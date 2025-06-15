@@ -269,3 +269,16 @@ img {
 a, button {
     cursor: pointer;
 }
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--accent-color);
+  color: var(--secondary-color);
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: none;
+  z-index: 1001;
+}
