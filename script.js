@@ -3,6 +3,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const navHeight = nav.offsetHeight;
   const navLinks = document.querySelectorAll('nav ul li a');
   const sections = document.querySelectorAll('section');
+  const backToTop = document.getElementById('back-to-top');
+
+  if (backToTop) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      backToTop.style.display = 'block';
+    } else {
+      backToTop.style.display = 'none';
+    }
+  });
+
+  backToTop.addEventListener('click', e => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
 
   // Smooth scrolling with nav height offset
   navLinks.forEach(link => {
