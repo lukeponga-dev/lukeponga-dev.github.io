@@ -1,94 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Define character encoding and responsive viewport -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Page title displayed in the browser tab -->
   <title>Luke Ponga - Portfolio</title>
-  <!-- Link to external CSS stylesheet -->
+  <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header section containing navigation -->
-  <header class="site_header">
-    <nav>
-      <!-- Unordered list for navigation links -->
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header>
+    <h1>Luke Ponga</h1>
+    <p>Software Developer</p>
   </header>
-
-  <!-- Hero section for a welcoming introduction -->
-  <section id="hero">
-    <div class="hero_content">
-      <!-- Main heading with your name -->
-      <h1>Luke Ponga</h1>
-      <!-- Subtitle with your professional title -->
-      <p>Software Developer</p>
-      <!-- Social media links with icons -->
-      <div class="hero_social">
-        <a href="https://github.com/lukeponga-dev"><img src="assets/icon-github.svg" alt="GitHub"></a>
-        <a href="https://twitter.com/yourhandle"><img src="assets/icon-twitter.svg" alt="Twitter"></a>
-      </div>
-      <!-- Your location -->
-      <p>Hamilton, New Zealand</p>
-    </div>
-  </section>
-
-  <!-- About section for personal bio and photo -->
-  <section id="about">
-    <div class="about_content">
-      <!-- Figure element for photo and caption -->
-      <figure>
-        <img src="assets/user.png" alt="Luke Ponga" width="200" height="200" />
-        <figcaption>Luke Ponga</figcaption>
-      </figure>
-      <!-- Bio paragraph -->
-      <p>I’m a software developer with a passion for AI, IoT, and Web3 technologies. I enjoy blending innovation with user-friendly design and delivering robust solutions through full-stack development.</p>
-    </div>
-  </section>
-
-  <!-- Work section to showcase experience -->
-  <section id="work">
-    <!-- Section heading -->
-    <h2>Work Experience</h2>
-    <!-- List of company logos -->
+  <nav>
     <ul>
-      <li><img src="assets/logo1.png" alt="Company 1"></li>
-      <li><img src="assets/logo2.png" alt="Company 2"></li>
-      <li><img src="assets/logo3.png" alt="Company 3"></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, my name is Luke and I have graduated with a (Level 6) Diploma in software development...</p>
+    <p>I'm currently interested, primarily, in Internet of Things (IoT), Artificial Intelligence (AI)...</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>General Management</li>
+      <li>Logical Reasoning</li>
+      <li>Organization Skills</li>
+      <li>Computer Skills</li>
+      <li>C#</li>
+      <li>Problem Solving Skills</li>
+      <li>Time Management Skills</li>
+      <li>Detail Oriented</li>
+      <li>Data Analysis</li>
+      <li>Java</li>
     </ul>
   </section>
 
-  <!-- Contact section with a form -->
-  <section id="contact">
-    <!-- Section heading -->
-    <h2>Contact Me</h2>
-    <!-- Contact form -->
-    <form>
-      <!-- Name input field -->
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
-      <!-- Email input field -->
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-      <!-- Message textarea -->
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-      <!-- Submit button -->
-      <button type="submit">Send Message</button>
-    </form>
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>Vision College, Hamilton - Level 6 Diploma in Software Development (FEB 2020 - MARCH 2021)</li>
+      <li>Vision College, Hamilton - Level 5 Diploma in Web Development & Design (FEB 2019 - March 2021)</li>
+      <li>Vision College, Hamilton - Level 3 Certificate in Business Administration and Technology (June 2018 - December 2018)</li>
+      <li>Vision College, Hamilton - Level 1 Certificate in Foundation Skills (February 2018 - August 2018)</li>
+      <li>Trainme, Hamilton - Barista Course (March 2018)</li>
+    </ul>
   </section>
 
-  <!-- Footer with copyright information -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Coming soon...</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Address: 20 Bankwood Road, Hamilton, Chartwell 3210</p>
+    <p>Phone: <a href="tel:+64211038077">(021) 103-8077</a></p>
+    <p>Email: <a href="mailto:lukeponga9@gmail.com">lukeponga9@gmail.com</a></p>
+  </section>
+
   <footer>
-    <p>© 2025 Luke Ponga</p>
+    <p>© 2025 Luke Ponga. All rights reserved.</p>
   </footer>
-<script src="script.js"> </script>
+
+  <script>
+    // Smooth scroll for nav links
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
