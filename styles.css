@@ -15,6 +15,7 @@ body {
     line-height: 1.7;
     margin: 0;
     color: var(--text-primary);
+    background: linear-gradient(to bottom, var(--bg-light), #e9ecef);
 }
 
 header {
@@ -24,6 +25,10 @@ header {
     color: var(--secondary-color);
 }
 
+header h1, header p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
 nav {
     position: sticky;
     top: 0;
@@ -31,6 +36,31 @@ nav {
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
 }
 
 .content-wrapper {
@@ -48,6 +78,9 @@ nav {
     margin-bottom: 3rem;
     position: relative;
     display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
 }
 
 .section-title::after {
@@ -59,6 +92,13 @@ nav {
     height: 4px;
     background: var(--accent-color);
     border-radius: 2px;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .accent-bg {
@@ -78,10 +118,11 @@ nav {
     border-radius: 12px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    border: 1px solid var(--accent-color);
 }
 
 .skill-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -101,6 +142,94 @@ nav {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    color: var(--accent-color);
+}
+
+.project-card p {
+    margin: 1rem 0;
+}
+
+.project-card a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Education Section */
+#education ul {
+    list-style: none;
+    padding: 0;
+}
+
+#education ul li {
+    background: var(--secondary-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* Contact Section */
+#contact p {
+    margin: 0.5rem 0;
+}
+
+#contact a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: var(--bg-dark);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .section-container {
         padding: 3rem 0;
@@ -109,4 +238,29 @@ nav {
     .section-title {
         font-size: 2rem;
     }
+}
+
+@media (max-width: 480px) {
+    .content-wrapper {
+        padding: 0 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .skills-grid, .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* General Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+a, button {
+    cursor: pointer;
 }
