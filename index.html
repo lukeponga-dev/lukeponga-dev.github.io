@@ -6,114 +6,129 @@
   <meta name="keywords" content="software developer, IoT, AI, Hamilton, portfolio">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luke Ponga - Portfolio</title>
-  <!-- Link to external stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Luke Ponga</h1>
-    <p>Software Developer</p>
+  <header class="site-header">
+    <div class="header-content">
+      <h1 class="site-title">Luke Ponga</h1>
+      <p class="site-tagline">Software Developer</p>
+    </div>
   </header>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+
+  <nav class="main-nav">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+      <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+      <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+      <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
   </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi, my name is Luke and I have graduated with a (Level 6) Diploma in software development...</p>
-    <p>I'm currently interested, primarily, in Internet of Things (IoT), Artificial Intelligence (AI)...</p>
-  </section>
+  <main>
+    <section id="about" class="section-container">
+      <div class="content-wrapper">
+        <h2 class="section-title">About Me</h2>
+        <p>Hi, my name is Luke and I have graduated with a (Level 6) Diploma in software development...</p>
+        <p>I'm currently interested, primarily, in Internet of Things (IoT), Artificial Intelligence (AI)...</p>
+      </div>
+    </section>
 
-<section id="skills" class="section-container accent-bg">
-  <div class="content-wrapper">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <h3>Development</h3>
-        <ul>
-          <li>C#</li>
-          <li>Java</li>
+    <section id="skills" class="section-container accent-bg">
+      <div class="content-wrapper">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3 class="skill-card__title">Development</h3>
+            <ul class="skill-card__list">
+              <li>C#</li>
+              <li>Java</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3 class="skill-card__title">Soft Skills</h3>
+            <ul class="skill-card__list">
+              <li>Problem Solving</li>
+              <li>Logical Reasoning</li>
+              <li>Time Management</li>
+              <li>Organization</li>
+              <li>Detail Oriented</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3 class="skill-card__title">Technical</h3>
+            <ul class="skill-card__list">
+              <li>General Management</li>
+              <li>Data Analysis</li>
+              <li>Computer Skills</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section-container">
+      <div class="content-wrapper">
+        <h2 class="section-title">Education</h2>
+        <ul class="education-list">
+          <li class="education-item">Vision College, Hamilton - Level 6 Diploma in Software Development (FEB 2020 - MARCH 2021)</li>
+          <li class="education-item">Vision College, Hamilton - Level 5 Diploma in Web Development & Design (FEB 2019 - March 2021)</li>
+          <li class="education-item">Vision College, Hamilton - Level 3 Certificate in Business Administration and Technology (June 2018 - December 2018)</li>
+          <li class="education-item">Vision College, Hamilton - Level 1 Certificate in Foundation Skills (February 2018 - August 2018)</li>
+          <li class="education-item">Trainme, Hamilton - Barista Course (March 2018)</li>
         </ul>
       </div>
-      <div class="skill-card">
-        <h3>Soft Skills</h3>
-        <ul>
-          <li>Problem Solving</li>
-          <li>Logical Reasoning</li>
-          <li>Time Management</li>
-          <li>Organization</li>
-          <li>Detail Oriented</li>
-        </ul>
+    </section>
+
+    <section id="projects" class="section-container">
+      <div class="content-wrapper">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3 class="project-card__title">New Zealand Website</h3>
+            <p class="project-card__description">A website developed for my diploma in web development and design, showcasing New Zealand's history.</p>
+            <div class="project-card__links">
+              <a href="https://your-nz-website-demo.com" target="_blank" class="project-card__link">Live Demo</a>
+              <a href="https://github.com/your-repo/nz-website" target="_blank" class="project-card__link">Source Code</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <h3 class="project-card__title">Doctors Appointments</h3>
+            <p class="project-card__description">An ASP.NET Core web app for appointment tracking, developed as a software development assignment.</p>
+            <div class="project-card__links">
+              <a href="https://your-doctors-app-demo.com" target="_blank" class="project-card__link">Live Demo</a>
+              <a href="https://github.com/your-repo/doctors-appointments" target="_blank" class="project-card__link">Source Code</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <h3 class="project-card__title">Smart Home Monitor</h3>
+            <p class="project-card__description">An IoT-based application that tracks environmental data like temperature and humidity using sensors and visualizes it in real time using a web dashboard. Built with .NET and integrated via REST APIs.</p>
+            <div class="project-card__links">
+              <a href="https://your-smart-home-monitor-demo.com" target="_blank" class="project-card__link">Live Demo</a>
+              <a href="https://github.com/your-repo/smart-home-monitor" target="_blank" class="project-card__link">Source Code</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="skill-card">
-        <h3>Technical</h3>
-        <ul>
-          <li>General Management</li>
-          <li>Data Analysis</li>
-          <li>Computer Skills</li>
-        </ul>
+    </section>
+
+    <section id="contact" class="section-container">
+      <div class="content-wrapper">
+        <h2 class="section-title">Contact</h2>
+        <p class="contact-info">Address: 20 Bankwood Road, Hamilton, Chartwell 3210</p>
+        <p class="contact-info">Phone: <a href="tel:+64211038077" class="contact-link">(021) 103-8077</a></p>
+        <p class="contact-info">Email: <a href="mailto:lukeponga9@gmail.com" class="contact-link">lukeponga9@gmail.com</a></p>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+  </main>
 
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li>Vision College, Hamilton - Level 6 Diploma in Software Development (FEB 2020 - MARCH 2021)</li>
-      <li>Vision College, Hamilton - Level 5 Diploma in Web Development & Design (FEB 2019 - March 2021)</li>
-      <li>Vision College, Hamilton - Level 3 Certificate in Business Administration and Technology (June 2018 - December 2018)</li>
-      <li>Vision College, Hamilton - Level 1 Certificate in Foundation Skills (February 2018 - August 2018)</li>
-      <li>Trainme, Hamilton - Barista Course (March 2018)</li>
-    </ul>
-  </section>
-
-  <!-- Projects Section: List of projects with descriptions and links -->
-<section id="projects">
-    <h2>Projects</h2>
-
-    <!-- Project 1 -->
-    <div class="project">
-        <h3>New Zealand Website</h3>
-        <p>A website developed for my diploma in web development and design, showcasing New Zealand's history.</p>
-        <a href="[invalid url, do not cite]" target="_blank">Live Demo</a>
-        <a href="[invalid url, do not cite]" target="_blank">Source Code</a>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project">
-        <h3>Doctors Appointments</h3>
-        <p>An ASP.NET Core web app for appointment tracking, developed as a software development assignment.</p>
-        <a href="[invalid url, do not cite]" target="_blank">Live Demo</a>
-        <a href="[invalid url, do not cite]" target="_blank">Source Code</a>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project">
-        <h3>Smart Home Monitor</h3>
-        <p>An IoT-based application that tracks environmental data like temperature and humidity using sensors and visualizes it in real time using a web dashboard. Built with .NET and integrated via REST APIs.</p>
-        <a href="[your live demo URL]" target="_blank">Live Demo</a>
-        <a href="[your GitHub repo URL]" target="_blank">Source Code</a>
-    </div>
-</section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Address: 20 Bankwood Road, Hamilton, Chartwell 3210</p>
-    <p>Phone: <a href="tel:+64211038077">(021) 103-8077</a></p>
-    <p>Email: <a href="mailto:lukeponga9@gmail.com">lukeponga9@gmail.com</a></p>
-  </section>
+  <a href="#top" id="back-to-top" class="back-to-top">Back to Top</a>
   
-  <a href="#" id="back-to-top">Back to Top</a>
-  
-  <footer>
-    <p>© 2025 Luke Ponga. All rights reserved.</p>
+  <footer class="site-footer">
+    <p class="footer-text">© 2025 Luke Ponga. All rights reserved.</p>
   </footer>
   <script src="script.js"></script>
 </body>
