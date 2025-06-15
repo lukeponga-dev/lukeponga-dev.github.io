@@ -1,1 +1,162 @@
+/* Reset default browser styles for consistency */
+* {
+    box-sizing: border-box; /* Include padding and border in element size */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+}
 
+/* Base styles for the body */
+body {
+    font-family: Arial, sans-serif; /* Set default font */
+    line-height: 1.6; /* Improve readability with line spacing */
+}
+
+/* Utility classes for common styling */
+.flex {
+    display: flex; /* Enable flexbox layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.text_center {
+    text-align: center; /* Center text */
+}
+
+/* Container classes for layout control */
+.wrapper {
+    width: 100%; /* Full width */
+    max-width: 1240px; /* Limit max width for larger screens */
+    margin: 0 auto; /* Center the container */
+}
+
+.wrapper_inner {
+    width: 100%; /* Full width */
+    max-width: 800px; /* Narrower max width for inner content */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Header styling */
+.site_header {
+    background: #333; /* Dark background color */
+    color: #fff; /* White text */
+    padding: 1rem 0; /* Vertical padding */
+}
+
+.site_header nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Horizontal navigation layout */
+    justify-content: space-around; /* Evenly space links */
+}
+
+.site_header nav ul li a {
+    color: #fff; /* White link color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Hero section styling */
+#hero {
+    /* Gradient overlay on background image */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/background_image.jpg') no-repeat center center/cover;
+    color: #fff; /* White text */
+    text-align: center; /* Center content */
+    padding: 4rem 0; /* Vertical padding */
+}
+
+.hero_content h1 {
+    font-size: 3rem; /* Large heading size */
+}
+
+.hero_content p {
+    font-size: 1.5rem; /* Subtitle size */
+}
+
+.hero_social img {
+    width: 24px; /* Icon width */
+    height: 24px; /* Icon height */
+    margin: 0 10px; /* Horizontal spacing between icons */
+}
+
+/* About section styling */
+#about {
+    padding: 2rem 0; /* Vertical padding */
+    background: #f4f4f4; /* Light gray background */
+}
+
+.about_content {
+    display: flex; /* Flexbox layout for photo and bio */
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Center content */
+}
+
+.about_content figure {
+    margin-right: 2rem; /* Space between photo and bio */
+}
+
+.about_content img {
+    border-radius: 50%; /* Circular photo */
+}
+
+/* Work section styling */
+#work {
+    padding: 2rem 0; /* Vertical padding */
+    background: #ddd; /* Light gray background */
+}
+
+#work h2 {
+    text-align: center; /* Center heading */
+    margin-bottom: 1rem; /* Space below heading */
+}
+
+#work ul {
+    display: flex; /* Horizontal layout for logos */
+    justify-content: space-around; /* Evenly space logos */
+}
+
+#work ul li img {
+    width: 100px; /* Logo width */
+    height: 100px; /* Logo height */
+}
+
+/* Contact section styling */
+#contact {
+    padding: 2rem 0; /* Vertical padding */
+    background: #333; /* Dark background */
+    color: #fff; /* White text */
+}
+
+#contact h2 {
+    text-align: center; /* Center heading */
+    margin-bottom: 1rem; /* Space below heading */
+}
+
+#contact form {
+    display: flex; /* Vertical form layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center form elements */
+}
+
+#contact form label {
+    margin-bottom: 0.5rem; /* Space below labels */
+}
+
+#contact form input, #contact form textarea {
+    width: 80%; /* Form field width */
+    padding: 0.5rem; /* Inner padding */
+    margin-bottom: 1rem; /* Space between fields */
+}
+
+#contact form button {
+    padding: 0.5rem 1rem; /* Button padding */
+    background: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    cursor: pointer; /* Hand cursor on hover */
+}
+
+/* Footer styling */
+footer {
+    background: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center; /* Center text */
+    padding: 1rem 0; /* Vertical padding */
+}
