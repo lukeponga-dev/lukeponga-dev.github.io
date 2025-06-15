@@ -63,6 +63,11 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
+nav ul li a.active {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
 .content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
