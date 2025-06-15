@@ -233,6 +233,16 @@ img {
   text-decoration: none; /* Remove underline on hover for buttons */
 }
 
+.project-card img {
+  width: 100%;
+  height: 200px; /* Adjust this height as desired, or set to 'auto' */
+  object-fit: cover; /* Ensures images cover the area well */
+  border-top-left-radius: var(--border-radius-lg);
+  border-top-right-radius: var(--border-radius-lg);
+  margin-bottom: 1rem; /* Adds space below the image */
+}
+
+
 /* ===== Education Section ===== */
 .education-list {
   list-style: none;
