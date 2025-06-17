@@ -1,6 +1,6 @@
 # Luke Ponga - Software Developer Portfolio
 
-![Portfolio Screenshot](https://via.placeholder.com/800x500/4361ee/ffffff?text=Luke+Ponga+Portfolio)
+![Portfolio Screenshot](images/Screenshot_2025-06-18-09-48-49-828_com.android.chrome.jpg)
 
 A modern, responsive portfolio website showcasing Luke Ponga's skills, projects, and professional experience as a software developer specializing in IoT and AI.
 
