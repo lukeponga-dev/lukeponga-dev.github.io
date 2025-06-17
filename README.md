@@ -1,38 +1,56 @@
-# lukeponga-dev.github.io
+# Modern Portfolio Website
 
-Welcome! This is the source code for my personal developer portfolio site, designed to showcase my projects, technical skills, and passion for creating clean, accessible, and user-friendly web experiences.
+A complete redesign of my developer portfolio with modern web technologies and best practices.
 
-## 🌐 Live Site
+## Live Site
 You can visit the live version of this portfolio at: [https://lukeponga-dev.github.io](https://lukeponga-dev.github.io)
 
-## 🔧 Technologies Used
-- **HTML5** – Semantic structure and layout
-- **CSS3** – Styling with focus on responsiveness and accessibility
-- **JavaScript** – Adds interactivity and functionality
-- **GitHub Pages** – For hosting and version control
+## Key Improvements
 
-## 📁 Project Structure
-- `index.html` – Main structure and content of the site
-- `styles.css` – Custom styles and responsive design elements
-- `script.js` – Handles interactive components and dynamic behaviors
+1. **Modern Architecture**:
+   - Semantic HTML5 structure
+   - CSS Variables for consistent theming
+   - Mobile-first responsive design
+   - BEM methodology for CSS classes
 
-## ✨ Features
-- Clean, modern UI with responsive layout
-- Modular and maintainable code
-- Hover effects and subtle animations for enhanced UX
-- SEO-friendly and accessible markup
+2. **Performance Optimizations**:
+   - Optimized image loading with lazy loading
+   - Reduced CSS specificity
+   - Efficient JavaScript with event delegation
+   - Modern layout techniques (Flexbox/Grid)
 
-## 🚀 Goals
-This portfolio is a living document of my growth as a developer, with plans to expand into:
-- Integrating projects featuring IoT and AI concepts
-- Adding blog-style posts for technical reflections
-- Implementing versioned updates and changelogs
+3. **Enhanced UX**:
+   - Smooth animations and transitions
+   - Improved navigation highlighting
+   - Accessible focus states
+   - Better touch targets for mobile
 
-## 📫 Contact Me
-I'm open to collaboration or feedback! Feel free to connect via:
-- [LinkedIn](#) (add your link)
-- [Email](mailto:your.email@example.com)
+4. **Visual Refresh**:
+   - Modern color scheme with accent colors
+   - Card-based design for content sections
+   - Professional typography with Inter font
+   - Subtle background patterns
 
----
+## Features
+- Responsive navigation with active state tracking
+- Project showcase with interactive cards
+- Education timeline visualization
+- Back-to-top button with smooth scrolling
+- Accessible form elements and focus states
+- Print-friendly styles
 
-Thanks for stopping by!
+## Technologies
+- HTML5 (Semantic Elements)
+- CSS3 (Variables, Grid, Flexbox)
+- JavaScript (ES6+)
+- GitHub Pages Deployment
+
+## Setup
+1. Clone repository: `git clone https://github.com/lukeponga-dev/lukeponga-dev.github.io`
+2. Open `index.html` in browser
+
+## Customization
+- Update colors in `:root` CSS variables
+- Modify content in HTML files
+- Add/remove projects in projects section
+- Update certificate information
