@@ -1,4 +1,4 @@
-# Luke Ponga - Software Developer Portfolio
+# Portfolio Website 
 
 ![Portfolio Screenshot](images/Portfoliohomepage.jpg)
 
