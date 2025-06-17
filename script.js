@@ -1,78 +1,73 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const nav = document.querySelector('.main-nav'); // Use class selector
-  const navLinks = document.querySelectorAll('.main-nav .nav-link'); // Use more specific class selectors
+  // DOM Elements
+  const nav = document.querySelector('.nav');
+  const navLinks = document.querySelectorAll('.nav__link');
   const sections = document.querySelectorAll('section');
-  const backToTopButton = document.getElementById('back-to-top');
-
-  // Cache nav height to avoid recalculating on every scroll
-  const navHeight = nav ? nav.offsetHeight : 0;
-
-  // Function to smoothly scroll to a target element
-  const smoothScrollTo = (targetElement) => {
-    if (targetElement) {
-      // Calculate offset, considering fixed nav bar
-      const offset = targetElement.offsetTop - navHeight;
-      window.scrollTo({
-        top: offset,
-        behavior: 'smooth' // Modern browsers handle this via CSS `scroll-behavior: smooth`
-      });
+  const backToTopBtn = document.getElementById('back-to-top');
+  
+  // Navigation highlight on scroll
+  const highlightNav = () => {
+    const scrollPosition = window.scrollY + 100;
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute('id');
+      
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  };
+  
+  // Smooth scrolling for navigation links
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      const targetId = link.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop - 80,
+          behavior: 'smooth'
+        });
+        
+        // Update URL without jumping
+        history.pushState(null, null, targetId);
+      }
+    });
+  });
+  
+  // Back to top button functionality
+  const handleBackToTop = () => {
+    if (window.scrollY > 500) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
     }
   };
-
-  // Show/hide the "Back to Top" button based on scroll position
-  if (backToTopButton) {
-    window.addEventListener('scroll', () => {
-      // Show button if scrolled down more than viewport height / 2
-      backToTopButton.style.display = window.scrollY > window.innerHeight / 2 ? 'block' : 'none';
-    });
-
-    // Smooth scroll to top when "Back to Top" is clicked
-    backToTopButton.addEventListener('click', e => {
-      e.preventDefault();
-      // Scroll to the very top (0,0)
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-
-  // Enable smooth scrolling when nav links are clicked
-  navLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault(); // Prevent default anchor jump
-      const targetId = link.getAttribute('href').substring(1); // Remove "#" from href
-      const targetSection = document.getElementById(targetId);
-      smoothScrollTo(targetSection);
+  
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
   });
-
-  // Highlight the nav link of the section currently in view
+  
+  // Initialize event listeners
   window.addEventListener('scroll', () => {
-    let currentActiveSectionId = '';
-
-    // Determine the current section based on scroll position
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - navHeight; // Adjust for nav height
-      const sectionBottom = sectionTop + section.offsetHeight;
-
-      // If the middle of the viewport is within this section
-      if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
-        currentActiveSectionId = section.getAttribute('id');
-      }
-    });
-
-    // Handle the case where no section is in view (e.g., at the very top of the page)
-    if (currentActiveSectionId === '' && window.scrollY < sections[0].offsetTop - navHeight) {
-      currentActiveSectionId = sections[0].getAttribute('id');
-    }
-
-    // Update the active class on nav links
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href').substring(1) === currentActiveSectionId) {
-        link.classList.add('active');
-      }
-    });
+    highlightNav();
+    handleBackToTop();
   });
-
-  // Initial call to set active link on page load
-  window.dispatchEvent(new Event('scroll'));
+  
+  // Initialize scroll position
+  highlightNav();
+  handleBackToTop();
 });
