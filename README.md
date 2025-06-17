@@ -2,6 +2,9 @@
 
 ![Portfolio Screenshot](images/Portfoliohomepage.jpg)
 
+
+View Live: [lukeponga-dev.github.io](https://lukeponga-dev.github.io/) 
+
 A modern, responsive portfolio website showcasing Luke Ponga's skills, projects, and professional experience as a software developer specializing in IoT and AI.
 
 ## Features
