@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Portfolio of Luke Ponga, a software developer specializing in IoT and AI based in Hamilton, NZ">
-  <meta name="keywords" content="software developer, IoT, AI, Hamilton, portfolio, generative ai">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luke Ponga - Software Developer Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Luke Ponga - Software Developer specializing in IoT and AI">
+  <meta name="keywords" content="software developer, IoT, AI, generative ai, portfolio">
+  <title>Luke Ponga - Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-content">
-      <h1 class="site-title">Luke Ponga</h1>
-      <p class="site-tagline">Software Developer</p>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">Luke Ponga</h1>
+      <p class="header__subtitle">Software Developer</p>
     </div>
   </header>
 
-  <nav class="main-nav">
-    <ul class="nav-list">
-      <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-      <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-      <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-      <li class="nav-item"><a href="#certificates" class="nav-link">Certificates</a></li>
-      <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-      <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+  <nav class="nav" aria-label="Main Navigation">
+    <ul class="nav__list container">
+      <li><a href="#about" class="nav__link">About</a></li>
+      <li><a href="#skills" class="nav__link">Skills</a></li>
+      <li><a href="#education" class="nav__link">Education</a></li>
+      <li><a href="#certificates" class="nav__link">Certificates</a></li>
+      <li><a href="#projects" class="nav__link">Projects</a></li>
+      <li><a href="#contact" class="nav__link">Contact</a></li>
     </ul>
   </nav>
 
   <main>
-    <section id="about" class="section-container">
-      <div class="content-wrapper">
-        <h2 class="section-title">About Me</h2>
-        <p>Hi, my name is Luke and I have graduated with a (Level 6) Diploma in software development...</p>
-        <p>I'm currently interested, primarily, in the Internet of Things (IoT) and Artificial Intelligence (AI). I have recently expanded my expertise in this area by earning a certification in Generative AI.</p>
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section__title">About Me</h2>
+        <div class="about-content">
+          <p>Hi, I'm Luke, a Software Developer graduate specializing in IoT and AI solutions. I hold a Level 6 Diploma in Software Development with a focus on creating innovative technology solutions.</p>
+          <p>My current interests center around Internet of Things (IoT) ecosystems and Artificial Intelligence applications. I've recently expanded my expertise through certification in Generative AI.</p>
+        </div>
       </div>
     </section>
 
-    <section id="skills" class="section-container accent-bg">
-      <div class="content-wrapper">
-        <h2 class="section-title">Skills</h2>
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Skills</h2>
         <div class="skills-grid">
-          <div class="skill-card">
+          <article class="skill-card">
             <h3 class="skill-card__title">Development</h3>
             <ul class="skill-card__list">
               <li>C#</li>
               <li>Java</li>
               <li>Generative AI</li>
             </ul>
-          </div>
-          <div class="skill-card">
+          </article>
+          
+          <article class="skill-card">
             <h3 class="skill-card__title">Soft Skills</h3>
             <ul class="skill-card__list">
               <li>Problem Solving</li>
@@ -57,124 +63,126 @@
               <li>Organization</li>
               <li>Detail Oriented</li>
             </ul>
-          </div>
-          <div class="skill-card">
+          </article>
+          
+          <article class="skill-card">
             <h3 class="skill-card__title">Technical</h3>
             <ul class="skill-card__list">
               <li>General Management</li>
               <li>Data Analysis</li>
               <li>Computer Skills</li>
             </ul>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="education" class="section-container">
-      <div class="content-wrapper">
-        <h2 class="section-title">Education</h2>
-        <ul class="education-list">
-          <li class="education-item">Vision College, Hamilton - Level 6 Diploma in Software Development (FEB 2020 - MARCH 2021)</li>
-          <li class="education-item">Vision College, Hamilton - Level 5 Diploma in Web Development & Design (FEB 2019 - March 2021)</li>
-          <li class="education-item">Vision College, Hamilton - Level 3 Certificate in Business Administration and Technology (June 2018 - December 2018)</li>
-          <li class="education-item">Vision College, Hamilton - Level 1 Certificate in Foundation Skills (February 2018 - August 2018)</li>
-          <li class="education-item">Trainme, Hamilton - Barista Course (March 2018)</li>
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section__title">Education</h2>
+        <ul class="timeline">
+          <li class="timeline__item">
+            <div class="timeline__content">
+              <h3>Level 6 Diploma in Software Development</h3>
+              <p>Vision College, Hamilton</p>
+              <p class="timeline__date">FEB 2020 - MARCH 2021</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <div class="timeline__content">
+              <h3>Level 5 Diploma in Web Development & Design</h3>
+              <p>Vision College, Hamilton</p>
+              <p class="timeline__date">FEB 2019 - MARCH 2021</p>
+            </div>
+          </li>
+          <!-- Other education items -->
         </ul>
       </div>
     </section>
 
-    <section id="certificates" class="section-container accent-bg">
-      <div class="content-wrapper">
-        <h2 class="section-title">Certificates</h2>
-        <div class="certificate-item" style="display: flex; align-items: center; gap: 20px;">
-          <a href="https://codesignal.com/learn/certificates/cmcoct0jf000gla04cr345pg6/courses/883" target="_blank" rel="noopener noreferrer">
-              <img src="certificates/certificate.png" alt="Generative AI in 2025 Certificate" style="width:150px; border: 1px solid #ddd; padding: 5px;">
+    <section id="certificates" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Certificates</h2>
+        <div class="certificate">
+          <a href="https://codesignal.com/learn/certificates/cmcoct0jf000gla04cr345pg6/courses/883" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             aria-label="View Generative AI Certificate">
+            <img src="certificates/certificate.png" 
+                 alt="Generative AI in 2025 Certificate" 
+                 class="certificate__image">
           </a>
-          <div>
-            <p style="margin: 0; padding: 0;">
-              <strong>Course:</strong> Generative AI in 2025 - Overview and Practice<br>
-              <strong>Issuing Authority:</strong> CodeSignal<br>
-              <strong>Completion Date:</strong> June 18, 2025
-            </p>
+          <div class="certificate__details">
+            <p><strong>Course:</strong> Generative AI in 2025 - Overview and Practice</p>
+            <p><strong>Issuer:</strong> CodeSignal</p>
+            <p><strong>Completed:</strong> June 18, 2025</p>
           </div>
         </div>
       </div>
     </section>
     
-    <section id="projects" class="section-container">
-      <div class="content-wrapper">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-grid">
-
-      <div class="project-card">
-        <h3 class="project-card__title">New Zealand Website</h3>
-        <img src="images/new-zealand-website-screenshot.jpg" alt="Screenshot of New Zealand Website project">
-        <p class="project-card__description">A web development project showcasing your skills in creating a visually appealing and functional site, possibly related to New Zealand culture, services, or information.</p>
-        <div class="project-card__links">
-          <a href="https://your-nz-website-demo.com" target="_blank" rel="noopener noreferrer" class="project-card__link">Live Demo</a>
-          <a href="https://github.com/your-repo/new-zealand-website" target="_blank" rel="noopener noreferrer" class="project-card__link">Source Code</a>
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section__title">Projects</h2>
+        <div class="projects-grid">
+          
+          <article class="project-card">
+            <div class="project-card__image-container">
+              <img src="images/new-zealand-website-screenshot.jpg" 
+                   alt="New Zealand Website project" 
+                   loading="lazy">
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">New Zealand Website</h3>
+              <p class="project-card__description">A web development project showcasing New Zealand culture and services.</p>
+              <div class="project-card__links">
+                <a href="https://your-nz-website-demo.com" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="btn btn--primary">
+                  Live Demo
+                </a>
+                <a href="https://github.com/your-repo/new-zealand-website" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="btn btn--secondary">
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Other project cards -->
+          
         </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <h3 class="project-card__title">Doctors Appointments</h3>
-        <img src="images/doctors-appointments-screenshot.jpg" alt="Screenshot of Doctors Appointments project">
-        <p class="project-card__description">A healthcare-related application for scheduling or managing doctor appointments, showcasing backend and database integration.</p>
-        <div class="project-card__links">
-          <a href="https://your-doctors-appointments-demo.com" target="_blank" rel="noopener noreferrer" class="project-card__link">Live Demo</a>
-          <a href="https://github.com/your-repo/doctors-appointments" target="_blank" rel="noopener noreferrer" class="project-card__link">Source Code</a>
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section__title">Contact</h2>
+        <div class="contact-info">
+          <p>Hamilton, New Zealand</p>
+          <p>
+            <a href="mailto:lukeponga9@gmail.com" class="contact-link">
+              lukeponga9@gmail.com
+            </a>
+          </p>
         </div>
-      </div>
-
-      <div class="project-card">
-        <h3 class="project-card__title">Health Clinic MVC</h3>
-        <img src="images/health-clinic-mvc-screenshot.jpg" alt="Screenshot of Health Clinic MVC project">
-        <p class="project-card__description">A Model-View-Controller (MVC) based project for a health clinic, likely involving a structured web application for managing clinic operations or patient data.</p>
-        <div class="project-card__links">
-          <a href="https://your-health-clinic-mvc-demo.com" target="_blank" rel="noopener noreferrer" class="project-card__link">Live Demo</a>
-          <a href="https://github.com/your-repo/health-clinic-mvc" target="_blank" rel="noopener noreferrer" class="project-card__link">Source Code</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3 class="project-card__title">Vehicle API</h3>
-        <img src="images/vehicle-api-screenshot.jpg" alt="Screenshot of Vehicle API project">
-        <p class="project-card__description">An API-driven project, possibly for retrieving or managing vehicle-related data, such as specifications, pricing, or availability.</p>
-        <div class="project-card__links">
-          <a href="https://your-vehicle-api-demo.com" target="_blank" rel="noopener noreferrer" class="project-card__link">Live Demo</a>
-          <a href="https://github.com/your-repo/vehicle-api" target="_blank" rel="noopener noreferrer" class="project-card__link">Source Code</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3 class="project-card__title">Crypto Currency Stats</h3>
-        <img src="images/crypto-currency-stats-screenshot.jpg" alt="Screenshot of Crypto Currency Stats project">
-        <p class="project-card__description">A project focused on displaying or analyzing cryptocurrency statistics, possibly involving real-time data fetching and visualization.</p>
-        <div class="project-card__links">
-          <a href="https://your-crypto-stats-demo.com" target="_blank" rel="noopener noreferrer" class="project-card__link">Live Demo</a>
-          <a href="https://github.com/your-repo/crypto-currency-stats" target="_blank" rel="noopener noreferrer" class="project-card__link">Source Code</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-    <section id="contact" class="section-container">
-      <div class="content-wrapper">
-        <h2 class="section-title">Contact</h2>
-        <p class="contact-info">Address: Hamilton</p>
-        <p class="contact-info">Email: <a href="mailto:lukeponga9@gmail.com" class="contact-link">lukeponga9@gmail.com</a></p>
       </div>
     </section>
   </main>
 
-  <a href="#top" id="back-to-top" class="back-to-top">Back to Top</a>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    ↑
+  </button>
   
-  <footer class="site-footer">
-    <p class="footer-text">© 2025 Luke Ponga. All rights reserved.</p>
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__copyright">© 2025 Luke Ponga. All rights reserved.</p>
+    </div>
   </footer>
-  <script src="script.js"></script>
+  
+  <script src="script.js" defer></script>
 </body>
 </html>
