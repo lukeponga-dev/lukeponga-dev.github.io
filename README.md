@@ -1,6 +1,6 @@
 # Luke Ponga - Software Developer Portfolio
 
-![Portfolio Screenshot](images/Portfoliohomepage.png)
+![Portfolio Screenshot](images/Portfoliohomepage.jpg)
 
 A modern, responsive portfolio website showcasing Luke Ponga's skills, projects, and professional experience as a software developer specializing in IoT and AI.
 
