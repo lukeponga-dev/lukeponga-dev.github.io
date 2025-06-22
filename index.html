@@ -1,556 +1,751 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Portfolio of Luke Ponga, a software developer specializing in IoT and AI based in Hamilton, NZ" />
-    <meta name="keywords" content="software developer, IoT, AI, Hamilton, portfolio, generative ai" />
-    <title>Luke Ponga - Software Developer Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-</head>
+    <head>
+        <!-- Character set declaration -->
+        <meta charset="UTF-8" />
+        <!-- Viewport meta tag for responsive behavior -->
+        <!-- Ensures the page scales correctly on all devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- SEO Meta Tags for search engine optimization -->
+        <meta name="description"
+            content="Portfolio of Luke Ponga, a software developer specializing in IoT and AI based in Hamilton, NZ" />
+        <meta name="keywords"
+            content="software developer, IoT, AI, Hamilton, portfolio, generative ai" />
+        <title>Luke Ponga - Software Developer Portfolio</title>
+        <!-- Bootstrap CSS for responsive grid, components, and utilities -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet" />
+        <!-- Bootstrap Icons CSS for scalable vector icons -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+        <!-- Google Fonts (Poppins for headings, Inter for body text) -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+            rel="stylesheet" />
+        <!-- Custom Stylesheet for overriding and adding specific styles -->
+        <link rel="stylesheet" href="styles.css" />
+    </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Luke Ponga</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#education">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#certificates">Certificates</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7 hero-content">
-                    <h5 class="text-primary">Hello, I'm</h5>
-                    <h1 class="hero-title">Luke Ponga</h1>
-                    <h2 class="hero-subtitle">Software Developer</h2>
-                    <p class="hero-description">
-                        A passionate developer based in Hamilton, NZ, specializing in IoT
-                        and AI solutions. I focus on creating innovative technology that
-                        solves real-world problems and I'm always exploring the cutting
-                        edge of tech.
-                    </p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-outline-primary">Contact Me</a>
-                    </div>
-                </div>
-                <div class="col-lg-5 text-center d-none d-lg-block">
-                    <div class="hero-img position-relative">
-                        <img src="https://via.placeholder.com/500x500/4361ee/ffffff?text=LP" alt="Luke Ponga"
-                            class="img-fluid rounded-circle" style="
-                  border: 10px solid white;
-                  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-                " />
-                    </div>
+    <body>
+        <!-- Navigation Bar - fixed-top keeps it visible on scroll -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+                <!-- Navbar Brand/Logo -->
+                <a class="navbar-brand" href="#">Luke Ponga</a>
+                <!-- Navbar Toggler for Mobile:
+                     This button appears on smaller screens to toggle the navigation menu.
+                     data-bs-toggle="collapse" and data-bs-target="#navbarNav" enable Bootstrap's collapse functionality.
+                     aria-controls, aria-expanded, and aria-label are for accessibility. -->
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar Links - collapses on small screens -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- ms-auto pushes nav items to the right -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#education">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="#certificates">Certificates</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </nav>
 
-    <section id="about" class="bg-light">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">About Me</h2>
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-4 mb-lg-0 animate-on-scroll">
-                    <div class="about-img">
-                        <img src="https://via.placeholder.com/500x600/1e2a47/ffffff?text=Luke" alt="Luke Ponga" />
+        <!-- Hero Section - first section of the page, sets the tone -->
+        <section class="hero" id="home">
+            <div class="container">
+                <!-- Row for responsive layout, align-items-center vertically aligns content -->
+                <div class="row align-items-center">
+                    <!-- Column for hero text content (takes 7 of 12 columns on large screens) -->
+                    <div class="col-lg-7 hero-content">
+                        <h5 class="text-primary">Hello, I'm</h5>
+                        <h1 class="hero-title">Luke Ponga</h1>
+                        <h2 class="hero-subtitle">Software Developer</h2>
+                        <p class="hero-description">
+                            A passionate developer based in Hamilton, NZ,
+                            specializing in IoT
+                            and AI solutions. I focus on creating innovative
+                            technology that
+                            solves real-world problems and I'm always exploring
+                            the cutting
+                            edge of tech.
+                        </p>
+                        <!-- Flex container for buttons with spacing gap -->
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#projects" class="btn btn-primary">View My
+                                Work</a>
+                            <a href="#contact"
+                                class="btn btn-outline-primary">Contact Me</a>
+                        </div>
+                    </div>
+                    <!-- Column for hero image (takes 5 of 12 columns on large screens) -->
+                    <!-- d-none hides it by default, d-lg-block shows it only on large screens and up -->
+                    <div class="col-lg-5 text-center d-none d-lg-block">
+                        <div class="hero-img position-relative">
+                            <!-- img-fluid makes image responsive (scales with parent) -->
+                            <!-- rounded-circle applies a circular shape -->
+                            <!-- hero-profile-img is a custom class for specific styling (border, shadow) -->
+                            <img src="images/heroimg.png" alt="Luke Ponga"
+                                class="img-fluid rounded-circle hero-profile-img" />
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-7 animate-on-scroll">
-                    <div class="about-content">
-                        <h3 class="mb-4">
-                            Software Developer from Hamilton, New Zealand
-                        </h3>
-                        <p class="mb-4">
-                            I'm a passionate software developer with expertise in building
-                            scalable applications, IoT systems, and AI solutions. With a
-                            strong foundation from my diplomas and hands-on experience, I
-                            create efficient and innovative software.
-                        </p>
-                        <p class="mb-4">
-                            My current interests center around Internet of Things (IoT)
-                            ecosystems and Artificial Intelligence applications. I've
-                            recently expanded my expertise through certification in
-                            Generative AI and continue to explore new technologies to solve
-                            complex problems.
-                        </p>
-                        <div class="row mt-5">
-                            <div class="col-md-6">
-                                <div class="d-flex mb-3">
-                                    <div class="me-3 text-primary">
-                                        <i class="bi bi-cpu fs-2"></i>
+            </section>
+
+            <!-- About Me Section -->
+            <section id="about" class="bg-light">
+                <div class="container">
+                    <h2 class="section-title animate-on-scroll">About Me</h2>
+                    <div class="row align-items-center">
+                        <!-- About image column -->
+                        <div class="col-lg-5 mb-4 mb-lg-0 animate-on-scroll">
+                            <div class="about-img">
+                                <img
+                                    src="https://via.placeholder.com/500x600/1e2a47/ffffff?text=Luke"
+                                    alt="Luke Ponga" />
+                            </div>
+                        </div>
+                        <!-- About content column -->
+                        <div class="col-lg-7 animate-on-scroll">
+                            <div class="about-content">
+                                <h3 class="mb-4">
+                                    Software Developer from Hamilton, New
+                                    Zealand
+                                </h3>
+                                <p class="mb-4">
+                                    I'm a passionate software developer with
+                                    expertise in building
+                                    scalable applications, IoT systems, and AI
+                                    solutions. With a
+                                    strong foundation from my diplomas and
+                                    hands-on experience, I
+                                    create efficient and innovative software.
+                                </p>
+                                <p class="mb-4">
+                                    My current interests center around Internet
+                                    of Things (IoT)
+                                    ecosystems and Artificial Intelligence
+                                    applications. I've
+                                    recently expanded my expertise through
+                                    certification in
+                                    Generative AI and continue to explore new
+                                    technologies to solve
+                                    complex problems.
+                                </p>
+                                <!-- Feature rows for IoT/AI and Problem Solver -->
+                                <div class="row mt-5">
+                                    <div class="col-md-6">
+                                        <div class="d-flex mb-3">
+                                            <div class="me-3 text-primary">
+                                                <i class="bi bi-cpu fs-2"></i>
+                                            </div>
+                                            <div>
+                                                <h5>IoT & AI Focus</h5>
+                                                <p class="mb-0 text-muted">
+                                                    Building intelligent,
+                                                    connected systems.
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h5>IoT & AI Focus</h5>
-                                        <p class="mb-0 text-muted">
-                                            Building intelligent, connected systems.
-                                        </p>
+                                    <div class="col-md-6">
+                                        <div class="d-flex mb-3">
+                                            <div class="me-3 text-primary">
+                                                <i
+                                                    class="bi bi-lightbulb fs-2"></i>
+                                            </div>
+                                            <div>
+                                                <h5>Problem Solver</h5>
+                                                <p class="mb-0 text-muted">
+                                                    Applying logical reasoning
+                                                    to find solutions.
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="d-flex mb-3">
-                                    <div class="me-3 text-primary">
-                                        <i class="bi bi-lightbulb fs-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills">
+                <div class="container">
+                    <h2 class="section-title animate-on-scroll">My Skills</h2>
+                    <!-- Skills container uses CSS Grid for responsive layout -->
+                    <div class="skills-container">
+                        <div class="skills-card animate-on-scroll">
+                            <h3><i
+                                    class="bi bi-code-slash me-2"></i>Development</h3>
+                            <ul class="skills-list">
+                                <li>C# & .NET Framework</li>
+                                <li>Java & Spring Boot</li>
+                                <li>Generative AI</li>
+                                <li>Python & TensorFlow</li>
+                                <li>JavaScript/TypeScript</li>
+                            </ul>
+                        </div>
+                        <div class="skills-card animate-on-scroll">
+                            <h3><i class="bi bi-cpu me-2"></i>Technical</h3>
+                            <ul class="skills-list">
+                                <li>IoT System Design</li>
+                                <li>Data Analysis & Visualization</li>
+                                <li>Cloud Infrastructure (AWS)</li>
+                                <li>API Development</li>
+                                <li>Database Management</li>
+                            </ul>
+                        </div>
+                        <div class="skills-card animate-on-scroll">
+                            <h3><i class="bi bi-people me-2"></i>Soft
+                                Skills</h3>
+                            <ul class="skills-list">
+                                <li>Problem Solving</li>
+                                <li>Logical Reasoning</li>
+                                <li>Time Management</li>
+                                <li>Project Organization</li>
+                                <li>Detail Oriented</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="bg-light">
+                <div class="container">
+                    <h2 class="section-title animate-on-scroll">Education</h2>
+                    <!-- Education timeline structure -->
+                    <div class="education-timeline">
+                        <!-- Each timeline-item represents a period of education -->
+                        <div class="timeline-item animate-on-scroll">
+                            <div class="timeline-content">
+                                <h4>Level 6 Diploma in Software Development</h4>
+                                <h5 class="text-primary">Vision College,
+                                    Hamilton</h5>
+                                <p class="text-muted mb-0">Feb 2020 - Mar
+                                    2021</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item animate-on-scroll">
+                            <div class="timeline-content">
+                                <h4>Level 5 Diploma in Web Development &
+                                    Design</h4>
+                                <h5 class="text-primary">Vision College,
+                                    Hamilton</h5>
+                                <p class="text-muted mb-0">Feb 2019 - Mar
+                                    2021</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item animate-on-scroll">
+                            <div class="timeline-content">
+                                <h4>Level 3 Cert. in Business Admin &
+                                    Technology</h4>
+                                <h5 class="text-primary">Vision College,
+                                    Hamilton</h5>
+                                <p class="text-muted mb-0">Jun 2018 - Dec
+                                    2018</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item animate-on-scroll">
+                            <div class="timeline-content">
+                                <h4>Level 1 Certificate in Foundation
+                                    Skills</h4>
+                                <h5 class="text-primary">Vision College,
+                                    Hamilton</h5>
+                                <p class="text-muted mb-0">Feb 2018 - Aug
+                                    2018</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item animate-on-scroll">
+                            <div class="timeline-content">
+                                <h4>Barista Course</h4>
+                                <h5 class="text-primary">Trainme, Hamilton</h5>
+                                <p class="text-muted mb-0">March 2018</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certificates Section -->
+            <section id="certificates">
+                <div class="container">
+                    <h2
+                        class="section-title animate-on-scroll">Certificates</h2>
+                    <!-- Row for certificate cards, justify-content-center centers them horizontally -->
+                    <div class="row justify-content-center">
+                        <!-- Each certificate card uses Bootstrap's grid system (col-md-8, col-lg-6) for responsiveness -->
+                        <div class="col-md-8 col-lg-6 mb-4 animate-on-scroll">
+                            <div class="project-card">
+                                <div
+                                    class="project-img d-flex align-items-center justify-content-center"
+                                    style="background: linear-gradient(45deg, #4361ee, #7209b7)">
+                                    <i class="bi bi-award-fill text-white"
+                                        style="font-size: 6rem"></i>
+                                </div>
+                                <div class="card-body p-4">
+                                    <h3 class="project-card__title">Generative
+                                        AI in 2025</h3>
+                                    <p class="project-card__description">
+                                        An overview and practical guide to
+                                        Generative AI concepts and
+                                        applications, issued by CodeSignal.
+                                    </p>
+                                    <div class="mt-3">
+                                        <span class="tech-badge">Generative
+                                            AI</span>
+                                        <span class="tech-badge">Machine
+                                            Learning</span>
+                                        <span class="tech-badge">Neural
+                                            Networks</span>
                                     </div>
-                                    <div>
-                                        <h5>Problem Solver</h5>
-                                        <p class="mb-0 text-muted">
-                                            Applying logical reasoning to find solutions.
-                                        </p>
+                                    <div class="project-card__links mt-4">
+                                        <a
+                                            href="https://codesignal.com/learn/certificates/cmcoct0jf000gla04cr345pg6/courses/883"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="btn btn-primary">View
+                                            Certificate</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">My Skills</h2>
-            <div class="skills-container">
-                <div class="skills-card animate-on-scroll">
-                    <h3><i class="bi bi-code-slash me-2"></i>Development</h3>
-                    <ul class="skills-list">
-                        <li>C# & .NET Framework</li>
-                        <li>Java & Spring Boot</li>
-                        <li>Generative AI</li>
-                        <li>Python & TensorFlow</li>
-                        <li>JavaScript/TypeScript</li>
-                    </ul>
-                </div>
-                <div class="skills-card animate-on-scroll">
-                    <h3><i class="bi bi-cpu me-2"></i>Technical</h3>
-                    <ul class="skills-list">
-                        <li>IoT System Design</li>
-                        <li>Data Analysis & Visualization</li>
-                        <li>Cloud Infrastructure (AWS)</li>
-                        <li>API Development</li>
-                        <li>Database Management</li>
-                    </ul>
-                </div>
-                <div class="skills-card animate-on-scroll">
-                    <h3><i class="bi bi-people me-2"></i>Soft Skills</h3>
-                    <ul class="skills-list">
-                        <li>Problem Solving</li>
-                        <li>Logical Reasoning</li>
-                        <li>Time Management</li>
-                        <li>Project Organization</li>
-                        <li>Detail Oriented</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="education" class="bg-light">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Education</h2>
-            <div class="education-timeline">
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-content">
-                        <h4>Level 6 Diploma in Software Development</h4>
-                        <h5 class="text-primary">Vision College, Hamilton</h5>
-                        <p class="text-muted mb-0">Feb 2020 - Mar 2021</p>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-content">
-                        <h4>Level 5 Diploma in Web Development & Design</h4>
-                        <h5 class="text-primary">Vision College, Hamilton</h5>
-                        <p class="text-muted mb-0">Feb 2019 - Mar 2021</p>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-content">
-                        <h4>Level 3 Cert. in Business Admin & Technology</h4>
-                        <h5 class="text-primary">Vision College, Hamilton</h5>
-                        <p class="text-muted mb-0">Jun 2018 - Dec 2018</p>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-content">
-                        <h4>Level 1 Certificate in Foundation Skills</h4>
-                        <h5 class="text-primary">Vision College, Hamilton</h5>
-                        <p class="text-muted mb-0">Feb 2018 - Aug 2018</p>
-                    </div>
-                </div>
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-content">
-                        <h4>Barista Course</h4>
-                        <h5 class="text-primary">Trainme, Hamilton</h5>
-                        <p class="text-muted mb-0">March 2018</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="certificates">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Certificates</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-6 mb-4 animate-on-scroll">
-                    <div class="project-card">
-                        <div class="project-img d-flex align-items-center justify-content-center"
-                            style="background: linear-gradient(45deg, #4361ee, #7209b7)">
-                            <i class="bi bi-award-fill text-white" style="font-size: 6rem"></i>
-                        </div>
-                        <div class="card-body p-4">
-                            <h3 class="project-card__title">Generative AI in 2025</h3>
-                            <p class="project-card__description">
-                                An overview and practical guide to Generative AI concepts and
-                                applications, issued by CodeSignal.
-                            </p>
-                            <div class="mt-3">
-                                <span class="tech-badge">Generative AI</span>
-                                <span class="tech-badge">Machine Learning</span>
-                                <span class="tech-badge">Neural Networks</span>
-                            </div>
-                            <div class="project-card__links mt-4">
-                                <a href="https://codesignal.com/learn/certificates/cmcoct0jf000gla04cr345pg6/courses/883"
-                                    target="_blank" rel="noopener noreferrer" class="btn btn-primary">View
-                                    Certificate</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Microsoft Build Certificate -->
-                <div class="col-md-8 col-lg-6 mb-4 animate-on-scroll">
-                    <div class="project-card">
-                        <div class="project-img d-flex align-items-center justify-content-center bg-white"
-                            style="height: 180px">
-                            <img src="certificates/microsoftbuildnaturallangcert.png"
-                                alt="Microsoft Build Natural Language Certificate" style="
+                        <div class="col-md-8 col-lg-6 mb-4 animate-on-scroll">
+                            <div class="project-card">
+                                <div
+                                    class="project-img d-flex align-items-center justify-content-center bg-white"
+                                    style="height: 180px">
+                                    <img
+                                        src="certificates/microsoftbuildnaturallangcert.png"
+                                        alt="Microsoft Build Natural Language Certificate"
+                                        style="
                     max-height: 160px;
                     max-width: 100%;
                     object-fit: contain;
                   " />
-                        </div>
-                        <div class="card-body p-4">
-                            <h3 class="project-card__title">
-                                Microsoft Build: Natural Language AI
-                            </h3>
-                            <p class="project-card__description">
-                                Certificate of completion for Microsoft Build's Natural
-                                Language AI learning path, covering Azure AI services and
-                                natural language processing fundamentals.
-                            </p>
-                            <div class="mt-3">
-                                <span class="tech-badge">Azure AI</span>
-                                <span class="tech-badge">Natural Language Processing</span>
-                                <span class="tech-badge">Microsoft Build</span>
-                            </div>
-                            <div class="project-card__links mt-4">
-                                <a href="certificates/microsoftbuildnaturallangcert.png" target="_blank"
-                                    rel="noopener noreferrer" class="btn btn-primary">View Certificate</a>
+                                </div>
+                                <div class="card-body p-4">
+                                    <h3 class="project-card__title">
+                                        Microsoft Build: Natural Language AI
+                                    </h3>
+                                    <p class="project-card__description">
+                                        Certificate of completion for Microsoft
+                                        Build's Natural
+                                        Language AI learning path, covering
+                                        Azure AI services and
+                                        natural language processing
+                                        fundamentals.
+                                    </p>
+                                    <div class="mt-3">
+                                        <span class="tech-badge">Azure AI</span>
+                                        <span class="tech-badge">Natural
+                                            Language Processing</span>
+                                        <span class="tech-badge">Microsoft
+                                            Build</span>
+                                    </div>
+                                    <div class="project-card__links mt-4">
+                                        <a
+                                            href="certificates/microsoftbuildnaturallangcert.png"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="btn btn-primary">View
+                                            Certificate</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section id="projects" class="bg-light">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Featured Projects</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="https://via.placeholder.com/600x400/7209b7/ffffff?text=NZ+Website"
-                                alt="New Zealand Website project" />
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h3 class="project-card__title">New Zealand Website</h3>
-                            <p class="project-card__description">
-                                A responsive web platform showcasing New Zealand's culture,
-                                tourism, and services with interactive elements.
-                            </p>
-                            <div class="mt-auto">
-                                <div class="mb-3">
-                                    <span class="tech-badge">HTML/CSS</span>
-                                    <span class="tech-badge">JavaScript</span>
-                                    <span class="tech-badge">Bootstrap</span>
+            <!-- Projects Section -->
+            <section id="projects" class="bg-light">
+                <div class="container">
+                    <h2 class="section-title animate-on-scroll">Featured
+                        Projects</h2>
+                    <!-- Row for project cards with gutter spacing -->
+                    <div class="row g-4">
+                        <!-- Each project card uses Bootstrap's grid for responsiveness -->
+                        <!-- col-md-6 takes half width on medium screens, col-lg-4 takes one-third on large screens -->
+                        <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
+                            <div class="project-card">
+                                <div class="project-img">
+                                    <img
+                                        src="https://via.placeholder.com/600x400/7209b7/ffffff?text=NZ+Website"
+                                        alt="New Zealand Website project" />
                                 </div>
-                                <div class="project-card__links">
-                                    <a href="#" class="btn btn-sm btn-primary me-2">Live Demo</a>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Source Code</a>
+                                <div class="card-body p-4 d-flex flex-column">
+                                    <h3 class="project-card__title">New Zealand
+                                        Website</h3>
+                                    <p class="project-card__description">
+                                        A responsive web platform showcasing New
+                                        Zealand's culture,
+                                        tourism, and services with interactive
+                                        elements.
+                                    </p>
+                                    <div class="mt-auto">
+                                        <div class="mb-3">
+                                            <span
+                                                class="tech-badge">HTML/CSS</span>
+                                            <span
+                                                class="tech-badge">JavaScript</span>
+                                            <span
+                                                class="tech-badge">Bootstrap</span>
+                                        </div>
+                                        <div class="project-card__links">
+                                            <a href="#"
+                                                class="btn btn-sm btn-primary me-2">Live
+                                                Demo</a>
+                                            <a href="#"
+                                                class="btn btn-sm btn-outline-secondary">Source
+                                                Code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
+                            <div class="project-card">
+                                <div class="project-img">
+                                    <img
+                                        src="https://via.placeholder.com/600x400/7209b7/ffffff?text=Doctor+App"
+                                        alt="Doctors Appointments project" />
+                                </div>
+                                <div class="card-body p-4 d-flex flex-column">
+                                    <h3 class="project-card__title">Doctors
+                                        Appointments</h3>
+                                    <p class="project-card__description">
+                                        Healthcare management system for
+                                        scheduling appointments with
+                                        real-time updates and patient record
+                                        management.
+                                    </p>
+                                    <div class="mt-auto">
+                                        <div class="mb-3">
+                                            <span class="tech-badge">C#</span>
+                                            <span
+                                                class="tech-badge">ASP.NET</span>
+                                            <span class="tech-badge">SQL
+                                                Server</span>
+                                        </div>
+                                        <div class="project-card__links">
+                                            <a href="#"
+                                                class="btn btn-sm btn-primary me-2">Live
+                                                Demo</a>
+                                            <a href="#"
+                                                class="btn btn-sm btn-outline-secondary">Source
+                                                Code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
+                            <div class="project-card">
+                                <div class="project-img">
+                                    <img
+                                        src="https://via.placeholder.com/600x400/7209b7/ffffff?text=Health+Clinic"
+                                        alt="Health Clinic MVC project" />
+                                </div>
+                                <div class="card-body p-4 d-flex flex-column">
+                                    <h3 class="project-card__title">Health
+                                        Clinic MVC</h3>
+                                    <p class="project-card__description">
+                                        An MVC application for managing clinic
+                                        operations, including
+                                        patient data, appointments, and billing.
+                                    </p>
+                                    <div class="mt-auto">
+                                        <div class="mb-3">
+                                            <span class="tech-badge">MVC</span>
+                                            <span class="tech-badge">Entity
+                                                Framework</span>
+                                            <span class="tech-badge">Razor
+                                                Pages</span>
+                                        </div>
+                                        <div class="project-card__links">
+                                            <a href="#"
+                                                class="btn btn-sm btn-primary me-2">Live
+                                                Demo</a>
+                                            <a href="#"
+                                                class="btn btn-sm btn-outline-secondary">Source
+                                                Code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
+                            <div class="project-card">
+                                <div class="project-img">
+                                    <img
+                                        src="https://via.placeholder.com/600x400/7209b7/ffffff?text=Vehicle+API"
+                                        alt="Vehicle API project" />
+                                </div>
+                                <div class="card-body p-4 d-flex flex-column">
+                                    <h3 class="project-card__title">Vehicle
+                                        API</h3>
+                                    <p class="project-card__description">
+                                        RESTful API for vehicle data management
+                                        with endpoints for
+                                        specifications, inventory, and pricing
+                                        information.
+                                    </p>
+                                    <div class="mt-auto">
+                                        <div class="mb-3">
+                                            <span class="tech-badge">REST
+                                                API</span>
+                                            <span
+                                                class="tech-badge">Node.js</span>
+                                            <span
+                                                class="tech-badge">MongoDB</span>
+                                        </div>
+                                        <div class="project-card__links">
+                                            <a href="#"
+                                                class="btn btn-sm btn-primary me-2">Live
+                                                Demo</a>
+                                            <a href="#"
+                                                class="btn btn-sm btn-outline-secondary">Source
+                                                Code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
+                            <div class="project-card">
+                                <div class="project-img">
+                                    <img
+                                        src="https://via.placeholder.com/600x400/7209b7/ffffff?text=Crypto+Stats"
+                                        alt="Crypto Currency Stats project" />
+                                </div>
+                                <div class="card-body p-4 d-flex flex-column">
+                                    <h3 class="project-card__title">Crypto
+                                        Currency Stats</h3>
+                                    <p class="project-card__description">
+                                        Dashboard for crypto stats with
+                                        real-time data visualization,
+                                        price tracking, and market analysis.
+                                    </p>
+                                    <div class="mt-auto">
+                                        <div class="mb-3">
+                                            <span
+                                                class="tech-badge">React</span>
+                                            <span
+                                                class="tech-badge">WebSockets</span>
+                                            <span
+                                                class="tech-badge">D3.js</span>
+                                        </div>
+                                        <div class="project-card__links">
+                                            <a href="#"
+                                                class="btn btn-sm btn-primary me-2">Live
+                                                Demo</a>
+                                            <a href="#"
+                                                class="btn btn-sm btn-outline-secondary">Source
+                                                Code</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="https://via.placeholder.com/600x400/7209b7/ffffff?text=Doctor+App"
-                                alt="Doctors Appointments project" />
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h3 class="project-card__title">Doctors Appointments</h3>
-                            <p class="project-card__description">
-                                Healthcare management system for scheduling appointments with
-                                real-time updates and patient record management.
-                            </p>
-                            <div class="mt-auto">
-                                <div class="mb-3">
-                                    <span class="tech-badge">C#</span>
-                                    <span class="tech-badge">ASP.NET</span>
-                                    <span class="tech-badge">SQL Server</span>
-                                </div>
-                                <div class="project-card__links">
-                                    <a href="#" class="btn btn-sm btn-primary me-2">Live Demo</a>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Source Code</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="https://via.placeholder.com/600x400/7209b7/ffffff?text=Health+Clinic"
-                                alt="Health Clinic MVC project" />
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h3 class="project-card__title">Health Clinic MVC</h3>
-                            <p class="project-card__description">
-                                An MVC application for managing clinic operations, including
-                                patient data, appointments, and billing.
-                            </p>
-                            <div class="mt-auto">
-                                <div class="mb-3">
-                                    <span class="tech-badge">MVC</span>
-                                    <span class="tech-badge">Entity Framework</span>
-                                    <span class="tech-badge">Razor Pages</span>
-                                </div>
-                                <div class="project-card__links">
-                                    <a href="#" class="btn btn-sm btn-primary me-2">Live Demo</a>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Source Code</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="https://via.placeholder.com/600x400/7209b7/ffffff?text=Vehicle+API"
-                                alt="Vehicle API project" />
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h3 class="project-card__title">Vehicle API</h3>
-                            <p class="project-card__description">
-                                RESTful API for vehicle data management with endpoints for
-                                specifications, inventory, and pricing information.
-                            </p>
-                            <div class="mt-auto">
-                                <div class="mb-3">
-                                    <span class="tech-badge">REST API</span>
-                                    <span class="tech-badge">Node.js</span>
-                                    <span class="tech-badge">MongoDB</span>
-                                </div>
-                                <div class="project-card__links">
-                                    <a href="#" class="btn btn-sm btn-primary me-2">Live Demo</a>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Source Code</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="https://via.placeholder.com/600x400/7209b7/ffffff?text=Crypto+Stats"
-                                alt="Crypto Currency Stats project" />
-                        </div>
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h3 class="project-card__title">Crypto Currency Stats</h3>
-                            <p class="project-card__description">
-                                Dashboard for crypto stats with real-time data visualization,
-                                price tracking, and market analysis.
-                            </p>
-                            <div class="mt-auto">
-                                <div class="mb-3">
-                                    <span class="tech-badge">React</span>
-                                    <span class="tech-badge">WebSockets</span>
-                                    <span class="tech-badge">D3.js</span>
-                                </div>
-                                <div class="project-card__links">
-                                    <a href="#" class="btn btn-sm btn-primary me-2">Live Demo</a>
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">Source Code</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Get In Touch</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-10 animate-on-scroll">
-                    <div class="contact-card">
-                        <div class="row">
-                            <div class="col-lg-6 mb-5 mb-lg-0">
-                                <h3 class="mb-4">Contact Information</h3>
-                                <div class="contact-info">
-                                    <div class="contact-icon">
-                                        <i class="bi bi-envelope-fill"></i>
+            <!-- Contact Section -->
+            <section id="contact">
+                <div class="container">
+                    <h2 class="section-title animate-on-scroll">Get In
+                        Touch</h2>
+                    <!-- Row to center the contact card -->
+                    <div class="row justify-content-center">
+                        <!-- Column for the contact card, takes 10 of 12 columns on large screens -->
+                        <div class="col-lg-10 animate-on-scroll">
+                            <div class="contact-card">
+                                <div class="row">
+                                    <!-- Contact Information Column -->
+                                    <div class="col-lg-6 mb-5 mb-lg-0">
+                                        <h3 class="mb-4">Contact
+                                            Information</h3>
+                                        <!-- Contact Info: Email -->
+                                        <div class="contact-info">
+                                            <div class="contact-icon">
+                                                <i
+                                                    class="bi bi-envelope-fill"></i>
+                                            </div>
+                                            <div>
+                                                <h5>Email</h5>
+                                                <a
+                                                    href="mailto:lukeponga9@gmail.com">lukeponga9@gmail.com</a>
+                                            </div>
+                                        </div>
+                                        <!-- Contact Info: Location -->
+                                        <div class="contact-info">
+                                            <div class="contact-icon">
+                                                <i
+                                                    class="bi bi-geo-alt-fill"></i>
+                                            </div>
+                                            <div>
+                                                <h5>Location</h5>
+                                                <p>Hamilton, New Zealand</p>
+                                            </div>
+                                        </div>
+                                        <!-- Contact Info: LinkedIn -->
+                                        <div class="contact-info">
+                                            <div class="contact-icon">
+                                                <i class="bi bi-linkedin"></i>
+                                            </div>
+                                            <div>
+                                                <h5>LinkedIn</h5>
+                                                <a
+                                                    href="https://linkedin.com/in/lukeponga"
+                                                    target="_blank">linkedin.com/in/lukeponga</a>
+                                            </div>
+                                        </div>
+                                        <!-- Contact Info: GitHub -->
+                                        <div class="contact-info">
+                                            <div class="contact-icon">
+                                                <i class="bi bi-github"></i>
+                                            </div>
+                                            <div>
+                                                <h5>GitHub</h5>
+                                                <a
+                                                    href="https://github.com/lukeponga-dev"
+                                                    target="_blank">github.com/lukeponga-dev</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h5>Email</h5>
-                                        <a href="mailto:lukeponga9@gmail.com">lukeponga9@gmail.com</a>
+                                    <!-- Send Message Form Column -->
+                                    <div class="col-lg-6">
+                                        <h3 class="mb-4">Send Me a Message</h3>
+                                        <!-- Contact Form -->
+                                        <form>
+                                            <div class="mb-3">
+                                                <input type="text"
+                                                    class="form-control"
+                                                    placeholder="Your Name"
+                                                    required />
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="email"
+                                                    class="form-control"
+                                                    placeholder="Your Email"
+                                                    required />
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="text"
+                                                    class="form-control"
+                                                    placeholder="Subject" />
+                                            </div>
+                                            <div class="mb-3">
+                                                <textarea class="form-control"
+                                                    rows="5"
+                                                    placeholder="Your Message"
+                                                    required></textarea>
+                                            </div>
+                                            <!-- w-100 makes the button full width -->
+                                            <button type="submit"
+                                                class="btn btn-primary w-100">
+                                                Send Message
+                                            </button>
+                                        </form>
                                     </div>
                                 </div>
-                                <div class="contact-info">
-                                    <div class="contact-icon">
-                                        <i class="bi bi-geo-alt-fill"></i>
-                                    </div>
-                                    <div>
-                                        <h5>Location</h5>
-                                        <p>Hamilton, New Zealand</p>
-                                    </div>
-                                </div>
-                                <div class="contact-info">
-                                    <div class="contact-icon">
-                                        <i class="bi bi-linkedin"></i>
-                                    </div>
-                                    <div>
-                                        <h5>LinkedIn</h5>
-                                        <a href="https://linkedin.com/in/lukeponga"
-                                            target="_blank">linkedin.com/in/lukeponga</a>
-                                    </div>
-                                </div>
-                                <div class="contact-info">
-                                    <div class="contact-icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Section -->
+            <footer>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Footer Brand/Description Column -->
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <h4 class="footer-title">Luke Ponga</h4>
+                            <p class="text-white-50">
+                                Software Developer specializing in IoT and AI
+                                solutions.
+                            </p>
+                        </div>
+                        <!-- Social Media Links in Footer - centered on medium screens and below -->
+                        <div class="col-md-4 mb-4 mb-md-0 text-center">
+                            <ul
+                                class="list-inline social-links justify-content-center mb-0">
+                                <li class="list-inline-item">
+                                    <a href="https://github.com/lukeponga-dev"
+                                        class="social-link" target="_blank"
+                                        aria-label="GitHub">
                                         <i class="bi bi-github"></i>
-                                    </div>
-                                    <div>
-                                        <h5>GitHub</h5>
-                                        <a href="https://github.com/lukeponga-dev"
-                                            target="_blank">github.com/lukeponga-dev</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <h3 class="mb-4">Send Me a Message</h3>
-                                <form>
-                                    <div class="mb-3">
-                                        <input type="text" class="form-control" placeholder="Your Name" required />
-                                    </div>
-                                    <div class="mb-3">
-                                        <input type="email" class="form-control" placeholder="Your Email" required />
-                                    </div>
-                                    <div class="mb-3">
-                                        <input type="text" class="form-control" placeholder="Subject" />
-                                    </div>
-                                    <div class="mb-3">
-                                        <textarea class="form-control" rows="5" placeholder="Your Message"
-                                            required></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary w-100">
-                                        Send Message
-                                    </button>
-                                </form>
-                            </div>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://linkedin.com/in/lukeponga"
+                                        class="social-link" target="_blank"
+                                        aria-label="LinkedIn">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="social-link"
+                                        aria-label="Twitter">
+                                        <i class="bi bi-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="mailto:lukeponga9@gmail.com"
+                                        class="social-link" aria-label="Email">
+                                        <i class="bi bi-envelope-fill"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Footer Navigation Links - aligned to end on medium screens and up -->
+                        <div class="col-md-4 text-md-end">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="#about">About</a></li>
+                                <li class="mb-2"><a
+                                        href="#projects">Projects</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
                         </div>
                     </div>
+                    <!-- Copyright Information -->
+                    <div class="copyright">
+                        <p>&copy; 2025 Luke Ponga. All Rights Reserved.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </footer>
 
-    <footer>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h4 class="footer-title">Luke Ponga</h4>
-                    <p class="text-white-50">
-                        Software Developer specializing in IoT and AI solutions.
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4 mb-md-0 text-center">
-                    <ul class="list-inline social-links justify-content-center mb-0">
-                        <li class="list-inline-item">
-                            <a href="https://github.com/lukeponga-dev" class="social-link" target="_blank"
-                                aria-label="GitHub">
-                                <i class="bi bi-github"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://linkedin.com/in/lukeponga" class="social-link" target="_blank"
-                                aria-label="LinkedIn">
-                                <i class="bi bi-linkedin"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="social-link" aria-label="Twitter">
-                                <i class="bi bi-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="mailto:lukeponga9@gmail.com" class="social-link" aria-label="Email">
-                                <i class="bi bi-envelope-fill"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4 text-md-end">
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-2"><a href="#about">About</a></li>
-                        <li class="mb-2"><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Luke Ponga. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+            <!-- Bootstrap JavaScript Bundle with Popper for components and responsive features -->
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Custom JavaScript for animations and dynamic behaviors -->
+            <script src="script.js"></script>
+        </body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-</body>
-
-</html>
+    </html>
