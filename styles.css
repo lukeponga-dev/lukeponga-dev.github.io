@@ -1,415 +1,247 @@
-/* ===== Root Variables for Global Colors, Effects, and Utilities ===== */
+/*
+ * Custom Styles for Luke Ponga's Portfolio
+ * Author: Luke Ponga 
+*/
+
+/* ==== 1. Root Variables ==== */
 :root {
-  --primary-color: #2d3436;            /* Main text color and dark backgrounds */
-  --accent-color: #00a8ff;             /* Used for highlights, buttons, links */
-  --secondary-color: #fff;             /* Light foreground elements (text/icons) */
-  --bg-light: #f8f9fa;                 /* Light background gradient start */
-  --bg-dark: #2d3436;                  /* Dark background section fallback */
-  --text-primary: #2d3436;             /* Default text color */
-  --text-secondary: #636e72;           /* Subtle secondary text for contrast */
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
-  --transition: all 0.3s ease;         /* Consistent transition for interactions */
-  --border-radius-lg: 12px;            /* Larger border radius for cards */
-  --border-radius-md: 8px;             /* Medium border radius for elements */
-  --border-radius-sm: 4px;             /* Small border radius for buttons/links */
+  --primary: #4361ee;
+  --primary-dark: #3a56d4;
+  --secondary: #7209b7;
+  --light: #f8fafc;
+  --dark: #0f172a;
+  --dark-alt: #1e293b;
+  --text-light: #e2e8f0;
+  --text-dark: #1f2937;
+  --card-bg-light: #ffffff;
+  --card-bg-dark: #1e293b;
+  --bg-light: #f8fafc;
+  --bg-dark: #0f172a;
+  --border-light: #e2e8f0;
+  --border-dark: #334155;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease-in-out;
 }
 
-/* ===== Base Styles ===== */
+/* ==== 2. Global & Theme Styles ==== */
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif; /* System-friendly font stack */
-  line-height: 1.7;                    /* Comfortable reading line height */
-  margin: 0;
-  color: var(--text-primary);          /* Applies dark text */
-  background: linear-gradient(to bottom, var(--bg-light), #e9ecef); /* Subtle page background */
-  scroll-behavior: smooth; /* Ensures smooth scroll for anchor links */
-}
-
-/* Base styles for anchors and images */
-a {
-  text-decoration: none;
-  transition: color var(--transition), background-color var(--transition), outline var(--transition); /* Add outline to transition */
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Universal focus style for better accessibility */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus,
-select:focus,
-.skill-card:focus-within, /* For cards containing interactive elements */
-.project-card:focus-within,
-.education-item:focus-within {
-  outline: 2px solid var(--accent-color); /* Bright, contrasting outline */
-  outline-offset: 3px; /* Space between element and outline */
-  border-radius: var(--border-radius-sm); /* Match border-radius if applicable */
-}
-
-/* Remove default outline for mouse users, keep for keyboard users (optional, but common) */
-*:focus:not(:focus-visible) {
-  outline: none;
-}
-
-
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--border-radius-md);
-}
-
-/* ===== Site Header Section ===== */
-.site-header {
-  background: linear-gradient(135deg, var(--bg-dark), #636e72); /* Diagonal gradient background */
-  padding: 6rem 2rem;
-  text-align: center;
-  color: var(--secondary-color);       /* Light text over dark background */
-}
-
-.site-header .site-title,
-.site-header .site-tagline {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Adds subtle depth to text */
-  margin: 0.5rem 0; /* Adjust spacing */
-}
-
-/* ===== Main Navigation Bar ===== */
-.main-nav {
-  position: sticky;
-  top: 0;
-  background: rgba(45, 52, 54, 0.95);  /* Semi-transparent dark navbar */
-  backdrop-filter: blur(10px);         /* Subtle glassmorphism effect */
-  z-index: 1000;
-  padding: 1rem;
-}
-
-.main-nav .nav-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-}
-
-.main-nav .nav-item {
-  margin: 0 1rem;
-}
-
-.main-nav .nav-link {
-  color: var(--secondary-color);
-  padding: 0.5rem 1rem;
-  transition: var(--transition);
-  display: block; /* Makes the clickable area larger */
-}
-
-.main-nav .nav-link:hover {
-  color: var(--accent-color);
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: var(--border-radius-sm);
-  text-decoration: none; /* Remove underline on hover for nav links */
-}
-
-/* Add focus styles to nav links specifically */
-.main-nav .nav-link:focus {
-  color: var(--accent-color);
-  background-color: rgba(255, 255, 255, 0.15); /* Slightly more prominent on focus */
-  border-radius: var(--border-radius-sm);
-  outline: 2px solid var(--accent-color); /* Explicit outline for nav links */
-  outline-offset: 2px;
-}
-
-
-.main-nav .nav-link.active {
-  color: var(--accent-color);
-  font-weight: bold;
-}
-
-/* ===== Layout Containers ===== */
-.content-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem; /* Horizontal padding */
-}
-
-.section-container {
-  padding: 5rem 0; /* Vertical spacing between sections */
-}
-
-.section-container:nth-child(even) { /* Example: alternating background for even sections */
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
   background-color: var(--bg-light);
-}
-
-/* ===== Section Title Styling ===== */
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  position: relative;
-  display: inline-block;
-  opacity: 0; /* Initial state for animation */
-  transform: translateY(20px); /* Start slightly below view */
-  animation: fadeInUp 0.6s ease forwards; /* Animate into view */
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: var(--accent-color); /* Adds a colored underline accent */
-  border-radius: 2px;
-}
-
-/* ===== Animations ===== */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===== Skills Grid ===== */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive cards */
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.skill-card {
-  background: var(--secondary-color);
-  padding: 2rem;
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-  border: 1px solid var(--accent-color); /* Kept accent border for emphasis */
-}
-
-.skill-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper hover shadow */
-}
-
-.skill-card__title {
-  color: var(--accent-color);
-  margin-top: 0;
-}
-
-.skill-card__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.skill-card__list li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.skill-card__list li:last-child {
-  border-bottom: none; /* No border for the last item */
-}
-
-/* ===== Project Cards ===== */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.project-card {
-  background: var(--secondary-color);
-  padding: 2rem;
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow);
   transition: var(--transition);
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+body.dark-mode {
+  color: var(--text-light);
+  background-color: var(--bg-dark);
 }
 
-.project-card__title {
-  color: var(--accent-color);
-  margin-top: 0;
-}
-
-.project-card__description {
-  margin: 1rem 0;
-}
-
-.project-card__links {
-  display: flex;
-  gap: 1rem; /* Space between links */
-  margin-top: 1.5rem;
-}
-
-.project-card__link {
-  color: var(--accent-color);
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border: 2px solid var(--accent-color);
-  border-radius: var(--border-radius-sm);
-  transition: background-color var(--transition), color var(--transition);
-}
-
-.project-card__link:hover {
-  background-color: var(--accent-color);
-  color: var(--secondary-color);
-  text-decoration: none; /* Remove underline on hover for buttons */
-}
-
-/* Ensure project card links also have good focus states */
-.project-card__link:focus {
-  background-color: var(--accent-color);
-  color: var(--secondary-color);
-  outline: 2px solid var(--accent-color); /* Explicit outline for project links */
-  outline-offset: 2px;
-}
-
-
-.project-card img {
-  width: 100%;
-  height: 200px; /* Adjust this height as desired, or set to 'auto' */
-  object-fit: cover; /* Ensures images cover the area well */
-  border-top-left-radius: var(--border-radius-lg);
-  border-top-right-radius: var(--border-radius-lg);
-  margin-bottom: 1rem; /* Adds space below the image */
-}
-
-
-/* ===== Education Section ===== */
-.education-list {
-  list-style: none;
-  padding: 0;
-}
-
-.education-item {
-  background: var(--secondary-color);
-  padding: 1.5rem; /* Slightly more padding */
-  margin-bottom: 1rem;
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.education-item:hover {
-  transform: translateX(5px); /* Subtle slide effect on hover */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
-}
-
-/* Ensure education items are focusable if they become interactive (e.g., clickable) */
-.education-item:focus-within {
-  outline: 2px solid var(--accent-color);
-  outline-offset: 3px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* ===== Contact Section ===== */
-.contact-info {
-  margin: 0.5rem 0;
-}
-
-.contact-link {
-  color: var(--accent-color);
+/* Links & Buttons */
+a {
+  color: var(--primary);
   text-decoration: none;
+  transition: var(--transition);
+}
+a:hover {
+  color: var(--primary-dark);
+}
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+.btn-outline-secondary {
+    border-color: var(--border-light);
+    color: var(--text-dark);
+}
+body.dark-mode .btn-outline-secondary {
+    border-color: var(--border-dark);
+    color: var(--text-light);
 }
 
-.contact-link:hover {
-  text-decoration: underline;
+/* ==== 3. Reusable Components ==== */
+.section-padding {
+  padding: 80px 0;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.section-bg {
+    background-color: #f1f5f9;
+}
+body.dark-mode .section-bg {
+    background-color: var(--dark-alt);
 }
 
-/* Ensure contact links have good focus states */
-.contact-link:focus {
-  text-decoration: underline;
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
+
+/* ==== 4. Navigation Bar ==== */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    padding: 15px 0;
+}
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 10px 0;
+}
+body.dark-mode .navbar {
+    background-color: rgba(15, 23, 42, 0.8);
+}
+body.dark-mode .navbar.scrolled {
+    background-color: rgba(15, 23, 42, 0.95);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.navbar .navbar-brand {
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+.navbar .nav-link {
+    font-weight: 500;
+}
+body.dark-mode .navbar .nav-link, 
+body.dark-mode .navbar .navbar-brand {
+    color: var(--text-light);
 }
 
 
-/* ===== Site Footer ===== */
-.site-footer {
-  background: var(--bg-dark);
-  color: var(--secondary-color);
+/* ==== 5. Hero Section ==== */
+.hero {
+  padding: 120px 0;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+body.dark-mode .hero {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+.hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+.hero-subtitle {
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.hero-profile-img {
+    border: 10px solid var(--primary);
+    box-shadow: var(--shadow);
+}
+
+
+/* ==== 6. Project & Skill Cards ==== */
+.project-card, .skill-card, .certificate-card, .contact-card {
+  background-color: var(--card-bg-light);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.project-card:hover, .skill-card:hover {
+  transform: translateY(-10px);
+}
+body.dark-mode .project-card, 
+body.dark-mode .skill-card, 
+body.dark-mode .certificate-card, 
+body.dark-mode .contact-card {
+    background-color: var(--card-bg-dark);
+    border-color: var(--border-dark);
+}
+.project-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.project-card .card-footer {
+    background: none;
+    border: none;
+    padding: 1.25rem;
+    margin-top: auto;
+}
+.project-card-title { font-size: 1.25rem; font-weight: 600; }
+.tech-tags { margin: 1rem 0; }
+.tech-tags .badge {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.4em 0.8em;
+}
+.skill-card { text-align: center; padding: 2rem; }
+.skill-icon { font-size: 3rem; color: var(--primary); }
+.skill-card-title { margin-top: 1rem; }
+
+
+/* ==== 7. Education & Certificates ==== */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 3px solid var(--primary);
+}
+.timeline-item { position: relative; margin-bottom: 2rem; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.7rem;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    border: 4px solid var(--bg-light);
+}
+body.dark-mode .timeline-item::before {
+    border-color: var(--dark-alt);
+}
+
+.certificate-card {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+}
+.certificate-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-right: 1.5rem;
+}
+.certificate-title { font-size: 1.1rem; font-weight: 600; }
+.certificate-issuer { color: #6c757d; }
+body.dark-mode .certificate-issuer { color: #adb5bd; }
+
+
+/* ==== 8. Contact Section ==== */
+.contact-card { padding: 2rem; }
+.contact-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+
+/* ==== 9. Footer ==== */
+.footer {
   text-align: center;
   padding: 2rem 0;
+  background-color: var(--dark-alt);
+  color: #a0aec0;
 }
-
-.footer-text {
-  margin: 0;
+body.dark-mode .footer {
+    background-color: #000;
 }
-
-/* Back to Top Button */
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: var(--accent-color);
-  color: var(--secondary-color);
-  padding: 10px 20px;
-  border-radius: var(--border-radius-sm);
-  text-decoration: none;
-  display: none; /* Hidden by default, shown by JS */
-  z-index: 1001;
-  box-shadow: var(--shadow);
-  transition: background-color var(--transition), transform var(--transition);
-}
-
-.back-to-top:hover {
-  background-color: #007bff; /* Slightly darker accent on hover */
-  transform: translateY(-3px); /* Subtle lift effect */
-  text-decoration: none;
-}
-
-/* Ensure back to top button has good focus */
-.back-to-top:focus {
-  background-color: #007bff;
-  transform: translateY(-3px);
-  outline: 2px solid var(--secondary-color); /* White outline for contrast on dark background */
-  outline-offset: 3px;
-}
-
-/* ===== Responsive Breakpoints ===== */
-@media (max-width: 768px) { /* Changed from 790px for common breakpoint */
-  .section-container {
-    padding: 3rem 0;
-  }
-
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 2rem; /* Adjusted spacing */
-  }
-
-  .main-nav .nav-item {
-    margin: 0.5rem; /* More compact on smaller screens */
-  }
-
-  .site-header {
-    padding: 4rem 1rem; /* Reduced padding */
-  }
-}
-
-@media (max-width: 480px) { /* Changed from 490px for common breakpoint */
-  .content-wrapper {
-    padding: 0 1rem;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .skills-grid,
-  .projects-grid {
-    grid-template-columns: 1fr; /* Stack items on small devices */
-  }
-
-  .skill-card,
-  .project-card,
-  .education-item {
-    padding: 1.5rem; /* Reduced padding for smaller cards */
-  }
-}
+.footer .bi-heart-fill { color: var(--primary); }
