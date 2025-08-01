@@ -7,15 +7,12 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import './styles/App.css';
 
 function App() {
-    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+    const [theme, setTheme] = useState('light');
 
     useEffect(() => {
-        document.body.className = '';
-        document.body.classList.add(theme === 'dark' ? 'dark-mode' : '');
-        localStorage.setItem('theme', theme);
+        document.body.className = theme === 'dark' ? 'dark-mode' : '';
     }, [theme]);
 
     const toggleTheme = () => {

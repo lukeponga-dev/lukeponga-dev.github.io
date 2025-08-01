@@ -1,18 +1,43 @@
 import NZWebsiteImg from '../assets/images/new-zealand-website-screenshot.jpg';
 import DoctorsAppImg from '../assets/images/doctors-appointments-screenshot.jpg';
 import HealthClinicImg from '../assets/images/health-clinic-mvc-screenshot.jpg';
+import cosmic from '../assets/images/cosmic.png';
 
 const projectData = [
     {
-        img: NZWebsiteImg,
+        img: require('../assets/images/new-zealand-website-screenshot.jpg'),
         title: "New Zealand Website",
         description: "A responsive site showcasing NZ's culture and tourism...",
         tags: ["HTML/CSS", "JavaScript", "Bootstrap"],
         liveUrl: "https://lukeponga-dev.github.io/NZ-Website/index.html",
         sourceUrl: "https://github.com/lukeponga-dev/NZ-Website/"
     },
-    // ... other projects
+    {
+        img: require('../assets/images/doctors-appointments-screenshot.jpg'),
+        title: "Doctors Appointments",
+        description: "A full-stack application for managing doctor appointments...",
+        tags: ["React", "Node.js", "Express", "MongoDB"],
+        liveUrl: "https://doctors-appointments-app.com",
+        sourceUrl: "https://github.com/lukeponga-dev/Doctors-Appointments/"
+    },
+    {
+        img: require('../assets/images/health-clinic-mvc-screenshot.jpg'),
+        title: "Health Clinic MVC",
+        description: "A health clinic management system built with ASP.NET MVC...",
+        tags: ["ASP.NET", "C#", "SQL Server"],
+        liveUrl: "https://health-clinic-mvc.com",
+        sourceUrl: "https://github.com/lukeponga-dev/Health-Clinic-MVC/"
+    },
+    {
+        img: require('../assets/images/cosmic.png'),
+        title: "SPACE photo of the day web app",
+        description: "Astronomy Picture of the Day web app. Displays daily space images and descriptions. Uses NASA API. Responsive design.",
+        tags: ["React", "JavaScript", "API", "CSS", "Responsive", "Web Development"],
+        liveUrl: "https://cosmicimages.netlify.app/",
+        sourceUrl: "https://github.com/lukeponga-dev/cosmic-canvas"
+    }
 ];
+
 
 const Projects = () => {
     return (
