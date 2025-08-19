@@ -1,244 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luke Ponga | Portfolio</title>
-  <!-- Load the Tailwind CSS CDN for styling -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Set a custom font for the body -->
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #1f2937;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #4f46e5;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #4338ca;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Luke Ponga, a software developer specializing in IoT and AI based in Hamilton, NZ" />
+    <meta name="keywords" content="software developer, IoT, AI, Hamilton, portfolio, generative ai, c#, java, python" />
+    <title>Luke Ponga - Software Developer Portfolio</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-gray-900 text-gray-300 antialiased leading-relaxed">
+<body>
 
-  <!-- Navigation Bar -->
-  <nav id="navbar" class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-sm z-50 transition-all duration-300 py-4 shadow-lg">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <a href="#" class="text-xl font-bold text-white">Luke Ponga</a>
-      <div class="hidden md:flex space-x-8">
-        <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a>
-        <a href="#skills" class="text-gray-300 hover:text-white transition-colors duration-300">Skills</a>
-        <a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300">Projects</a>
-        <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a>
-      </div>
-      <!-- Mobile menu button -->
-      <div class="md:hidden">
-        <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-4 pt-2 pb-4">
-      <div class="flex flex-col space-y-3">
-        <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a>
-        <a href="#skills" class="text-gray-300 hover:text-white transition-colors duration-300">Skills</a>
-        <a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300">Projects</a>
-        <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a>
-      </div>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Luke Ponga</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education & Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <button id="theme-toggle" class="btn btn-outline-secondary ms-3" aria-label="Toggle Theme">
+                    <i class="bi bi-moon-stars-fill"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Header Section: Prominent, professional, and centrally aligned -->
-  <header class="bg-gray-800 text-center py-20 px-4 md:px-8 shadow-2xl rounded-b-3xl transform -skew-y-1 mt-16">
-    <div class="transform skew-y-1">
-      <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-2 tracking-tight">Luke Ponga</h1>
-      <p class="text-xl md:text-2xl font-light text-gray-400">Junior Software Developer | Hamilton, NZ</p>
-    </div>
-  </header>
-
-  <main class="container mx-auto px-4 py-16">
-
-    <!-- About Me Section: Clean card with a hover scale effect for visual interest -->
-    <section id="about" class="bg-gray-800 p-10 rounded-3xl shadow-lg mb-16 transform hover:scale-105 transition-transform duration-300">
-      <h2 class="text-4xl font-bold text-white mb-4 border-b-2 border-indigo-500 pb-2">About Me</h2>
-      <p class="text-lg text-gray-400">
-        I'm a passionate developer with a strong foundation in backend systems, IT support, and web technologies. I thrive in collaborative environments and love solving real-world problems through tech.
-      </p>
+    <section class="hero" id="home">
+        <div class="container text-center text-lg-start">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h5 class="hero-intro">Hello, I'm</h5>
+                    <h1 class="hero-title">Luke Ponga</h1>
+                    <h2 class="hero-subtitle">Software Developer</h2>
+                    <p class="hero-description">A passionate developer from Hamilton, NZ, specializing in IoT and AI solutions. I build innovative technology to solve real-world problems and am always exploring the cutting edge of tech.</p>
+                    <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-outline-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center d-none d-lg-block">
+                    <div class="hero-img-container">
+                        <img src="images/heroimg.png" alt="Luke Ponga" class="img-fluid rounded-circle hero-profile-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Skills Section: Dynamic grid layout with distinct categories -->
-    <section id="skills" class="bg-gray-800 p-10 rounded-3xl shadow-lg mb-16">
-      <h2 class="text-4xl font-bold text-white mb-8 text-center border-b-2 border-indigo-500 pb-2">Skills</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Languages & Frameworks Card -->
-        <div class="p-6 rounded-2xl bg-gray-700 hover:bg-indigo-600 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Languages & Frameworks</h3>
-          <ul class="list-disc list-inside text-gray-300">
-            <li>C#, Java, HTML/CSS/JS</li>
-            <li>SQL, .NET, Azure</li>
-            <li>React Native</li>
-          </ul>
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="about-img">
+                        <img src="images/heroimg.png" alt="Luke Ponga" class="img-fluid rounded shadow-lg" />
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="about-content">
+                        <h3>Software Developer from Hamilton, New Zealand</h3>
+                        <p>I'm a passionate software developer with expertise in building scalable applications, IoT systems, and AI solutions. With a strong foundation from my diplomas and hands-on experience, I focus on creating efficient and innovative software.</p>
+                        <p>My interests center around Internet of Things (IoT) ecosystems and Artificial Intelligence. I have recently expanded my expertise through certification in Generative AI and continue to explore new technologies to solve complex problems.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Tools & Software Card -->
-        <div class="p-6 rounded-2xl bg-gray-700 hover:bg-indigo-600 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Tools & Software</h3>
-          <ul class="list-disc list-inside text-gray-300">
-            <li>Microsoft Office</li>
-            <li>Git, GitHub</li>
-            <li>Visual Studio, VS Code</li>
-          </ul>
-        </div>
-        <!-- Methodologies & Concepts Card -->
-        <div class="p-6 rounded-2xl bg-gray-700 hover:bg-indigo-600 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Methodologies & Concepts</h3>
-          <ul class="list-disc list-inside text-gray-300">
-            <li>ISTQB CTFL</li>
-            <li>Natural Language AI</li>
-            <li>Agile Development</li>
-          </ul>
-        </div>
-      </div>
     </section>
 
-    <!-- Projects Section: A multi-column grid to showcase featured work -->
-    <section id="projects" class="mb-16">
-      <h2 class="text-4xl font-bold text-white mb-8 text-center border-b-2 border-indigo-500 pb-2">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-        <!-- Project card for the Java Data Structures repository -->
-        <div class="project bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Data Structures & Algorithms</h3>
-          <p class="text-gray-400 mb-4">
-            University assignments on implementing core data structures in Java. Demonstrates knowledge of BSTs, Heaps, and Linked Lists.
-          </p>
-          <a href="https://github.com/lukeponga-dev/compx201-university-java-data-structures" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-400 hover:underline">
-            View on GitHub
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-10h6m0 0l-6 6"></path></svg>
-          </a>
+    <section id="skills" class="section-padding section-bg">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="bi bi-code-slash"></i></div>
+                        <h3 class="skill-card-title">Development</h3>
+                        <ul class="list-unstyled">
+                            <li>C# & .NET Framework</li>
+                            <li>Java & Spring Boot</li>
+                            <li>Python & TensorFlow</li>
+                            <li>JavaScript/TypeScript</li>
+                            <li>Generative AI</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="bi bi-cpu"></i></div>
+                        <h3 class="skill-card-title">Technical</h3>
+                        <ul class="list-unstyled">
+                            <li>IoT System Design</li>
+                            <li>Cloud Infrastructure (AWS)</li>
+                            <li>API Development</li>
+                            <li>Database Management</li>
+                            <li>Data Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="bi bi-people"></i></div>
+                        <h3 class="skill-card-title">Soft Skills</h3>
+                        <ul class="list-unstyled">
+                            <li>Problem Solving</li>
+                            <li>Logical Reasoning</li>
+                            <li>Time Management</li>
+                            <li>Project Organization</li>
+                            <li>Detail Oriented</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Project card for the Job Application Tracker -->
-        <div class="project bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Job Application Tracker</h3>
-          <p class="text-gray-400 mb-4">
-            A practical web-based tool for tracking job applications and volunteer work.
-          </p>
-          <a href="https://github.com/lukeponga-dev/JobApplication-tracker" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-400 hover:underline">
-            View on GitHub
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-10h6m0 0l-6 6"></path></svg>
-          </a>
+    </section>
+    
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <img src="images/new-zealand-website-screenshot.jpg" class="card-img-top" alt="New Zealand Website Screenshot">
+                        <div class="card-body">
+                            <h3 class="project-card-title">New Zealand Website</h3>
+                            <p class="project-card-description">A responsive site showcasing NZ's culture and tourism with interactive elements.</p>
+                            <div class="tech-tags">
+                                <span class="badge">HTML/CSS</span>
+                                <span class="badge">JavaScript</span>
+                                <span class="badge">Bootstrap</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://lukeponga-dev.github.io/NZ-Website/index.html" target="_blank" class="btn btn-primary">Live Demo</a>
+                            <a href="https://github.com/lukeponga-dev/NZ-Website/" target="_blank" class="btn btn-outline-secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <img src="images/doctors-appointments-screenshot.jpg" class="card-img-top" alt="Doctors Appointments Screenshot">
+                        <div class="card-body">
+                            <h3 class="project-card-title">Doctors Appointments</h3>
+                            <p class="project-card-description">A healthcare management system for scheduling appointments and managing patient records.</p>
+                             <div class="tech-tags">
+                                <span class="badge">C#</span>
+                                <span class="badge">ASP.NET</span>
+                                <span class="badge">SQL Server</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Live Demo</a>
+                            <a href="#" class="btn btn-outline-secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <img src="images/health-clinic-mvc-screenshot.jpg" class="card-img-top" alt="Health Clinic MVC Screenshot">
+                        <div class="card-body">
+                            <h3 class="project-card-title">Health Clinic MVC</h3>
+                            <p class="project-card-description">An MVC app for managing clinic operations, including patient data, appointments, and billing.</p>
+                             <div class="tech-tags">
+                                <span class="badge">MVC</span>
+                                <span class="badge">Entity Framework</span>
+                                <span class="badge">C#</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Live Demo</a>
+                            <a href="#" class="btn btn-outline-secondary">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <img src="images/Screenshot_2025-07-27-01-38-19-262_com.microsoft.emmx-edit.jpg" class="card-img-top" alt="CosmicPic Screenshot">
+                        <div class="card-body">
+                            <h3 class="project-card-title">CosmicPic</h3>
+                            <p class="project-card-description">An engaging web application for exploring fascinating cosmic imagery.</p>
+                             <div class="tech-tags">
+                                <span class="badge">HTML</span>
+                                <span class="badge">CSS</span>
+                                <span class="badge">JavaScript</span>
+                                <span class="badge">API Integration</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://cosmicimages.netlify.app/" target="_blank" class="btn btn-primary">Live Demo</a>
+                            <a href="#" class="btn btn-outline-secondary">Source Code</a> </div>
+                    </div>
+                </div>
+                </div>
         </div>
-
-        <!-- Project card for the Kiwi Car Checker -->
-        <div class="project bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Kiwi Car Checker</h3>
-          <p class="text-gray-400 mb-4">
-            A TypeScript-based application for checking vehicle information in New Zealand.
-          </p>
-          <a href="https://github.com/lukeponga-dev/kiwi-car-checker" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-400 hover:underline">
-            View on GitHub
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-10h6m0 0l-6 6"></path></svg>
-          </a>
-        </div>
-
-        <!-- More projects placeholder card -->
-        <div class="project bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-colors duration-300 flex flex-col justify-between transform hover:-translate-y-2">
-          <div>
-            <h3 class="text-2xl font-semibold text-white mb-2">More Projects</h3>
-            <p class="text-gray-400 mb-4">
-              I'm actively working on new projects. Stay tuned for updates, or check out my GitHub profile for my latest activity.
-            </p>
-          </div>
-          <a href="https://github.com/lukeponga-dev" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-400 hover:underline">
-            Visit My GitHub
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-10h6m0 0l-6 6"></path></svg>
-          </a>
-        </div>
-      </div>
     </section>
 
-    <!-- Contact Section: A clean, centered card for contact information -->
-    <section id="contact" class="bg-gray-800 p-10 rounded-3xl shadow-lg mb-16 text-center">
-      <h2 class="text-4xl font-bold text-white mb-4 border-b-2 border-indigo-500 pb-2">Contact</h2>
-      <p class="text-lg">
-        <span class="text-indigo-500">Email:</span> <a href="mailto:lukeponga9@gmail.com" class="hover:underline text-gray-300">lukeponga9@gmail.com</a>
-      </p>
+    <section id="education" class="section-padding section-bg">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4 text-start">Education</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h6>Level 6 Diploma in Software Development</h6>
+                            <p class="text-muted mb-0">Vision College, Hamilton | 2020 - 2021</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h6>Level 5 Diploma in Web Development & Design</h6>
+                            <p class="text-muted mb-0">Vision College, Hamilton | 2019 - 2021</p>
+                        </div>
+                         <div class="timeline-item">
+                            <h6>Level 3 Cert. in Business Admin & Technology</h6>
+                            <p class="text-muted mb-0">Vision College, Hamilton | 2018</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4 text-start">Certificates</h2>
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="certificate-card d-flex align-items-center">
+                                <img src="certificates/certificate.png" alt="Generative AI Certificate" class="certificate-img">
+                                <div class="certificate-body">
+                                    <h5 class="certificate-title">Generative AI in 2025</h5>
+                                    <p class="certificate-issuer">Issued by CodeSignal</p>
+                                    <a href="https://codesignal.com/learn/certificates/cmcoct0jf000gla04cr345pg6/courses/883" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">View Certificate</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="certificate-card d-flex align-items-center">
+                                <img src="certificates/microsoftbuildnaturallangcert.png" alt="Microsoft Build Natural Language Certificate" class="certificate-img">
+                                <div class="certificate-body">
+                                    <h5 class="certificate-title">Microsoft Build: Natural Language AI</h5>
+                                    <p class="certificate-issuer">Issued by Microsoft</p>
+                                    <a href="certificates/microsoftbuildnaturallangcert.png" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">View Certificate</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-  </main>
 
-  <!-- Back to Top Button -->
-  <button id="backToTop" class="fixed bottom-8 right-8 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0 invisible">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-    </svg>
-  </button>
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="text-center mb-4">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out.</p>
+                    <div class="contact-card">
+                        <div class="row text-center">
+                             <div class="col-md-4 mb-3 mb-md-0">
+                                <i class="bi bi-envelope-fill contact-icon"></i>
+                                <h5>Email</h5>
+                                <a href="mailto:lukeponga9@gmail.com">lukeponga9@gmail.com</a>
+                            </div>
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <i class="bi bi-linkedin contact-icon"></i>
+                                <h5>LinkedIn</h5>
+                                <a href="https://linkedin.com/in/lukeponga" target="_blank">linkedin.com/in/lukeponga</a>
+                            </div>
+                            <div class="col-md-4">
+                                <i class="bi bi-github contact-icon"></i>
+                                <h5>GitHub</h5>
+                                <a href="https://github.com/lukeponga-dev" target="_blank">github.com/lukeponga-dev</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer: Simple and subtle -->
-  <footer class="text-center py-6 px-4 text-gray-500">
-    <p>&copy; 2025 Luke Ponga</p>
-  </footer>
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Luke Ponga. All Rights Reserved.</p>
+            <p>Designed with <i class="bi bi-heart-fill"></i> in Hamilton, New Zealand</p>
+        </div>
+    </footer>
 
-  <script>
-    // Back to Top functionality
-    const backToTopButton = document.getElementById('backToTop');
-    
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopButton.classList.remove('opacity-0', 'invisible');
-        backToTopButton.classList.add('opacity-100', 'visible');
-      } else {
-        backToTopButton.classList.remove('opacity-100', 'visible');
-        backToTopButton.classList.add('opacity-0', 'invisible');
-      }
-    });
-    
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    
-    // Mobile menu functionality
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-    
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-    
-    // Navbar background change on scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('bg-gray-900', 'shadow-lg');
-        navbar.classList.remove('bg-gray-900/90');
-      } else {
-        navbar.classList.remove('bg-gray-900', 'shadow-lg');
-        navbar.classList.add('bg-gray-900/90');
-      }
-    });
-  </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
