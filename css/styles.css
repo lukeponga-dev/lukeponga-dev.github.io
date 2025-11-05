@@ -1,179 +1,421 @@
 /* Base Styles */
+* {
+  font-family: 'Inter', sans-serif;
+}
+
 body {
-    font-family: 'Inter', sans-serif; /* Sets the font for the entire document */
-    background-color: var(--dark-bg); /* Sets the background color based on the dark mode variable */
-    color: var(--text-color); /* Sets the text color based on the variable */
-    scroll-behavior: smooth; /* Enables smooth scrolling behavior */
-    transition: background-color 0.5s, color 0.5s; /* Smooth transition for background and text color changes */
+  font-family: 'Inter', sans-serif;
+  /* Sets the font for the entire document */
+  background-color: var(--dark-bg);
+  /* Sets the background color based on the dark mode variable */
+  color: var(--text-color);
+  /* Sets the text color based on the variable */
+  scroll-behavior: smooth;
+  /* Enables smooth scrolling behavior */
+  transition: background-color 0.5s, color 0.5s;
+  /* Smooth transition for background and text color changes */
 }
 
 :root {
-    /* Dark Mode Defaults */
-    --primary-color: #3b82f6; /* Default primary color */
-    --dark-bg: #0c121e; /* Dark background color */
-    --card-bg: #1a2434; /* Background color for cards in dark mode */
-    --text-color: #f1f5f9; /* Text color in dark mode */
-    --secondary-text: #94a3b8; /* Color for secondary text */
-    --border-color: rgba(241, 245, 249, 0.1); /* Border color with slight transparency */
+  /* Dark Mode Defaults */
+  --primary-color: #3b82f6;
+  /* Default primary color */
+  --dark-bg: #0c121e;
+  /* Dark background color */
+  --card-bg: #1a2434;
+  /* Background color for cards in dark mode */
+  --text-color: #f1f5f9;
+  /* Text color in dark mode */
+  --secondary-text: #94a3b8;
+  /* Color for secondary text */
+  --border-color: rgba(241, 245, 249, 0.1);
+  /* Border color with slight transparency */
 }
 
 /* Light Mode Styles */
 body.light-mode {
-    --primary-color: #1d4ed8; /* Primary color for light mode */
-    --dark-bg: #f8fafc; /* Background color for light mode */
-    --card-bg: #ffffff; /* Card background color in light mode */
-    --text-color: #0f172a; /* Text color in light mode */
-    --secondary-text: #475569; /* Secondary text color in light mode */
-    --border-color: rgba(15, 23, 42, 0.1); /* Darker border color in light mode */
+  --primary-color: #1d4ed8;
+  /* Primary color for light mode */
+  --dark-bg: #f8fafc;
+  /* Background color for light mode */
+  --card-bg: #ffffff;
+  /* Card background color in light mode */
+  --text-color: #0f172a;
+  /* Text color in light mode */
+  --secondary-text: #475569;
+  /* Secondary text color in light mode */
+  --border-color: rgba(15, 23, 42, 0.1);
+  /* Darker border color in light mode */
 }
 
 /* Section Title Styling: Primary color with an underscore effect */
 .section-title {
-    position: relative; /* Sets the position to relative to allow absolute positioning of the pseudo-element */
-    display: inline-block; /* Makes the section title fit its content */
+  position: relative;
+  /* Sets the position to relative to allow absolute positioning of the pseudo-element */
+  display: inline-block;
+  /* Makes the section title fit its content */
 }
+
 .section-title::after {
-    content: ''; /* Creates a pseudo-element for the underscore effect */
-    position: absolute; /* Absolutely positions the underscore */
-    bottom: -8px; /* Positions it 8px below the section title */
-    left: 0; /* Aligns it to the left of the section title */
-    width: 50%; /* Sets width to half of the title */
-    height: 3px; /* Height of the underscore */
-    background-color: var(--primary-color); /* Sets the background color to the primary color */
-    border-radius: 9999px; /* Gives a fully rounded appearance */
-    transition: background-color 0.5s; /* Smooth transition for background color changes */
+  content: '';
+  /* Creates a pseudo-element for the underscore effect */
+  position: absolute;
+  /* Absolutely positions the underscore */
+  bottom: -8px;
+  /* Positions it 8px below the section title */
+  left: 0;
+  /* Aligns it to the left of the section title */
+  width: 50%;
+  /* Sets width to half of the title */
+  height: 3px;
+  /* Height of the underscore */
+  background-color: var(--primary-color);
+  /* Sets the background color to the primary color */
+  border-radius: 9999px;
+  /* Gives a fully rounded appearance */
+  transition: background-color 0.5s;
+  /* Smooth transition for background color changes */
 }
 
 /* Card Hover Effect */
 .card {
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth transition for all properties */
-    background-color: var(--card-bg); /* Sets the background color from the variable */
-    border: 1px solid var(--border-color); /* Sets the border using the variable */
-    color: var(--text-color); /* Sets the text color using the variable */
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /* Smooth transition for all properties */
+  background-color: var(--card-bg);
+  /* Sets the background color from the variable */
+  border: 1px solid var(--border-color);
+  /* Sets the border using the variable */
+  color: var(--text-color);
+  /* Sets the text color using the variable */
 }
+
 .card:hover {
-    box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.3); /* Adds shadow on hover */
-    transform: translateY(-3px); /* Moves the card slightly upwards */
-    border-color: var(--primary-color); /* Changes border color on hover */
+  box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.3);
+  /* Adds shadow on hover */
+  transform: translateY(-3px);
+  /* Moves the card slightly upwards */
+  border-color: var(--primary-color);
+  /* Changes border color on hover */
 }
 
 /* Utility for Mobile-Friendly Containers */
 .container-padding {
-    padding-left: 1rem; /* Adds left padding */
-    padding-right: 1rem; /* Adds right padding */
+  padding-left: 1rem;
+  /* Adds left padding */
+  padding-right: 1rem;
+  /* Adds right padding */
 }
-@media (min-width: 640px) { /* Applies styles for screen sizes 640px and above */
-    .container-padding {
-        padding-left: 1.5rem; /* Increased left padding */
-        padding-right: 1.5rem; /* Increased right padding */
-    }
+
+@media (min-width: 640px) {
+
+  /* Applies styles for screen sizes 640px and above */
+  .container-padding {
+    padding-left: 1.5rem;
+    /* Increased left padding */
+    padding-right: 1.5rem;
+    /* Increased right padding */
+  }
 }
 
 /* Ensure smooth transition for nav links for active state */
 .nav-link {
-    transition: color 0.3s ease-in-out; /* Smooth color transition for nav links */
-    color: var(--secondary-text); /* Sets color for nav links */
-    font-weight: 500; /* Sets font weight for nav links */
+  transition: color 0.3s ease-in-out;
+  /* Smooth color transition for nav links */
+  color: var(--secondary-text);
+  /* Sets color for nav links */
+  font-weight: 500;
+  /* Sets font weight for nav links */
 }
-.nav-link.active, .nav-link:hover {
-    color: var(--primary-color); /* Changes color on active or hover state */
+
+.nav-link.active,
+.nav-link:hover {
+  color: var(--primary-color);
+  /* Changes color on active or hover state */
 }
 
 /* --- Projects Grid Styles (from user) --- */
 .portfolio-grid {
-  display: grid; /* Uses CSS Grid layout */
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Responsive grid columns */
-  gap: 18px; /* Gap between grid items */
-  align-items: start; /* Aligns items to the start */
+  display: grid;
+  /* Uses CSS Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* Responsive grid columns */
+  gap: 18px;
+  /* Gap between grid items */
+  align-items: start;
+  /* Aligns items to the start */
 }
+
 .tile {
   /* Using user-provided dark mode colors for a specific project tile look */
-  background: #0f172a; /* Dark background for tiles */
-  color: #e6eef8; /* Light color text for tiles */
-  border-radius: 10px; /* Rounded corners for tiles */
-  padding: 16px; /* Padding inside tiles */
-  box-shadow: 0 6px 18px rgba(2,6,23,0.35); /* Shadow effect for tiles */
-  display: flex; /* Enables flexbox for internal layout */
-  flex-direction: column; /* Stacks child elements vertically */
-  gap: 10px; /* Space between child elements */
-  transition: all 0.3s ease; /* Smooth transition for all properties */
-  border: 1px solid transparent; /* Transparent border for consistent transition */
+  background: #0f172a;
+  /* Dark background for tiles */
+  color: #e6eef8;
+  /* Light color text for tiles */
+  border-radius: 10px;
+  /* Rounded corners for tiles */
+  padding: 16px;
+  /* Padding inside tiles */
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.35);
+  /* Shadow effect for tiles */
+  display: flex;
+  /* Enables flexbox for internal layout */
+  flex-direction: column;
+  /* Stacks child elements vertically */
+  gap: 10px;
+  /* Space between child elements */
+  transition: all 0.3s ease;
+  /* Smooth transition for all properties */
+  border: 1px solid transparent;
+  /* Transparent border for consistent transition */
 }
+
 /* Adding a subtle hover effect consistent with the existing .card style, using the primary button color */
 .tile:hover {
-    box-shadow: 0 10px 20px -5px rgba(6, 182, 212, 0.3); /* Shadow effect on hover */
-    transform: translateY(-3px); /* Moves the tile slightly upwards on hover */
-    border-color: #06b6d4; /* Border color on hover */
+  box-shadow: 0 10px 20px -5px rgba(6, 182, 212, 0.3);
+  /* Shadow effect on hover */
+  transform: translateY(-3px);
+  /* Moves the tile slightly upwards on hover */
+  border-color: #06b6d4;
+  /* Border color on hover */
 }
+
 .tile h3 {
-  margin: 0; /* Removes margin from the heading */
-  font-size: 1.05rem; /* Font size for the heading */
-  color: #ffffff; /* White color for the heading text */
+  margin: 0;
+  /* Removes margin from the heading */
+  font-size: 1.05rem;
+  /* Font size for the heading */
+  color: #ffffff;
+  /* White color for the heading text */
 }
+
 .tile p {
-  margin: 0; /* Removes margin from the paragraph */
-  color: #cbd5e1; /* Light color for paragraph text */
-  font-size: 0.95rem; /* Font size for the paragraph */
-  line-height: 1.25; /* Line height for better readability */
+  margin: 0;
+  /* Removes margin from the paragraph */
+  color: #cbd5e1;
+  /* Light color for paragraph text */
+  font-size: 0.95rem;
+  /* Font size for the paragraph */
+  line-height: 1.25;
+  /* Line height for better readability */
 }
+
 .badges {
-  display: flex; /* Uses flexbox for badge layout */
-  gap: 8px; /* Space between badges */
-  flex-wrap: wrap; /* Allows wrapping of badges */
+  display: flex;
+  /* Uses flexbox for badge layout */
+  gap: 8px;
+  /* Space between badges */
+  flex-wrap: wrap;
+  /* Allows wrapping of badges */
 }
+
 .badge {
-  background: rgba(255,255,255,0.06); /* Transparent background for badges */
-  color: #cbd5e1; /* Light color for badge text */
-  padding: 6px 8px; /* Padding inside badges */
-  border-radius: 999px; /* Fully rounded badges */
-  font-size: 0.8rem; /* Font size for badges */
-  white-space: nowrap; /* Prevents text wrapping */
+  background: rgba(255, 255, 255, 0.06);
+  /* Transparent background for badges */
+  color: #cbd5e1;
+  /* Light color for badge text */
+  padding: 6px 8px;
+  /* Padding inside badges */
+  border-radius: 999px;
+  /* Fully rounded badges */
+  font-size: 0.8rem;
+  /* Font size for badges */
+  white-space: nowrap;
+  /* Prevents text wrapping */
 }
+
 .actions {
-  margin-top: auto; /* Pushes the actions to the bottom of the tile */
-  display: flex; /* Uses flexbox for action buttons */
-  gap: 10px; /* Space between action buttons */
+  margin-top: auto;
+  /* Pushes the actions to the bottom of the tile */
+  display: flex;
+  /* Uses flexbox for action buttons */
+  gap: 10px;
+  /* Space between action buttons */
 }
+
 .btn {
-  display: inline-block; /* Makes button inline-block for alignment */
-  padding: 8px 12px; /* Padding inside buttons */
-  border-radius: 8px; /* Rounded corners for buttons */
-  text-decoration: none; /* Removes underline from links */
-  font-weight: 600; /* Sets font weight for button text */
-  font-size: 0.9rem; /* Font size for buttons */
-  white-space: nowrap; /* Prevents text wrapping in buttons */
-  transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transitions for button */
+  display: inline-block;
+  /* Makes button inline-block for alignment */
+  padding: 8px 12px;
+  /* Padding inside buttons */
+  border-radius: 8px;
+  /* Rounded corners for buttons */
+  text-decoration: none;
+  /* Removes underline from links */
+  font-weight: 600;
+  /* Sets font weight for button text */
+  font-size: 0.9rem;
+  /* Font size for buttons */
+  white-space: nowrap;
+  /* Prevents text wrapping in buttons */
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  /* Smooth transitions for button */
 }
-.btn-primary { background: #06b6d4; color: #062b2e; } /* Primary button with specified colors */
-.btn-primary:hover { opacity: 0.85; /* Reduces opacity on hover for effect */ }
-.btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,0.06); color: #cbd5e1; } /* Ghost button style */
-.btn-ghost:hover { border-color: #06b6d4; color: #ffffff; /* Color change on hover for ghost button */ }
+
+.btn-primary {
+  background: #06b6d4;
+  color: #062b2e;
+}
+
+/* Primary button with specified colors */
+.btn-primary:hover {
+  opacity: 0.85;
+  /* Reduces opacity on hover for effect */
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+}
+
+/* Ghost button style */
+.btn-ghost:hover {
+  border-color: #06b6d4;
+  color: #ffffff;
+  /* Color change on hover for ghost button */
+}
 
 /* Light Mode Overrides for Project Grid */
 body.light-mode .tile {
-  background: #ffffff; /* White background for tiles in light mode */
-  color: var(--text-color); /* Text color based on variable for light mode */
-  box-shadow: 0 6px 18px rgba(12,18,28,0.06); /* Light shadow for tiles in light mode */
+  background: #ffffff;
+  /* White background for tiles in light mode */
+  color: var(--text-color);
+  /* Text color based on variable for light mode */
+  box-shadow: 0 6px 18px rgba(12, 18, 28, 0.06);
+  /* Light shadow for tiles in light mode */
 }
+
 body.light-mode .tile:hover {
-    box-shadow: 0 10px 20px -5px rgba(6, 182, 212, 0.2); /* Shadow effect on hover in light mode */
-    border-color: #06b6d4; /* Border color on hover in light mode */
+  box-shadow: 0 10px 20px -5px rgba(6, 182, 212, 0.2);
+  /* Shadow effect on hover in light mode */
+  border-color: #06b6d4;
+  /* Border color on hover in light mode */
 }
+
 body.light-mode .tile h3 {
-    color: var(--text-color); /* Heading color based on variable in light mode */
+  color: var(--text-color);
+  /* Heading color based on variable in light mode */
 }
+
 body.light-mode .tile p {
-  color: var(--secondary-text); /* Paragraph text color in light mode */
+  color: var(--secondary-text);
+  /* Paragraph text color in light mode */
 }
+
 body.light-mode .badge {
-  background: #f1f5f9; /* Background color for badges in light mode */
-  color: var(--text-color); /* Text color for badges based on variable in light mode */
+  background: #f1f5f9;
+  /* Background color for badges in light mode */
+  color: var(--text-color);
+  /* Text color for badges based on variable in light mode */
 }
-body.light-mode .btn-ghost { 
-  border: 1px solid rgba(15, 23, 42, 0.1); /* Light border for ghost button in light mode */
-  color: var(--secondary-text); /* Text color for ghost button based on variable */
+
+body.light-mode .btn-ghost {
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  /* Light border for ghost button in light mode */
+  color: var(--secondary-text);
+  /* Text color for ghost button based on variable */
 }
-body.light-mode .btn-ghost:hover { 
-  border-color: #06b6d4; /* Changes border color on hover in light mode */
-  color: #06b6d4; /* Changes text color on hover in light mode */
+
+body.light-mode .btn-ghost:hover {
+  border-color: #06b6d4;
+  /* Changes border color on hover in light mode */
+  color: #06b6d4;
+  /* Changes text color on hover in light mode */
+}
+
+
+/* Project Card Animations */
+.project-card {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tech Badges */
+.tech-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #06b6d4;
+  margin: 0.3rem;
+}
+
+.gradient-line {
+  height: 3px;
+  background: linear-gradient(90deg, #06b6d4, #3b82f6);
+  border-radius: 2px;
+}
+
+.featured-badge {
+  background: rgba(6, 182, 212, 0.9);
+  color: #000;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Button Styles */
+.btn-primary {
+  background: #06b6d4;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-ghost:hover {
+  border-color: #06b6d4;
+  color: #ffffff;
+}
+
+/* Active Button State */
+.btn-active {
+  background: #06b6d4;
+  color: #ffffff;
+}
+
+.btn-inactive {
+  background: #334155;
 }

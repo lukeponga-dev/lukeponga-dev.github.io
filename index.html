@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="bg-slate-950 text-slate-100">
     <!-- Navigation Bar -->
     <header
         class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md shadow-lg border-b border-slate-700 light-mode:bg-white/90 light-mode:border-slate-200 transition duration-500">
@@ -235,155 +235,324 @@
     <!-- projects section  -->
 
 
-
-    <section id="projects" class="py-16 container-padding">
+    <section id="projects" class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="section-title text-4xl font-bold mb-12 text-center">Featured Projects</h2>
-            <div class="portfolio-grid">
-                <div class="tile">
-                    <img src="/images/rotaryaimechanic.png" alt="RotorWise AI RX-8 Mechanic"
-                        class="w-full h-40 object-cover rounded-lg">
-                    <h3>RotorWise AI RX-8 Mechanic</h3>
-                    <p>AI-powered diagnostic assistant for Mazda RX-8, using Google Gemini to interpret symptoms and
-                        suggest repairs.</p>
-                    <div class="badges">
-                        <span class="badge">TypeScript</span>
-                        <span class="badge">Google Gemini</span>
-                        <span class="badge">AI Diagnostics</span>
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4">Featured Projects</h2>
+                <div class="gradient-line w-24 mx-auto mb-6"></div>
+                <p class="text-slate-400 text-lg max-w-2xl mx-auto">A collection of my recent work spanning AI, web
+                    development, and full-stack applications</p>
+            </div>
+
+            <!-- Layout Toggle -->
+            <div class="flex justify-center gap-4 mb-12">
+                <button id="grid-view-btn"
+                    class="px-6 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition font-semibold">Grid
+                    View</button>
+                <button id="list-view-btn"
+                    class="px-6 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition font-semibold">List
+                    View</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="grid-layout" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+                <!-- Project 1: RotorWise AI -->
+                <div
+                    class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
+                    <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
+                        <img src="/images/rotaryaimechanic.png" alt="RotorWise AI RX-8 Mechanic"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <div class="absolute top-3 right-3 featured-badge">⭐ Featured</div>
                     </div>
-                    <div class="actions">
-                        <a href="https://github.com/lukeponga-dev/RotorWise-AI-Your-RX-8-AI-Mechanic" target="_blank"
-                            class="btn btn-primary">View Repo</a>
-                        <a href="https://rotaryaimechanic.netlify.app" target="_blank" class="btn btn-ghost">Live
-                            Demo</a>
-                    </div>
-                </div>
-                <div class="tile">
-                    <img src="/images/jobtrackerdashboard.png" alt="JobTrakr"
-                        class="w-full h-40 object-cover rounded-lg">
-                    <h3>Job Tracker Dashboard</h3>
-                    <p>AI-powered job application dashboard with summaries and tracking.</p>
-                    <div class="badges">
-                        <span class="badge">Next.js</span>
-                        <span class="badge">Supabase</span>
-                        <span class="badge">Google AI</span>
-                    </div>
-                    <div class="actions">
-                        <a href="https://github.com/lukeponga-dev/jobtracker-dashboard" target="_blank"
-                            class="btn btn-primary">View Repo</a>
-                        <a href="https://jobtrackerdashboard.netlify.app" target="_blank" class="btn btn-ghost">Live
-                            Demo</a>
-                    </div>
-                </div>
-                <div class="tile">
-                    <img src="/images/cryptocoinstats.png" alt="CryptoStats"
-                        class="w-full h-40 object-cover rounded-lg">
-                    <h3>CryptoStats</h3>
-                    <p>Cryptocurrency price tracker with real-time data and historical charts.</p>
-                    <div class="badges">
-                        <span class="badge">React</span>
-                        <span class="badge">JavaScript</span>
-                        <span class="badge">API</span>
-                    </div>
-                    <div class="actions">
-                        <a href="https://github.com/lukeponga-dev/CryptoCoins-Price-Stats" target="_blank"
-                            class="btn btn-primary">View Repo</a>
-                        <a href="https://cryptocoinstats.netlify.app" target="_blank" class="btn btn-ghost">Live
-                            Demo</a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">RotorWise AI RX-8 Mechanic</h3>
+                        <p class="text-slate-400 text-sm mb-4">AI-powered diagnostic assistant for Mazda RX-8, using
+                            Google Gemini to interpret symptoms and suggest repairs.</p>
+                        <div class="mb-4">
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">Google Gemini</span>
+                            <span class="tech-badge">AI</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/lukeponga-dev/RotorWise-AI-Your-RX-8-AI-Mechanic"
+                                target="_blank" class="btn-primary flex-1 text-center">GitHub</a>
+                            <a href="https://rotaryaimechanic.netlify.app" target="_blank"
+                                class="btn-ghost flex-1 text-center">Demo</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="tile">
-                    <img src="/images/new-zealand-website-screenshot.jpg" alt="NZ Tourism Website"
-                        class="w-full h-40 object-cover rounded-lg">
-                    <h3>NZ Tourism Website</h3>
-                    <p>Interactive tourism showcase for New Zealand.</p>
-                    <div class="badges">
-                        <span class="badge">HTML</span>
-                        <span class="badge">CSS</span>
-                        <span class="badge">Bootstrap</span>
+                <!-- Project 2: Job Tracker -->
+                <div
+                    class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
+                    <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
+                        <img src="/images/jobtrackerdashboard.png" alt="Job Tracker Dashboard"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
-                    <div class="actions">
-                        <a href="https://github.com/lukeponga-dev/NZ-Website" target="_blank"
-                            class="btn btn-primary">View
-                            Repo</a>
-                        <a href="https://lukeponga-dev.github.io/NZ-Website/index.html" target="_blank"
-                            class="btn btn-ghost">Live Demo</a>
-                    </div>
-                </div>
-                <div class="tile">
-                    <img src="/images/cosmic.png" alt="NASA’s Astronomy Picture of the Day"
-                        class="w-full h-40 object-cover rounded-lg">
-                    <h3>NASA’s Astronomy Picture of the Day</h3>
-                    <p>Astronomy photo viewer using NASA’s APOD API.</p>
-                    <div class="badges">
-                        <span class="badge">React</span>
-                        <span class="badge">Tailwind CSS</span>
-                        <span class="badge">API Integration</span>
-                    </div>
-                    <div class="actions">
-                        <a href="https://github.com/lukeponga-dev/web-app-using-NASAS-Astronomy-Picture-of-the-day-API"
-                            target="_blank" class="btn btn-primary">View Repo</a>
-                        <a href="https://astronomydailypic.netlify.app/" target="_blank" class="btn btn-ghost">Live
-                            Demo</a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Job Tracker Dashboard</h3>
+                        <p class="text-slate-400 text-sm mb-4">AI-powered job application dashboard with summaries and
+                            tracking capabilities.</p>
+                        <div class="mb-4">
+                            <span class="tech-badge">Next.js</span>
+                            <span class="tech-badge">Supabase</span>
+                            <span class="tech-badge">Google AI</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/lukeponga-dev/jobtracker-dashboard" target="_blank"
+                                class="btn-primary flex-1 text-center">GitHub</a>
+                            <a href="https://jobtrackerdashboard.netlify.app" target="_blank"
+                                class="btn-ghost flex-1 text-center">Demo</a>
+                        </div>
                     </div>
                 </div>
-                <div class="tile">
-                    <img src="/images/v0-openai-chat-t.png" alt="AI Chat Interface SDK"
-                        class="w-full h-40 object-cover rounded-lg">
-                    <h3>AI Chat Interface SDK</h3>
-                    <p>Intelligent chat UI SDK for integrating LLMs.</p>
-                    <div class="badges">
-                        <span class="badge">Next.js</span>
-                        <span class="badge">TypeScript</span>
-                        <span class="badge">Genkit AI</span>
-                    </div>
-                    <div class="actions">
-                        <a href="https://github.com/lukeponga-dev/OpenAI-Chat-interface-sdk" target="_blank"
-                            class="btn btn-primary">View Repo</a>
-                        <a href="https://lukeponga-dev.github.io/chat-sdk-demo" target="_blank"
-                            class="btn btn-ghost">Live Demo</a>
-                    </div>
-                </div>
-                <!-- <div class="tile">
-                    <img src="/images/traffic-cameras-nz.jpg" alt="Traffic Cameras NZ App"
-                        class="w-full h-40 object-cover rounded-lg">
-                    <h3>Traffic Cameras NZ App</h3>
-                    <p>Location-aware safety app for NZ speed cameras.</p>
-                    <div class="badges">
-                        <span class="badge">React</span>
-                        <span class="badge">Leaflet</span>
-                        <span class="badge">Firebase</span>
-                    </div>
-                    <div class="actions">
-                        <a href="https://github.com/lukeponga-dev/traffic-cameras-nz-app" target="_blank"
-                            class="btn btn-primary">View Repo</a>
-                        <a href="https://lukeponga-dev.github.io/traffic-cameras-nz-demo" target="_blank"
-                            class="btn btn-ghost">Live Demo</a>
-                    </div>
-                </div> -->
 
-                <div class="tile">
-                    <img src="/images/letsenhance.png" alt="AI Image Enhancer"
-                        class="w-full h-40 object-cover rounded-lg">
-                    <h3>AI Image Enhancer</h3>
-                    <p>Enhance and transform images using AI techniques.</p>
-                    <div class="badges">
-                        <span class="badge">React</span>
-                        <span class="badge">AI Image Processing</span>
-                        <span class="badge">API Integration</span>
+                <!-- Project 3: CryptoStats -->
+                <div
+                    class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
+                    <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
+                        <img src="/images/cryptocoinstats.png" alt="CryptoStats"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">CryptoStats</h3>
+                        <p class="text-slate-400 text-sm mb-4">Cryptocurrency price tracker with real-time data and
+                            historical charts.</p>
+                        <div class="mb-4">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">API</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/lukeponga-dev/CryptoCoins-Price-Stats" target="_blank"
+                                class="btn-primary flex-1 text-center">GitHub</a>
+                            <a href="https://cryptocoinstats.netlify.app" target="_blank"
+                                class="btn-ghost flex-1 text-center">Demo</a>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="actions">
-                        <a href="https://github.com/lukeponga-dev/gemini-image-enhance_app" target="_blank"
-                            class="btn btn-primary">View Repo</a>
-                        <a href="https://letsenhance.vercel.app/" target="_blank" class="btn btn-ghost">Live
-                            Demo</a>
+                <!-- Project 4: NZ Tourism -->
+                <div
+                    class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
+                    <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
+                        <img src="/images/new-zealand-website-screenshot.jpg" alt="NZ Tourism Website"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">NZ Tourism Website</h3>
+                        <p class="text-slate-400 text-sm mb-4">Interactive tourism showcase for New Zealand with
+                            beautiful design and navigation.</p>
+                        <div class="mb-4">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">Bootstrap</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/lukeponga-dev/NZ-Website" target="_blank"
+                                class="btn-primary flex-1 text-center">GitHub</a>
+                            <a href="https://lukeponga-dev.github.io/NZ-Website/index.html" target="_blank"
+                                class="btn-ghost flex-1 text-center">Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: NASA APOD -->
+                <div
+                    class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
+                    <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
+                        <img src="/images/cosmic.png" alt="NASA APOD Viewer"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">NASA APOD Viewer</h3>
+                        <p class="text-slate-400 text-sm mb-4">Astronomy photo viewer using NASA's Astronomy Picture of
+                            the Day API with detailed metadata.</p>
+                        <div class="mb-4">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Tailwind CSS</span>
+                            <span class="tech-badge">API</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/lukeponga-dev/web-app-using-NASAS-Astronomy-Picture-of-the-day-API"
+                                target="_blank" class="btn-primary flex-1 text-center">GitHub</a>
+                            <a href="https://astronomydailypic.netlify.app/" target="_blank"
+                                class="btn-ghost flex-1 text-center">Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: AI Chat SDK -->
+                <div
+                    class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
+                    <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
+                        <img src="/images/v0-openai-chat-t.png" alt="AI Chat Interface SDK"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">AI Chat Interface SDK</h3>
+                        <p class="text-slate-400 text-sm mb-4">Intelligent chat UI SDK for integrating LLMs into
+                            applications with ease.</p>
+                        <div class="mb-4">
+                            <span class="tech-badge">Next.js</span>
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">Genkit AI</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/lukeponga-dev/OpenAI-Chat-interface-sdk" target="_blank"
+                                class="btn-primary flex-1 text-center">GitHub</a>
+                            <a href="https://lukeponga-dev.github.io/chat-sdk-demo" target="_blank"
+                                class="btn-ghost flex-1 text-center">Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: AI Image Enhancer -->
+                <div
+                    class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
+                    <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
+                        <img src="/images/letsenhance.png" alt="AI Image Enhancer"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">AI Image Enhancer</h3>
+                        <p class="text-slate-400 text-sm mb-4">Enhance and transform images using AI techniques for
+                            superior quality.</p>
+                        <div class="mb-4">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Google Gemini</span>
+                            <span class="tech-badge">Image AI</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/lukeponga-dev/gemini-image-enhance_app" target="_blank"
+                                class="btn-primary flex-1 text-center">GitHub</a>
+                            <a href="https://letsenhance.vercel.app/" target="_blank"
+                                class="btn-ghost flex-1 text-center">Demo</a>
+                        </div>
                     </div>
                 </div>
 
             </div>
+
+            <!-- Projects List (Alternative View) -->
+            <div id="list-layout" class="hidden space-y-4">
+
+                <div
+                    class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
+                    <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
+                        <img src="/images/rotaryaimechanic.png" alt="RotorWise" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold mb-2">⭐ RotorWise AI RX-8 Mechanic</h3>
+                        <p class="text-slate-400 mb-3">AI-powered diagnostic assistant for Mazda RX-8, using Google
+                            Gemini to interpret symptoms and suggest repairs.</p>
+                        <div class="flex gap-4 items-center flex-wrap">
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">Google Gemini</span>
+                            <div class="flex gap-2 ml-auto">
+                                <a href="https://github.com/lukeponga-dev/RotorWise-AI-Your-RX-8-AI-Mechanic"
+                                    target="_blank" class="btn-primary">GitHub</a>
+                                <a href="https://rotaryaimechanic.netlify.app" target="_blank"
+                                    class="btn-ghost">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
+                    <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
+                        <img src="/images/jobtrackerdashboard.png" alt="JobTrakr" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold mb-2">Job Tracker Dashboard</h3>
+                        <p class="text-slate-400 mb-3">AI-powered job application dashboard with summaries and tracking
+                            capabilities.</p>
+                        <div class="flex gap-4 items-center flex-wrap">
+                            <span class="tech-badge">Next.js</span>
+                            <span class="tech-badge">Supabase</span>
+                            <div class="flex gap-2 ml-auto">
+                                <a href="https://github.com/lukeponga-dev/jobtracker-dashboard" target="_blank"
+                                    class="btn-primary">GitHub</a>
+                                <a href="https://jobtrackerdashboard.netlify.app" target="_blank"
+                                    class="btn-ghost">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
+                    <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
+                        <img src="/images/cryptocoinstats.png" alt="CryptoStats" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold mb-2">CryptoStats</h3>
+                        <p class="text-slate-400 mb-3">Cryptocurrency price tracker with real-time data and historical
+                            charts.</p>
+                        <div class="flex gap-4 items-center flex-wrap">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <div class="flex gap-2 ml-auto">
+                                <a href="https://github.com/lukeponga-dev/CryptoCoins-Price-Stats" target="_blank"
+                                    class="btn-primary">GitHub</a>
+                                <a href="https://cryptocoinstats.netlify.app" target="_blank" class="btn-ghost">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
+                    <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
+                        <img src="/images/new-zealand-website-screenshot.jpg" alt="NZ Tourism"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold mb-2">NZ Tourism Website</h3>
+                        <p class="text-slate-400 mb-3">Interactive tourism showcase for New Zealand with beautiful
+                            design and
+                            navigation.</p>
+                        <div class="flex gap-4 items-center flex-wrap">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <div class="flex gap-2 ml-auto">
+                                <a href="https://github.com/lukeponga-dev/NZ-Tourism-Website" target="_blank"
+                                    class="btn-primary">GitHub</a>
+                                <a href="https://nz-tourism-website.netlify.app" target="_blank"
+                                    class="btn-ghost">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
+                    <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
+                        <img src="/images/cosmic.png" alt="NASA APOD" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold mb-2">NASA APOD Viewer</h3>
+                        <p class="text-slate-400 mb-3">Astronomy photo viewer using NASA's Astronomy Picture of the Day
+                            API with
+                            detailed
+                            metadata.</p>
+                        <div class="flex gap-4 items-center flex-wrap">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Tailwind CSS</span>
+                            <div class="flex gap-2 ml-auto">
+                                <a href="https://github.com/lukeponga-dev/NASA-APOD-Viewer" target="_blank"
+                                    class="btn-primary">GitHub</a>
+                                <a href="https://nasa-apod-viewer.netlify.app" target="_blank"
+                                    class="btn-ghost">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </section>
+
     <!-- Project section end -->
 
 

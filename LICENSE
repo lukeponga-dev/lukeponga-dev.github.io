@@ -1,6 +1,6 @@
-MIT License
+# MIT License
 
-Copyright (c) 2025 Pongaluke
+Copyright (c) 2025 Luke Ponga
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,157 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+## What This License Means
+
+### ✅ You CAN:
+
+- **Use** the code for personal, educational, or commercial projects
+- **Modify** the code to suit your needs
+- **Distribute** the code in your own projects
+- **Sublicense** the code under the same MIT license
+- **Use privately** without disclosing source code
+- **Sell** software that includes this code
+
+### ❌ You CANNOT:
+
+- Remove copyright notices or disclaimers
+- Hold the author liable for any issues
+- Use the author's name for endorsement without permission
+
+### ⚠️ Important Notes:
+
+- **No Warranty** - The software is provided "as is" without any guarantees
+- **No Liability** - The author is not responsible for any damages or issues
+- **Attribution Required** - Must include the copyright notice and license
+- **Same License** - If you distribute, you must use the same MIT license
+
+---
+
+## How to Use This License
+
+### **For Your Own Projects:**
+
+1. Copy the LICENSE text to a `LICENSE` file in your project root
+2. Replace "2025 Luke Ponga" with your name and year
+3. Include this file in your repository
+
+### **Example:**
+```
+Copyright (c) 2025 Your Name
+```
+
+---
+
+## Questions About MIT License?
+
+### **Q: Can I use this code commercially?**
+**A:** Yes! The MIT license allows commercial use.
+
+### **Q: Do I need to share my modifications?**
+**A:** No. Unlike GPL, MIT allows proprietary modifications.
+
+### **Q: Can I remove the copyright notice?**
+**A:** No. You must keep the original copyright and license notice.
+
+### **Q: What if I find a bug?**
+**A:** The author is not liable. You use the code at your own risk.
+
+### **Q: Can I sublicense this code?**
+**A:** Yes, under the same MIT license terms.
+
+---
+
+## License Comparison
+
+| Feature | MIT | GPL | Apache 2.0 |
+|---------|-----|-----|-----------|
+| Commercial Use | ✅ | ✅ | ✅ |
+| Modification | ✅ | ✅ | ✅ |
+| Distribution | ✅ | ✅ | ✅ |
+| Sublicense | ✅ | ❌ | ✅ |
+| Patent Grant | ❌ | ✅ | ✅ |
+| Trademark Use | ❌ | ❌ | ❌ |
+| Liability | ❌ | ❌ | ❌ |
+| Warranty | ❌ | ❌ | ❌ |
+
+---
+
+## Why MIT?
+
+The MIT License is chosen for this project because:
+
+✨ **Simple** - Easy to understand and implement  
+🔓 **Permissive** - Allows maximum flexibility  
+🌍 **Popular** - Widely recognized and trusted  
+📄 **Short** - Minimal legal overhead  
+🤝 **Community Friendly** - Encourages open-source collaboration  
+💼 **Business Friendly** - Allows commercial use  
+
+---
+
+## Additional Resources
+
+- **Official MIT License:** https://opensource.org/licenses/MIT
+- **TL;DR Legal:** https://tldrlegal.com/license/mit-license
+- **Choose a License:** https://choosealicense.com/licenses/mit/
+- **GitHub License Guide:** https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository
+
+---
+
+## Related Licenses
+
+For this project, related files are also licensed under MIT:
+
+- **index.html** - MIT License
+- **css/styles.css** - MIT License
+- **js/script.js** - MIT License
+- **README.md** - MIT License
+- **SECURITY.md** - MIT License
+
+---
+
+## License Header for Source Files (Optional)
+
+You can add this header to individual source files:
+
+```javascript
+/*
+ * Luke Ponga Portfolio
+ * Copyright (c) 2025 Luke Ponga
+ * Licensed under the MIT License
+ * See LICENSE file for details
+ */
+```
+
+---
+
+## Disclaimer
+
+**DISCLAIMERS:**
+
+This software is provided "as is" without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement.
+
+In no event shall the author be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
+
+---
+
+## Contact
+
+For questions about this license:
+- **Email:** lukeponga9@gmail.com
+- **GitHub:** https://github.com/lukeponga-dev
+- **Portfolio:** https://lukeponga-dev.github.io
+
+---
+
+**License Date:** 2025  
+**License Type:** MIT  
+**Licensor:** Luke Ponga  
+**Status:** Active
+
+---
+
+*This LICENSE file should be placed in the root directory of your repository as `LICENSE` (no file extension).*

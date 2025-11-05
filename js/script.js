@@ -32,7 +32,7 @@ if (themeToggle) {
         // Force particle redraw on theme change for color update
         // The animation loop handles this, but forcing a resize can ensure immediate refresh if needed
         const canvas = document.getElementById('heroCanvas');
-        if (canvas) setCanvasSize(); 
+        if (canvas) setCanvasSize();
     });
 }
 
@@ -104,7 +104,7 @@ let canvas, ctx, particles, particleCount;
 // Function to set canvas dimensions based on its parent container
 function setCanvasSize() {
     if (!canvas) return;
-    
+
     // Get the actual width and height of the canvas element from the layout
     const container = canvas.parentElement;
     canvas.width = container.clientWidth;
@@ -112,7 +112,7 @@ function setCanvasSize() {
 
     // Reinitialize particles only on first load
     if (particles.length === 0) {
-         for (let i = 0; i < particleCount; i++) {
+        for (let i = 0; i < particleCount; i++) {
             particles.push(new Particle());
         }
     }
@@ -171,11 +171,62 @@ window.onload = function () {
     ctx = canvas.getContext('2d');
     particleCount = 50;
     particles = [];
-    
+
     // Initial setup and event listeners
     setCanvasSize();
     window.addEventListener('resize', setCanvasSize);
 
     // Start the animation loop
     animate();
-};
+}      // ===== Layout Toggle Functionality =====
+// Switches between grid and list view layouts for project display
+function setLayout(type) {
+    const gridLayout = document.getElementById('grid-layout');
+    const listLayout = document.getElementById('list-layout');
+    const gridBtn = document.getElementById('grid-view-btn');
+    const listBtn = document.getElementById('list-view-btn');
+
+    if (type === 'grid') {
+        // Show grid layout, hide list layout
+        gridLayout.classList.remove('hidden');
+        listLayout.classList.add('hidden');
+
+        // Update button styles to show active state
+        gridBtn.classList.add('bg-cyan-600');
+        gridBtn.classList.remove('bg-slate-700');
+        listBtn.classList.remove('bg-cyan-600');
+        listBtn.classList.add('bg-slate-700');
+    } else {
+        // Show list layout, hide grid layout
+        gridLayout.classList.add('hidden');
+        listLayout.classList.remove('hidden');
+
+        // Update button styles to show active state
+        listBtn.classList.add('bg-cyan-600');
+        listBtn.classList.remove('bg-slate-700');
+        gridBtn.classList.remove('bg-cyan-600');
+        gridBtn.classList.add('bg-slate-700');
+    }
+}
+
+// ===== Initialize Layout on Page Load =====
+document.addEventListener('DOMContentLoaded', () => {
+    // Set grid as default layout on page load
+    setLayout('grid');
+
+    // Get references to layout toggle buttons
+    const gridBtn = document.getElementById('grid-view-btn');
+    const listBtn = document.getElementById('list-view-btn');
+
+    // Add click event listeners to toggle between layouts
+    if (gridBtn) gridBtn.addEventListener('click', () => setLayout('grid'));
+    if (listBtn) listBtn.addEventListener('click', () => setLayout('list'));
+
+    // ===== Staggered Animation for Project Cards =====
+    // Creates a cascading fade-in effect by delaying each card's animation
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach((card, index) => {
+        // Each card animates 0.1 seconds after the previous one
+        card.style.animationDelay = `${index * 0.1}s`;
+    });
+});
