@@ -4,16 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Luke Ponga - Web Developer & IT Support Specialist portfolio showcasing projects, skills, and contact details.">
+    <meta name="keywords" content="Luke Ponga, Web Developer, IT Support, Portfolio, Tailwind CSS, React, Node.js">
+
+    <meta property="og:title" content="Luke Ponga - Developer & IT Support Specialist">
+    <meta property="og:description" content="Explore my projects, skills, and contact details.">
+    <meta property="og:image" content="/assestsassests/images/profile-placeholder.jpg">
+    <meta property="og:url" content="https://lukeponga-dev.github.io/">
+    <link rel="icon" href="assests/favicon/favicon.ico" type="image/x-icon">
+
     <title>Luke Ponga - Developer and IT Support Specialist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body class="bg-slate-950 text-slate-100">
-    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md shadow-lg border-b border-slate-700 light-mode:bg-white/90 light-mode:border-slate-200 transition duration-500">
+    <header
+        class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md shadow-lg border-b border-slate-700 light-mode:bg-white/90 light-mode:border-slate-200 transition duration-500">
         <nav class="max-w-7xl mx-auto container-padding py-4 flex justify-between items-center">
-            <a href="#hero" class="text-2xl font-extrabold text-white light-mode:text-slate-900 tracking-wider transition duration-500">Luke
+            <a href="#hero"
+                class="text-2xl font-extrabold text-white light-mode:text-slate-900 tracking-wider transition duration-500">Luke
                 Ponga</a>
             <div class="space-x-4 hidden md:flex text-slate-300 light-mode:text-slate-600">
                 <a href="#about" class="nav-link">About</a>
@@ -22,11 +35,17 @@
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="flex items-center space-x-4">
-                <button id="themeToggle" class="p-2 rounded-full hover:bg-slate-800/50 light-mode:hover:bg-slate-200 transition duration-300" aria-label="Toggle theme">
-                    <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-yellow-400">
+                <button id="themeToggle"
+                    class="p-2 rounded-full hover:bg-slate-800/50 light-mode:hover:bg-slate-200 transition duration-300"
+                    aria-label="Toggle theme">
+                    <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="w-6 h-6 text-yellow-400">
                         <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
                     </svg>
-                    <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-amber-500 hidden">
+                    <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="w-6 h-6 text-amber-500 hidden">
                         <circle cx="12" cy="12" r="4" />
                         <path d="M12 2v2" />
                         <path d="M12 20v2" />
@@ -38,13 +57,19 @@
                         <path d="m19.07 4.93-1.41 1.41" />
                     </svg>
                 </button>
-                <button id="mobileMenuButton" class="p-2 rounded-full hover:bg-slate-800/50 light-mode:hover:bg-slate-200 transition duration-300 md:hidden" aria-label="Open menu" aria-expanded="false">
-                    <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white light-mode:text-slate-900">
+                <button id="mobileMenuButton"
+                    class="p-2 rounded-full hover:bg-slate-800/50 light-mode:hover:bg-slate-200 transition duration-300 md:hidden"
+                    aria-label="Open menu" aria-expanded="false">
+                    <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="w-6 h-6 text-white light-mode:text-slate-900">
                         <line x1="4" x2="20" y1="12" y2="12" />
                         <line x1="4" x2="20" y1="6" y2="6" />
                         <line x1="4" x2="20" y1="18" y2="18" />
                     </svg>
-                    <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white light-mode:text-slate-900 hidden">
+                    <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="w-6 h-6 text-white light-mode:text-slate-900 hidden">
                         <path d="M18 6 6 18" />
                         <path d="m6 6 12 12" />
                     </svg>
@@ -52,73 +77,93 @@
             </div>
         </nav>
     </header>
-    
-    <div id="mobileMenu" class="md:hidden absolute top-[68px] left-0 w-full bg-slate-900/95 light-mode:bg-white/95 backdrop-blur-md shadow-xl z-40 hidden transition duration-300">
+
+    <div id="mobileMenu"
+        class="md:hidden absolute top-[68px] left-0 w-full bg-slate-900/95 light-mode:bg-white/95 backdrop-blur-md shadow-xl z-40 hidden transition duration-300">
         <div class="flex flex-col items-center space-y-2 py-4 text-slate-300 light-mode:text-slate-600">
-            <a href="#about" class="mobile-nav-link w-11/12 text-center py-3 hover:bg-slate-800/70 light-mode:hover:bg-slate-100 rounded-lg font-medium text-lg">About</a>
-            <a href="#skills" class="mobile-nav-link w-11/12 text-center py-3 hover:bg-slate-800/70 light-mode:hover:bg-slate-100 rounded-lg font-medium text-lg">Skills</a>
-            <a href="#projects" class="mobile-nav-link w-11/12 text-center py-3 hover:bg-slate-800/70 light-mode:hover:bg-slate-100 rounded-lg font-medium text-lg">Projects</a>
-            <a href="#contact" class="mobile-nav-link w-11/12 text-center py-3 hover:bg-slate-800/70 light-mode:hover:bg-slate-100 rounded-lg font-medium text-lg">Contact</a>
+            <a href="#about"
+                class="mobile-nav-link w-11/12 text-center py-3 hover:bg-slate-800/70 light-mode:hover:bg-slate-100 rounded-lg font-medium text-lg">About</a>
+            <a href="#skills"
+                class="mobile-nav-link w-11/12 text-center py-3 hover:bg-slate-800/70 light-mode:hover:bg-slate-100 rounded-lg font-medium text-lg">Skills</a>
+            <a href="#projects"
+                class="mobile-nav-link w-11/12 text-center py-3 hover:bg-slate-800/70 light-mode:hover:bg-slate-100 rounded-lg font-medium text-lg">Projects</a>
+            <a href="#contact"
+                class="mobile-nav-link w-11/12 text-center py-3 hover:bg-slate-800/70 light-mode:hover:bg-slate-100 rounded-lg font-medium text-lg">Contact</a>
         </div>
     </div>
-    
+
     <section id="hero" class="relative overflow-hidden min-h-screen flex items-center justify-center container-padding">
         <canvas id="heroCanvas" class="absolute inset-0 z-0"></canvas>
         <div class="relative z-10 text-center py-16">
             <p class="text-blue-400 font-semibold text-lg mb-4">Hi, I'm</p>
-            <h1 class="text-6xl sm:text-7xl lg:text-8xl font-black mb-4 text-white light-mode:text-slate-900 leading-tight">
+            <h1
+                class="text-6xl sm:text-7xl lg:text-8xl font-black mb-4 text-white light-mode:text-slate-900 leading-tight">
                 Luke Ponga</h1>
             <p class="text-2xl sm:text-3xl font-light text-slate-300 light-mode:text-slate-600 mb-8">
-                A <span class="text-blue-400 font-semibold">Web Developer</span> and <span class="text-blue-400 font-semibold">IT Support Specialist</span>.
+                A <span class="text-blue-400 font-semibold">Web Developer</span> and <span
+                    class="text-blue-400 font-semibold">IT Support Specialist</span>.
             </p>
-            <a href="#contact" class="inline-block px-8 py-3 bg-blue-600 text-white font-bold rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">Get
+            <a href="#contact"
+                class="inline-block px-8 py-3 bg-blue-600 text-white font-bold rounded-full shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">Get
                 In Touch</a>
-            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white font-semibold rounded-lg shadow-lg hover:from-indigo-700 hover:to-blue-600 transition-all duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11V17M12 17L15 14M12 17L9 14M4 4H20V20H4V4Z" />
+            <a href="/CV.pdf" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white font-semibold rounded-lg shadow-lg hover:from-indigo-700 hover:to-blue-600 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 11V17M12 17L15 14M12 17L9 14M4 4H20V20H4V4Z" />
                 </svg>
                 View My CV
             </a>
         </div>
     </section>
-    
+
     <section id="about" class="py-16 sm:py-24 container-padding">
         <div class="max-w-7xl mx-auto">
             <h2 class="section-title text-4xl font-bold mb-12 text-center">About Me</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="rounded-xl overflow-hidden shadow-2xl bg-slate-800 light-mode:bg-slate-100 p-4">
-                    <img src="/images/profile-placeholder.jpg" alt="Professional portrait of Luke Ponga" class="w-full h-auto rounded-xl" />
+                    <img src="assests/images/logo.jpeg" alt="Professional portrait of Luke Ponga"
+                        class="w-full h-auto rounded-xl" />
                 </div>
                 <div class="text-slate-300 light-mode:text-slate-600 space-y-6">
                     <p class="text-lg">
-                        I am a dedicated professional with a dual focus on **full-stack web development** and **IT
-                        support**, based in Hamilton, New Zealand. My career is driven by a passion for solving complex
+                        I am a dedicated professional with a dual focus on <b>full-stack web development</b> and <b>IT
+                            support</b>, based in Hamilton, New Zealand. My career is driven by a passion for solving
+                        complex
                         technical problems and building scalable, user-centric applications.
                     </p>
                     <p class="text-lg">
-                        In development, I specialize in the modern web stack, primarily working with **JavaScript,
-                        React, Tailwind CSS, and Node.js**. I thrive in environments where I can translate design
+                        In development, I specialize in the modern web stack, primarily working with <b>JavaScript,
+                            React, Tailwind CSS, and Node.js</b>. I thrive in environments where I can translate
+                        design
                         concepts into flawless, responsive code.
                     </p>
                     <p class="text-lg">
-                        My background in IT support gives me a unique advantage: I understand the importance of **system
-                        reliability, security, and exceptional user experience** from the ground up. I am constantly
+                        My background in IT support gives me a unique advantage: I understand the importance of
+                        <b>system
+                            reliability, security, and exceptional user experience
+                        </b> from the ground up. I am
+                        constantly
                         learning new technologies to deliver high-quality, maintainable solutions.
                     </p>
-                    <a href="#contact" class="inline-block mt-4 text-blue-400 light-mode:text-blue-700 font-semibold hover:underline">Let's
+                    <a href="#contact"
+                        class="inline-block mt-4 text-blue-400 light-mode:text-blue-700 font-semibold hover:underline">Let's
                         build something great →</a>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section id="skills" class="py-16 sm:py-24 bg-slate-900 light-mode:bg-slate-50 container-padding">
         <div class="max-w-7xl mx-auto">
             <h2 class="section-title text-4xl font-bold mb-12 text-center text-white light-mode:text-slate-900">Core
                 Skills</h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                 <div class="card p-6 rounded-xl text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-blue-400 mx-auto mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-12 h-12 text-blue-400 mx-auto mb-3">
                         <path d="M12 2v2" />
                         <path d="M12 20v2" />
                         <path d="m4.93 4.93 1.41 1.41" />
@@ -131,7 +176,9 @@
                     <p class="text-xl font-semibold">React / Next.js</p>
                 </div>
                 <div class="card p-6 rounded-xl text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-yellow-400 mx-auto mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-12 h-12 text-yellow-400 mx-auto mb-3">
                         <path d="M2 12s3-4 8-4 8 4 8 4-3 4-8 4-8-4-8-4z" />
                         <circle cx="10" cy="12" r="1" />
                         <circle cx="16" cy="12" r="1" />
@@ -139,28 +186,36 @@
                     <p class="text-xl font-semibold">JavaScript (ES6+)</p>
                 </div>
                 <div class="card p-6 rounded-xl text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-cyan-400 mx-auto mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-12 h-12 text-cyan-400 mx-auto mb-3">
                         <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
                         <path d="M14 2v6h6" />
                     </svg>
                     <p class="text-xl font-semibold">Tailwind CSS</p>
                 </div>
                 <div class="card p-6 rounded-xl text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-green-400 mx-auto mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-12 h-12 text-green-400 mx-auto mb-3">
                         <path d="M12 2v20" />
                         <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
                     </svg>
                     <p class="text-xl font-semibold">Node.js / Express</p>
                 </div>
                 <div class="card p-6 rounded-xl text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-red-400 mx-auto mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-12 h-12 text-red-400 mx-auto mb-3">
                         <ellipse cx="12" cy="5" rx="9" ry="3" />
                         <path d="M3 5v14a9 3 0 0 0 18 0V5" />
                     </svg>
                     <p class="text-xl font-semibold">SQL / NoSQL</p>
                 </div>
                 <div class="card p-6 rounded-xl text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-orange-400 mx-auto mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-12 h-12 text-orange-400 mx-auto mb-3">
                         <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
                         <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
                         <path d="M6 6h.01" />
@@ -169,7 +224,9 @@
                     <p class="text-xl font-semibold">Hardware / Network</p>
                 </div>
                 <div class="card p-6 rounded-xl text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-purple-400 mx-auto mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-12 h-12 text-purple-400 mx-auto mb-3">
                         <circle cx="18" cy="18" r="3" />
                         <circle cx="6" cy="6" r="3" />
                         <path d="M13 6h3a2 2 0 0 1 2 2v7" />
@@ -178,7 +235,9 @@
                     <p class="text-xl font-semibold">Git / CI/CD</p>
                 </div>
                 <div class="card p-6 rounded-xl text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-lime-400 mx-auto mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-12 h-12 text-lime-400 mx-auto mb-3">
                         <path d="M4 14.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2.5" />
                         <path d="M19 19 23 15" />
                         <path d="M1 19 5 15" />
@@ -198,19 +257,23 @@
                 <p class="text-slate-400 text-lg max-w-2xl mx-auto">A collection of my recent work spanning AI, web
                     development, and full-stack applications</p>
             </div>
-            
+
             <div class="flex justify-center gap-4 mb-12">
-                <button id="grid-view-btn" class="px-6 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition font-semibold">Grid
+                <button id="grid-view-btn"
+                    class="px-6 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition font-semibold">Grid
                     View</button>
-                <button id="list-view-btn" class="px-6 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition font-semibold">List
+                <button id="list-view-btn"
+                    class="px-6 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition font-semibold">List
                     View</button>
             </div>
-            
+
             <div id="grid-layout" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                
-                <div class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
+
+                <div
+                    class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
                     <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                        <img src="/images/rotaryaimechanic.png" alt="RotorWise AI RX-8 Mechanic" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <img src="assests/images/rotaryaimechanic.png" alt="RotorWise AI RX-8 Mechanic"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                         <div class="absolute top-3 right-3 featured-badge">⭐ Featured</div>
                     </div>
                     <div class="p-6">
@@ -223,15 +286,19 @@
                             <span class="tech-badge">AI</span>
                         </div>
                         <div class="flex gap-2">
-                            <a href="https://github.com/lukeponga-dev/RotorWise-AI-Your-RX-8-AI-Mechanic" target="_blank" class="btn-primary flex-1 text-center">GitHub</a>
-                            <a href="https://rotaryaimechanic.netlify.app" target="_blank" class="btn-ghost flex-1 text-center">Demo</a>
+                            <a href="https://github.com/lukeponga-dev/RotorWise-AI-Your-RX-8-AI-Mechanic"
+                                target="_blank" class="btn-primary flex-1 text-center">GitHub</a>
+                            <a href="https://rotaryaimechanic.netlify.app" target="_blank"
+                                class="btn-ghost flex-1 text-center">Demo</a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
+
+                <div
+                    class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
                     <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                        <img src="/images/jobtrackerdashboard.png" alt="Job Tracker Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <img src="assests/images/jobtrackerdashboard.png" alt="Job Tracker Dashboard"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Job Tracker Dashboard</h3>
@@ -243,15 +310,19 @@
                             <span class="tech-badge">Google AI</span>
                         </div>
                         <div class="flex gap-2">
-                            <a href="https://github.com/lukeponga-dev/jobtracker-dashboard" target="_blank" class="btn-primary flex-1 text-center">GitHub</a>
-                            <a href="https://jobtrackerdashboard.netlify.app" target="_blank" class="btn-ghost flex-1 text-center">Demo</a>
+                            <a href="https://github.com/lukeponga-dev/jobtracker-dashboard" target="_blank"
+                                class="btn-primary flex-1 text-center">GitHub</a>
+                            <a href="https://jobtrackerdashboard.netlify.app" target="_blank"
+                                class="btn-ghost flex-1 text-center">Demo</a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
+
+                <div
+                    class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
                     <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                        <img src="/images/cryptocoinstats.png" alt="CryptoStats" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <img src="assests/images/cryptocoinstats.png" alt="CryptoStats"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">CryptoStats</h3>
@@ -263,15 +334,19 @@
                             <span class="tech-badge">API</span>
                         </div>
                         <div class="flex gap-2">
-                            <a href="https://github.com/lukeponga-dev/CryptoCoins-Price-Stats" target="_blank" class="btn-primary flex-1 text-center">GitHub</a>
-                            <a href="https://cryptocoinstats.netlify.app" target="_blank" class="btn-ghost flex-1 text-center">Demo</a>
+                            <a href="https://github.com/lukeponga-dev/CryptoCoins-Price-Stats" target="_blank"
+                                class="btn-primary flex-1 text-center">GitHub</a>
+                            <a href="https://cryptocoinstats.netlify.app" target="_blank"
+                                class="btn-ghost flex-1 text-center">Demo</a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
+
+                <div
+                    class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
                     <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                        <img src="/images/new-zealand-website-screenshot.jpg" alt="NZ Tourism Website" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <img src="assests/images/new-zealand-website-screenshot.jpg" alt="NZ Tourism Website"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">NZ Tourism Website</h3>
@@ -283,15 +358,19 @@
                             <span class="tech-badge">Bootstrap</span>
                         </div>
                         <div class="flex gap-2">
-                            <a href="https://github.com/lukeponga-dev/NZ-Website" target="_blank" class="btn-primary flex-1 text-center">GitHub</a>
-                            <a href="https://lukeponga-dev.github.io/NZ-Website/index.html" target="_blank" class="btn-ghost flex-1 text-center">Demo</a>
+                            <a href="https://github.com/lukeponga-dev/NZ-Website" target="_blank"
+                                class="btn-primary flex-1 text-center">GitHub</a>
+                            <a href="https://lukeponga-dev.github.io/NZ-Website/index.html" target="_blank"
+                                class="btn-ghost flex-1 text-center">Demo</a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
+
+                <div
+                    class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
                     <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                        <img src="/images/cosmic.png" alt="NASA APOD Viewer" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <img src="assests/images/cosmic.png" alt="NASA APOD Viewer"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">NASA APOD Viewer</h3>
@@ -303,15 +382,19 @@
                             <span class="tech-badge">API</span>
                         </div>
                         <div class="flex gap-2">
-                            <a href="https://github.com/lukeponga-dev/web-app-using-NASAS-Astronomy-Picture-of-the-day-API" target="_blank" class="btn-primary flex-1 text-center">GitHub</a>
-                            <a href="https://astronomydailypic.netlify.app/" target="_blank" class="btn-ghost flex-1 text-center">Demo</a>
+                            <a href="https://github.com/lukeponga-dev/web-app-using-NASAS-Astronomy-Picture-of-the-day-API"
+                                target="_blank" class="btn-primary flex-1 text-center">GitHub</a>
+                            <a href="https://astronomydailypic.netlify.app/" target="_blank"
+                                class="btn-ghost flex-1 text-center">Demo</a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
+
+                <div
+                    class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
                     <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                        <img src="/images/v0-openai-chat-t.png" alt="AI Chat Interface SDK" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <img src="assests/images/v0-openai-chat-t.png" alt="AI Chat Interface SDK"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">AI Chat Interface SDK</h3>
@@ -323,19 +406,24 @@
                             <span class="tech-badge">Genkit AI</span>
                         </div>
                         <div class="flex gap-2">
-                            <a href="https://github.com/lukeponga-dev/OpenAI-Chat-interface-sdk" target="_blank" class="btn-primary flex-1 text-center">GitHub</a>
-                            <a href="https://lukeponga-dev.github.io/chat-sdk-demo" target="_blank" class="btn-ghost flex-1 text-center">Demo</a>
+                            <a href="https://github.com/lukeponga-dev/OpenAI-Chat-interface-sdk" target="_blank"
+                                class="btn-primary flex-1 text-center">GitHub</a>
+                            <a href="https://lukeponga-dev.github.io/chat-sdk-demo" target="_blank"
+                                class="btn-ghost flex-1 text-center">Demo</a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
+
+                <div
+                    class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
                     <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                        <img src="/images/letsenhance.png" alt="AI Image Enhancer" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <img src="assests/images/letsenhance.png" alt="AI Image Enhancer"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">AI Image Enhancer</h3>
-                        <p class="text-slate-400 text-sm mb-4">Enhance and transform images using AI techniques for
+                        <p class="text-slate-400 text-sm mb-4">Enhance and transformassests images using AI techniques
+                            for
                             superior quality.</p>
                         <div class="mb-4">
                             <span class="tech-badge">React</span>
@@ -343,19 +431,23 @@
                             <span class="tech-badge">Image AI</span>
                         </div>
                         <div class="flex gap-2">
-                            <a href="https://github.com/lukeponga-dev/gemini-image-enhance_app" target="_blank" class="btn-primary flex-1 text-center">GitHub</a>
-                            <a href="https://letsenhance.vercel.app/" target="_blank" class="btn-ghost flex-1 text-center">Demo</a>
+                            <a href="https://github.com/lukeponga-dev/gemini-image-enhance_app" target="_blank"
+                                class="btn-primary flex-1 text-center">GitHub</a>
+                            <a href="https://letsenhance.vercel.app/" target="_blank"
+                                class="btn-ghost flex-1 text-center">Demo</a>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
-            
+
             <div id="list-layout" class="hidden space-y-4">
-                
-                <div class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
+
+                <div
+                    class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
                     <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
-                        <img src="/images/rotaryaimechanic.png" alt="RotorWise" class="w-full h-full object-cover">
+                        <img src="assests/images/rotaryaimechanic.png" alt="RotorWise"
+                            class="w-full h-full object-cover">
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold mb-2">⭐ RotorWise AI RX-8 Mechanic</h3>
@@ -365,16 +457,20 @@
                             <span class="tech-badge">TypeScript</span>
                             <span class="tech-badge">Google Gemini</span>
                             <div class="flex gap-2 ml-auto">
-                                <a href="https://github.com/lukeponga-dev/RotorWise-AI-Your-RX-8-AI-Mechanic" target="_blank" class="btn-primary">GitHub</a>
-                                <a href="https://rotaryaimechanic.netlify.app" target="_blank" class="btn-ghost">Demo</a>
+                                <a href="https://github.com/lukeponga-dev/RotorWise-AI-Your-RX-8-AI-Mechanic"
+                                    target="_blank" class="btn-primary">GitHub</a>
+                                <a href="https://rotaryaimechanic.netlify.app" target="_blank"
+                                    class="btn-ghost">Demo</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
+
+                <div
+                    class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
                     <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
-                        <img src="/images/jobtrackerdashboard.png" alt="JobTrakr" class="w-full h-full object-cover">
+                        <img src="assests/images/jobtrackerdashboard.png" alt="JobTrakr"
+                            class="w-full h-full object-cover">
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold mb-2">Job Tracker Dashboard</h3>
@@ -384,16 +480,20 @@
                             <span class="tech-badge">Next.js</span>
                             <span class="tech-badge">Supabase</span>
                             <div class="flex gap-2 ml-auto">
-                                <a href="https://github.com/lukeponga-dev/jobtracker-dashboard" target="_blank" class="btn-primary">GitHub</a>
-                                <a href="https://jobtrackerdashboard.netlify.app" target="_blank" class="btn-ghost">Demo</a>
+                                <a href="https://github.com/lukeponga-dev/jobtracker-dashboard" target="_blank"
+                                    class="btn-primary">GitHub</a>
+                                <a href="https://jobtrackerdashboard.netlify.app" target="_blank"
+                                    class="btn-ghost">Demo</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
+
+                <div
+                    class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
                     <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
-                        <img src="/images/cryptocoinstats.png" alt="CryptoStats" class="w-full h-full object-cover">
+                        <img src="assests/images/cryptocoinstats.png" alt="CryptoStats"
+                            class="w-full h-full object-cover">
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold mb-2">CryptoStats</h3>
@@ -403,16 +503,19 @@
                             <span class="tech-badge">React</span>
                             <span class="tech-badge">JavaScript</span>
                             <div class="flex gap-2 ml-auto">
-                                <a href="https://github.com/lukeponga-dev/CryptoCoins-Price-Stats" target="_blank" class="btn-primary">GitHub</a>
+                                <a href="https://github.com/lukeponga-dev/CryptoCoins-Price-Stats" target="_blank"
+                                    class="btn-primary">GitHub</a>
                                 <a href="https://cryptocoinstats.netlify.app" target="_blank" class="btn-ghost">Demo</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
+
+                <div
+                    class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
                     <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
-                        <img src="/images/new-zealand-website-screenshot.jpg" alt="NZ Tourism" class="w-full h-full object-cover">
+                        <img src="assests/images/new-zealand-website-screenshot.jpg" alt="NZ Tourism"
+                            class="w-full h-full object-cover">
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold mb-2">NZ Tourism Website</h3>
@@ -422,16 +525,19 @@
                             <span class="tech-badge">HTML</span>
                             <span class="tech-badge">CSS</span>
                             <div class="flex gap-2 ml-auto">
-                                <a href="https://github.com/lukeponga-dev/NZ-Website" target="_blank" class="btn-primary">GitHub</a>
-                                <a href="https://lukeponga-dev.github.io/NZ-Website/index.html" target="_blank" class="btn-ghost">Demo</a>
+                                <a href="https://github.com/lukeponga-dev/NZ-Website" target="_blank"
+                                    class="btn-primary">GitHub</a>
+                                <a href="https://lukeponga-dev.github.io/NZ-Website/index.html" target="_blank"
+                                    class="btn-ghost">Demo</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
+
+                <div
+                    class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
                     <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
-                        <img src="/images/cosmic.png" alt="NASA APOD" class="w-full h-full object-cover">
+                        <img src="assests/images/cosmic.png" alt="NASA APOD" class="w-full h-full object-cover">
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold mb-2">NASA APOD Viewer</h3>
@@ -441,16 +547,20 @@
                             <span class="tech-badge">React</span>
                             <span class="tech-badge">Tailwind CSS</span>
                             <div class="flex gap-2 ml-auto">
-                                <a href="https://github.com/lukeponga-dev/web-app-using-NASAS-Astronomy-Picture-of-the-day-API" target="_blank" class="btn-primary">GitHub</a>
-                                <a href="https://astronomydailypic.netlify.app/" target="_blank" class="btn-ghost">Demo</a>
+                                <a href="https://github.com/lukeponga-dev/web-app-using-NASAS-Astronomy-Picture-of-the-day-API"
+                                    target="_blank" class="btn-primary">GitHub</a>
+                                <a href="https://astronomydailypic.netlify.app/" target="_blank"
+                                    class="btn-ghost">Demo</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
+
+                <div
+                    class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
                     <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
-                        <img src="/images/v0-openai-chat-t.png" alt="AI Chat Interface SDK" class="w-full h-full object-cover">
+                        <img src="assests/images/v0-openai-chat-t.png" alt="AI Chat Interface SDK"
+                            class="w-full h-full object-cover">
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold mb-2">AI Chat Interface SDK</h3>
@@ -460,35 +570,40 @@
                             <span class="tech-badge">Next.js</span>
                             <span class="tech-badge">TypeScript</span>
                             <div class="flex gap-2 ml-auto">
-                                <a href="https://github.com/lukeponga-dev/OpenAI-Chat-interface-sdk" target="_blank" class="btn-primary">GitHub</a>
-                                <a href="https://lukeponga-dev.github.io/chat-sdk-demo" target="_blank" class="btn-ghost">Demo</a>
+                                <a href="https://github.com/lukeponga-dev/OpenAI-Chat-interface-sdk" target="_blank"
+                                    class="btn-primary">GitHub</a>
+                                <a href="https://lukeponga-dev.github.io/chat-sdk-demo" target="_blank"
+                                    class="btn-ghost">Demo</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
+
+                <div
+                    class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
                     <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
-                        <img src="/images/letsenhance.png" alt="AI Image Enhancer" class="w-full h-full object-cover">
+                        <img src="assests/images/letsenhance.png" alt="AI Image Enhancer"
+                            class="w-full h-full object-cover">
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold mb-2">AI Image Enhancer</h3>
-                        <p class="text-slate-400 mb-3">Enhance and transform images using AI techniques for
+                        <p class="text-slate-400 mb-3">Enhance and transformassests images using AI techniques for
                             superior quality.</p>
                         <div class="flex gap-4 items-center flex-wrap">
                             <span class="tech-badge">React</span>
                             <span class="tech-badge">Google Gemini</span>
                             <div class="flex gap-2 ml-auto">
-                                <a href="https://github.com/lukeponga-dev/gemini-image-enhance_app" target="_blank" class="btn-primary">GitHub</a>
+                                <a href="https://github.com/lukeponga-dev/gemini-image-enhance_app" target="_blank"
+                                    class="btn-primary">GitHub</a>
                                 <a href="https://letsenhance.vercel.app/" target="_blank" class="btn-ghost">Demo</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
     </section>
-    
+
     <section id="contact" class="py-16 sm:py-24 bg-slate-900 light-mode:bg-slate-50 container-padding">
         <div class="max-w-7xl mx-auto text-center">
             <h2 class="section-title text-4xl font-bold mb-8 text-white light-mode:text-slate-900">Get In Touch</h2>
@@ -500,14 +615,19 @@
                 <h3 class="text-2xl font-bold mb-6 text-white light-mode:text-slate-900">Contact Details</h3>
                 <div class="space-y-6">
                     <div class="flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-blue-400 mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-6 h-6 text-blue-400 mr-3">
                             <rect x="3" y="5" width="18" height="14" rx="2" />
                             <path d="m3 7 9 6 9-6" />
                         </svg>
-                        <a href="mailto:lukeponga9@gmail.com" class="text-lg text-white light-mode:text-slate-900 hover:text-blue-400 transition">lukeponga9@gmail.com</a>
+                        <a href="mailto:lukeponga9@gmail.com"
+                            class="text-lg text-white light-mode:text-slate-900 hover:text-blue-400 transition">lukeponga9@gmail.com</a>
                     </div>
                     <div class="flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-blue-400 mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-6 h-6 text-blue-400 mr-3">
                             <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                             <circle cx="12" cy="10" r="3" />
                         </svg>
@@ -515,14 +635,19 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
-    
-    <footer class="bg-slate-950 py-8 border-t border-slate-700 light-mode:bg-slate-900 light-mode:border-slate-800 text-center text-slate-400 light-mode:text-slate-500">
+
+    <footer
+        class="bg-slate-950 py-8 border-t border-slate-700 light-mode:bg-slate-900 light-mode:border-slate-800 text-center text-slate-400 light-mode:text-slate-500">
         <p class="text-sm">&copy; 2025 Luke Ponga. All rights reserved. | Built with Tailwind CSS.</p>
     </footer>
-    
+
     <script src="js/script.js"></script>
+
+
+
 </body>
 
 </html>

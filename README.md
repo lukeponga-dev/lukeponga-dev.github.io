@@ -105,10 +105,8 @@ This portfolio is designed for maximum clarity, performance, and user experience
 │ │   ├── images/              # Image assets
 │ │   └── favicon/             # Icon assets (site.webmanifest, favicons)
 │ ├── CV.pdf                   # Downloadable resume
-│ ├── components/              # Reusable components (if using React)
-│ │   ├── Header.js            # Header component
-│ │   ├── ProjectCard.js       # Project card component
-│ │   └── Footer.js            # Footer component
+│ ├── LICENSE                  # License file
+│ ├── SECURITY.md              # Security policy
 │ └── README.md                # This file
 ```
 
