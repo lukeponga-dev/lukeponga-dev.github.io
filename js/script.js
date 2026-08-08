@@ -144,7 +144,7 @@ function startCanvasAnimation() {
 
 function hydrateListImages() {
   document.querySelectorAll("#list-layout img[data-src]").forEach((image) => {
-    if (!image.getAttribute("src")) {
+    if (image.getAttribute("src") !== image.dataset.src) {
       image.setAttribute("src", image.dataset.src);
     }
   });
