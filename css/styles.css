@@ -240,3 +240,10 @@ a:hover {
     color: #3498db; /* Change color on hover */
     text-decoration: underline; /* Underline links on hover */
 }
+
+@media (min-width: 768px) {
+    .deferred-section {
+        content-visibility: auto;
+        contain-intrinsic-size: 1px 900px;
+    }
+}
