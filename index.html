@@ -14,6 +14,20 @@
     <link rel="icon" href="assests/favicon/favicon.ico" type="image/x-icon">
     
     <title>Luke Ponga - Developer and IT Support Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '.light-mode'],
+            theme: {
+                extend: {
+                    screens: {
+                        'light-mode': { raw: '(class: light-mode)' }
+                    }
+                }
+            }
+        }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
@@ -92,12 +106,12 @@
         </div>
     </section>
     
-    <section id="about" class="py-16 sm:py-24 container-padding">
+    <section id="about" class="deferred-section py-16 sm:py-24 container-padding">
         <div class="max-w-7xl mx-auto">
             <h2 class="section-title text-4xl font-bold mb-12 text-center">About Me</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="rounded-xl overflow-hidden shadow-2xl bg-slate-800 light-mode:bg-slate-100 p-4">
-                    <img src="assests/images/logo.jpeg" alt="Professional portrait of Luke Ponga" class="w-full h-auto rounded-xl" />
+                    <img src="assests/images/logo.jpeg" alt="Professional portrait of Luke Ponga" loading="eager" fetchpriority="high" decoding="async" class="w-full h-auto rounded-xl" />
                 </div>
                 <div class="text-slate-300 light-mode:text-slate-600 space-y-6">
                     <p class="text-lg">
@@ -127,7 +141,7 @@
         </div>
     </section>
     
-    <section id="skills" class="py-16 sm:py-24 bg-slate-900 light-mode:bg-slate-50 container-padding">
+    <section id="skills" class="deferred-section py-16 sm:py-24 bg-slate-900 light-mode:bg-slate-50 container-padding">
         <div class="max-w-7xl mx-auto">
             <h2 class="section-title text-4xl font-bold mb-12 text-center text-white light-mode:text-slate-900">Core
                 Skills</h2>
@@ -207,7 +221,7 @@
     </section>
     
     <!-- Certificate -->
-    <section id="certifications" class="py-16 sm:py-24 container-padding bg-slate-900/50 light-mode:bg-white">
+    <section id="certifications" class="deferred-section py-16 sm:py-24 container-padding bg-slate-900/50 light-mode:bg-white">
         <div class="max-w-4xl mx-auto">
             <h2 class="section-title text-4xl font-bold mb-12 text-center text-white light-mode:text-slate-900">
                 Certifications
@@ -254,7 +268,7 @@
     
     <!-- PROJECTS -->
     
-    <section id="projects" class="py-20 px-6">
+    <section id="projects" class="deferred-section py-20 px-6">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-5xl font-bold mb-4">Featured Projects</h2>
@@ -274,7 +288,7 @@
                 
                 <div class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
                     <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                        <img src="assests/images/jobtrackerdashboard.png" alt="Job Track" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <img src="assests/images/jobtrackerdashboard.png" alt="Job Track" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                         <div class="absolute top-3 right-3 featured-badge">⭐ Featured</div>
                     </div>
                     <div class="p-6">
@@ -294,7 +308,7 @@
                 </div>
                 <div class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
                     <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                        <img src="assests/images/rotaryaimechanic.png" alt="RotorWise AI RX-8 Mechanic" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <img src="assests/images/rotaryaimechanic.png" alt="RotorWise AI RX-8 Mechanic" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                         <div class="absolute top-3 right-3 featured-badge">⭐ Featured</div>
                     </div>
                     <div class="p-6">
@@ -315,7 +329,7 @@
                 
                 <div class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
                     <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                        <img src="assests/images/cryptocoinstats.png" alt="CryptoStats" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <img src="assests/images/cryptocoinstats.png" alt="CryptoStats" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">CryptoStats</h3>
@@ -335,7 +349,7 @@
                 
                 <div class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
                     <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                        <img src="assests/images/new-zealand-website-screenshot.jpg" alt="NZ Tourism Website" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <img src="assests/images/new-zealand-website-screenshot.jpg" alt="NZ Tourism Website" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">NZ Tourism Website</h3>
@@ -355,7 +369,7 @@
                 
                 <div class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
                     <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                        <img src="assests/images/cosmic.png" alt="NASA APOD Viewer" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <img src="assests/images/cosmic.png" alt="NASA APOD Viewer" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">NASA APOD Viewer</h3>
@@ -375,7 +389,7 @@
                 
                 <div class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
                     <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                        <img src="assests/images/v0-openai-chat-t.png" alt="AI Chat Interface SDK" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <img src="assests/images/v0-openai-chat-t.png" alt="AI Chat Interface SDK" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">AI Chat Interface SDK</h3>
@@ -395,7 +409,7 @@
                 
                 <div class="project-card group bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50">
                     <div class="relative h-40 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
-                        <img src="assests/images/letsenhance.png" alt="AI Image Enhancer" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <img src="assests/images/letsenhance.png" alt="AI Image Enhancer" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">AI Image Enhancer</h3>
@@ -420,7 +434,7 @@
                 
                 <div class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
                     <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
-                        <img src="assests/images/jobtrackerdashboard.png" alt="JobTrackr" class="w-full h-full object-cover">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="assests/images/jobtrackerdashboard.png" alt="JobTrackr" loading="lazy" decoding="async" class="w-full h-full object-cover">
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold mb-2">⭐ JobTrackr</h3>
@@ -438,7 +452,7 @@
                 </div>
                 <div class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
                     <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
-                        <img src="assests/images/rotaryaimechanic.png" alt="RotorWise" class="w-full h-full object-cover">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="assests/images/rotaryaimechanic.png" alt="RotorWise" loading="lazy" decoding="async" class="w-full h-full object-cover">
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold mb-2">⭐ RotorWise AI RX-8 Mechanic</h3>
@@ -457,7 +471,7 @@
                 
                 <div class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
                     <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
-                        <img src="assests/images/cryptocoinstats.png" alt="CryptoStats" class="w-full h-full object-cover">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="assests/images/cryptocoinstats.png" alt="CryptoStats" loading="lazy" decoding="async" class="w-full h-full object-cover">
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold mb-2">CryptoStats</h3>
@@ -476,7 +490,7 @@
                 
                 <div class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
                     <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
-                        <img src="assests/images/new-zealand-website-screenshot.jpg" alt="NZ Tourism" class="w-full h-full object-cover">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="assests/images/new-zealand-website-screenshot.jpg" alt="NZ Tourism" loading="lazy" decoding="async" class="w-full h-full object-cover">
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold mb-2">NZ Tourism Website</h3>
@@ -495,7 +509,7 @@
                 
                 <div class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
                     <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
-                        <img src="assests/images/cosmic.png" alt="NASA APOD" class="w-full h-full object-cover">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="assests/images/cosmic.png" alt="NASA APOD" loading="lazy" decoding="async" class="w-full h-full object-cover">
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold mb-2">NASA APOD Viewer</h3>
@@ -514,7 +528,7 @@
                 
                 <div class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
                     <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
-                        <img src="assests/images/v0-openai-chat-t.png" alt="AI Chat Interface SDK" class="w-full h-full object-cover">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="assests/images/v0-openai-chat-t.png" alt="AI Chat Interface SDK" loading="lazy" decoding="async" class="w-full h-full object-cover">
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold mb-2">AI Chat Interface SDK</h3>
@@ -533,7 +547,7 @@
                 
                 <div class="project-card flex items-center bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-cyan-500/50">
                     <div class="w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden mr-6">
-                        <img src="assests/images/letsenhance.png" alt="AI Image Enhancer" class="w-full h-full object-cover">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="assests/images/letsenhance.png" alt="AI Image Enhancer" loading="lazy" decoding="async" class="w-full h-full object-cover">
                     </div>
                     <div class="flex-grow">
                         <h3 class="text-2xl font-bold mb-2">AI Image Enhancer</h3>
@@ -556,7 +570,7 @@
     
     <!--Contsct -->
     
-    <section id="contact" class="py-16 sm:py-24 bg-slate-900 light-mode:bg-slate-50 container-padding">
+    <section id="contact" class="deferred-section py-16 sm:py-24 bg-slate-900 light-mode:bg-slate-50 container-padding">
         <div class="max-w-7xl mx-auto text-center">
             <h2 class="section-title text-4xl font-bold mb-8 text-white light-mode:text-slate-900">Get In Touch</h2>
             <p class="text-xl text-slate-300 light-mode:text-slate-600 max-w-3xl mx-auto mb-12">
@@ -592,22 +606,7 @@
         <p class="text-sm">&copy; 2025 Luke Ponga. All rights reserved. | Built with Tailwind CSS.</p>
     </footer>
     
-    <script src="js/script.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            // This tells Tailwind to look for a class named 'light-mode' on the HTML or Body tag
-            // to trigger specific styles.
-            darkMode: ['class', '.light-mode'],
-            theme: {
-                extend: {
-                    screens: {
-                        'light-mode': { raw: '(class: light-mode)' }
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="js/script.js" defer></script>
     
     
     
