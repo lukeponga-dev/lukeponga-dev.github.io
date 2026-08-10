@@ -26,6 +26,7 @@
 - **Next.js-style implementation**: `app/layout.tsx`, `app/page.tsx`, and section components in `components/` (Navbar, Hero, About, Skills, Projects, Connect, Footer).
 
 ## Project-specific editing conventions
+- Before the first edit in any task, explicitly state which implementation surface is being changed (`index.html`, `public/*`, or `app/components/*`) and whether counterpart files must also be updated for shared content/behavior changes.
 - Before editing, identify whether the task targets static HTML, mirrored public files, or Next.js component files; do not assume they auto-sync.
 - For copy/content updates, preserve section IDs and anchor targets to avoid breaking navbar and smooth-scroll behavior.
 - For UI behavior updates, check for duplicate implementations (inline script in HTML and standalone JS files) and update all relevant locations intentionally.
