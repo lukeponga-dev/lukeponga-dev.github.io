@@ -1,301 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luke Ponga — Software Developer & IT Specialist</title>
-  <!-- Load the Tailwind CSS CDN for styling -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Set a custom font for the body -->
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #1f2937;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #4f46e5;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #4338ca;
-    }
-  </style>
-  
-  <!-- Vercel Web Analytics -->
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4171876147164529" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Luke Ponga — software developer building AI-powered products, web applications and practical developer tools in New Zealand.">
+<meta name="theme-color" content="#080b12">
+<title>Luke Ponga — Software Developer</title>
+<style>
+:root{--bg:#080b12;--panel:#10151f;--panel2:#151b27;--text:#f4f7fb;--muted:#98a2b3;--line:#242c3a;--accent:#6ee7d8;--accent2:#8b9cff;--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.nav{position:sticky;top:0;z-index:20;background:rgba(8,11,18,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}.navin{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:-.04em;font-size:20px}.brand span{color:var(--accent)}.links{display:flex;gap:28px;color:#c7cfda;font-size:14px}.links a:hover{color:white}.pill,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid var(--line);padding:11px 17px;font-weight:700;font-size:14px;transition:.2s}.pill:hover,.btn:hover{border-color:#556176;transform:translateY(-1px)}.hero{padding:112px 0 90px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:650px;height:650px;border-radius:50%;background:radial-gradient(circle,rgba(110,231,216,.11),transparent 66%);top:-280px;right:-130px;pointer-events:none}.eyebrow{color:var(--accent);font:700 13px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase}.hero h1{font-size:clamp(48px,8vw,94px);line-height:.95;letter-spacing:-.065em;margin:22px 0 26px;max-width:920px}.gradient{background:linear-gradient(100deg,var(--text),#aab8ff 55%,var(--accent));-webkit-background-clip:text;color:transparent}.lead{font-size:clamp(18px,2.2vw,23px);color:#aab4c3;max-width:760px;margin:0 0 34px}.actions{display:flex;gap:12px;flex-wrap:wrap}.primary{background:var(--text);color:#090c12;border-color:var(--text)}.primary:hover{background:#dce4ed}.meta{display:flex;gap:30px;flex-wrap:wrap;margin-top:62px;color:var(--muted);font-size:14px}.meta strong{display:block;color:#eef3f8;font-size:18px;margin-bottom:2px}.section{padding:92px 0;border-top:1px solid rgba(255,255,255,.06)}.sectionhead{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;margin-bottom:44px}.section h2{font-size:clamp(34px,5vw,52px);letter-spacing:-.045em;line-height:1.05;margin:9px 0}.sectionhead p{color:var(--muted);font-size:18px;margin:8px 0 0;align-self:end}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.card{background:linear-gradient(145deg,var(--panel),#0d1119);border:1px solid var(--line);border-radius:24px;padding:28px;position:relative;overflow:hidden}.project{grid-column:span 6;min-height:330px;display:flex;flex-direction:column}.project.featured{grid-column:span 12;min-height:400px;padding:40px}.tag{font:700 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent);text-transform:uppercase;letter-spacing:.11em}.project h3{font-size:30px;letter-spacing:-.035em;margin:18px 0 12px}.featured h3{font-size:44px}.project p{color:var(--muted);max-width:650px;margin:0 0 22px}.stack{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}.chip{border:1px solid var(--line);background:#0a0e15;color:#b7c0cd;border-radius:999px;padding:6px 10px;font-size:12px}.arrow{position:absolute;right:28px;top:25px;font-size:22px;color:#7f8b9b}.skills{grid-column:span 4}.skills h3{margin:0 0 15px;font-size:18px}.skills p{color:var(--muted);margin:0}.about{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.about .card{padding:34px}.about p{font-size:18px;color:#aab4c3;margin:0}.timeline{display:grid;gap:13px;margin-top:20px}.timeline div{padding:14px 0;border-top:1px solid var(--line)}.timeline strong{display:block}.timeline span{color:var(--muted);font-size:14px}.contact{padding:110px 0}.contactbox{text-align:center;padding:64px 30px;background:radial-gradient(circle at top,rgba(139,156,255,.11),transparent 50%),var(--panel);border:1px solid var(--line);border-radius:30px}.contactbox h2{font-size:clamp(38px,6vw,66px);letter-spacing:-.055em;line-height:1;margin:10px auto 20px;max-width:800px}.contactbox p{color:var(--muted);max-width:620px;margin:0 auto 30px;font-size:18px}.footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.footerin{display:flex;justify-content:space-between;gap:20px}.mobile{display:none}.reveal{animation:up .65s ease both}@keyframes up{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}@media(max-width:760px){.links{display:none}.mobile{display:inline-flex}.hero{padding:82px 0 70px}.section{padding:72px 0}.sectionhead,.about{grid-template-columns:1fr}.project,.project.featured,.skills{grid-column:span 12}.project.featured{padding:28px;min-height:360px}.featured h3{font-size:34px}.meta{gap:22px}.footerin{flex-direction:column}.wrap{width:min(var(--max),calc(100% - 28px))}}
+</style>
 </head>
-<body class="bg-slate-950 text-slate-200 antialiased leading-relaxed">
+<body>
+<nav class="nav"><div class="wrap navin"><a class="brand" href="#top">LP<span>.</span></a><div class="links"><a href="#work">Work</a><a href="#about">About</a><a href="#skills">Stack</a><a href="#contact">Contact</a></div><a class="pill" href="https://github.com/lukeponga-dev" target="_blank" rel="noreferrer">GitHub ↗</a></div></nav>
+<main id="top">
+<header class="hero"><div class="wrap reveal"><div class="eyebrow">Software Developer · Hamilton, New Zealand</div><h1>I build useful software <span class="gradient">with AI at the core.</span></h1><p class="lead">I’m Luke Ponga — a developer focused on AI-powered products, full-stack web systems, mobile experiences and practical tools that solve real problems.</p><div class="actions"><a class="btn primary" href="#work">Explore my work ↓</a><a class="btn" href="mailto:lukeponga9@gmail.com">Get in touch</a></div><div class="meta"><div><strong>AI + Full Stack</strong>Product engineering</div><div><strong>Android + Web</strong>Cross-platform builds</div><div><strong>NZ based</strong>Open to opportunities</div></div></div></header>
 
-  <!-- Navigation Bar -->
-  <nav id="navbar" class="fixed top-0 w-full bg-slate-950/90 backdrop-blur-sm z-50 transition-all duration-300 py-4 shadow-lg">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <a href="#" class="text-xl font-bold text-white">Luke Ponga</a>
-      <div class="hidden md:flex space-x-8">
-        <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a>
-        <a href="#skills" class="text-gray-300 hover:text-white transition-colors duration-300">Skills</a>
-        <a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300">Projects</a>
-        <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Connect</a>
-      </div>
-      <!-- Mobile menu button -->
-      <div class="md:hidden">
-        <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 px-4 pt-2 pb-4">
-      <div class="flex flex-col space-y-3">
-        <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a>
-        <a href="#skills" class="text-gray-300 hover:text-white transition-colors duration-300">Skills</a>
-        <a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300">Projects</a>
-        <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Connect</a>
-      </div>
-    </div>
-  </nav>
+<section class="section" id="work"><div class="wrap"><div class="sectionhead"><div><div class="eyebrow">Selected work</div><h2>Projects built to ship.</h2></div><p>Recent work spans multimodal AI, market intelligence, mapping, autonomous agents and production APIs.</p></div><div class="grid">
+<a class="card project featured" href="https://github.com/lukeponga-dev/pricesnap-backend" target="_blank" rel="noreferrer"><span class="arrow">↗</span><div class="tag">Featured · AI product</div><h3>PriceSnap</h3><p>An AI-powered resale valuation platform for the New Zealand market. Users photograph an item and receive identification, condition analysis, comparable evidence and an estimated NZD value through a production Android + API stack.</p><div class="stack"><span class="chip">Android</span><span class="chip">Kotlin</span><span class="chip">Next.js</span><span class="chip">Multimodal AI</span><span class="chip">Vercel</span><span class="chip">REST API</span></div></a>
+<a class="card project" href="https://github.com/lukeponga-dev" target="_blank" rel="noreferrer"><span class="arrow">↗</span><div class="tag">Mapping · Data</div><h3>TrafficNZ Explorer</h3><p>A New Zealand traffic-camera exploration experience combining live transport data with an interactive map and location-aware discovery.</p><div class="stack"><span class="chip">React</span><span class="chip">Leaflet</span><span class="chip">Flask</span><span class="chip">Docker</span></div></a>
+<a class="card project" href="https://github.com/lukeponga-dev/compx201-university-java-data-structures" target="_blank" rel="noreferrer"><span class="arrow">↗</span><div class="tag">Computer science</div><h3>Data Structures</h3><p>Java implementations of core data structures and algorithms, including trees, heaps and linked structures, developed through university coursework.</p><div class="stack"><span class="chip">Java</span><span class="chip">Algorithms</span><span class="chip">OOP</span></div></a>
+<a class="card project" href="https://github.com/lukeponga-dev" target="_blank" rel="noreferrer"><span class="arrow">↗</span><div class="tag">Agentic AI</div><h3>LabFlow AI</h3><p>A multimodal experiment-reasoning concept designed to inspect documents, datasets and images, detect anomalies and turn evidence into corrective actions.</p><div class="stack"><span class="chip">AI Agents</span><span class="chip">Multimodal</span><span class="chip">Data analysis</span></div></a>
+<a class="card project" href="https://github.com/lukeponga-dev" target="_blank" rel="noreferrer"><span class="arrow">↗</span><div class="tag">Developer tools</div><h3>CodeAgent X</h3><p>An autonomous engineering-agent prototype for repository analysis, error diagnosis, targeted fixes and regression scanning.</p><div class="stack"><span class="chip">Agents</span><span class="chip">Git</span><span class="chip">Automation</span></div></a>
+</div></div></section>
 
-  <!-- Header Section: Prominent, professional, and centrally aligned -->
-  <header class="relative overflow-hidden bg-slate-900 text-center py-20 px-4 md:px-8 shadow-2xl rounded-b-3xl transform -skew-y-1 mt-16">
-    <div class="pointer-events-none absolute -top-10 left-1/4 h-36 w-36 rounded-full bg-indigo-500/30 blur-3xl animate-pulse"></div>
-    <div class="pointer-events-none absolute -bottom-16 right-1/4 h-44 w-44 rounded-full bg-cyan-500/20 blur-3xl animate-pulse"></div>
-    <div class="relative transform skew-y-1">
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-2 tracking-tight bg-gradient-to-r from-indigo-400 via-cyan-300 to-violet-400 bg-clip-text text-transparent">Luke Ponga</h1>
-      <p class="text-xl md:text-2xl font-light text-gray-300">Junior Software Developer | Hamilton, NZ</p>
-    </div>
-  </header>
+<section class="section" id="about"><div class="wrap"><div class="sectionhead"><div><div class="eyebrow">About</div><h2>Curious by default.<br>Builder by practice.</h2></div><p>I enjoy moving from an idea to something testable — designing the flow, connecting the backend, integrating AI and working through the details until it behaves like a real product.</p></div><div class="about"><div class="card"><p>My background combines computer science, software development and hands-on technical problem solving. I’m especially interested in applied AI, APIs, mobile development, IoT and systems that turn messy real-world information into useful experiences.</p></div><div class="card"><div class="tag">Education & credentials</div><div class="timeline"><div><strong>Computer Science</strong><span>University of Waikato</span></div><div><strong>Software Development · Level 6</strong><span>ATC Vision College</span></div><div><strong>Web Development & Design · Level 5</strong><span>ATC Vision College</span></div><div><strong>ISTQB Foundation</strong><span>Software testing certification</span></div></div></div></div></div></section>
 
-  <main class="container mx-auto px-4 py-16">
+<section class="section" id="skills"><div class="wrap"><div class="sectionhead"><div><div class="eyebrow">Technical stack</div><h2>Tools I build with.</h2></div><p>A practical mix of application development, cloud deployment, AI integration and software engineering fundamentals.</p></div><div class="grid"><div class="card skills"><h3>Languages</h3><p>JavaScript / TypeScript, Java, C#, SQL, HTML, CSS, Kotlin</p></div><div class="card skills"><h3>Web & APIs</h3><p>React, Next.js, Flask, FastAPI, Node.js, REST APIs, SvelteKit</p></div><div class="card skills"><h3>AI Engineering</h3><p>Multimodal models, agent workflows, structured outputs, grounding and evaluation</p></div><div class="card skills"><h3>Mobile & IoT</h3><p>Android, Kotlin, Retrofit, Arduino, sensors and connected-device prototypes</p></div><div class="card skills"><h3>Infrastructure</h3><p>Git, GitHub, Docker, Nginx, Vercel, Google Cloud, CI/CD workflows</p></div><div class="card skills"><h3>Engineering</h3><p>OOP, data structures, testing, security, Agile teamwork and system design</p></div></div></div></section>
 
-    <!-- About Me Section: Clean card with a hover scale effect for visual interest -->
-    <section id="about" class="bg-white/5 backdrop-blur-xl border border-white/10 p-10 rounded-3xl shadow-lg mb-16 transform hover:scale-105 transition-transform duration-300">
-      <h2 class="text-4xl font-bold text-white mb-4 border-b-2 border-indigo-500 pb-2">About Me</h2>
-      <p class="text-lg text-gray-400">
-        I'm a passionate developer with a strong foundation in backend systems, IT support, and web technologies. I thrive in collaborative environments and love solving real-world problems through tech.
-      </p>
-    </section>
-
-    <!-- Skills Section: Dynamic grid layout with distinct categories -->
-    <section id="skills" class="bg-white/5 backdrop-blur-xl border border-white/10 p-10 rounded-3xl shadow-lg mb-16">
-      <h2 class="text-4xl font-bold text-white mb-8 text-center border-b-2 border-indigo-500 pb-2">Skills</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Languages & Frameworks Card -->
-        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-indigo-600/40 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Languages & Frameworks</h3>
-          <ul class="list-disc list-inside text-gray-300">
-            <li>C#, Java, HTML/CSS/JS</li>
-            <li>SQL, .NET, Azure</li>
-            <li>React Native</li>
-          </ul>
-        </div>
-        <!-- Tools & Software Card -->
-        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-indigo-600/40 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Tools & Software</h3>
-          <ul class="list-disc list-inside text-gray-300">
-            <li>Microsoft Office</li>
-            <li>Git, GitHub</li>
-            <li>Visual Studio, VS Code</li>
-          </ul>
-        </div>
-        <!-- Methodologies & Concepts Card -->
-        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-indigo-600/40 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Methodologies & Concepts</h3>
-          <ul class="list-disc list-inside text-gray-300">
-            <li>ISTQB CTFL</li>
-            <li>Natural Language AI</li>
-            <li>Agile Development</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-<section id="certifications" class="py-16 sm:py-24 container-padding bg-slate-900/50 light-mode:bg-white">
-    <div class="max-w-4xl mx-auto">
-        <h2 class="section-title text-4xl font-bold mb-12 text-center text-white light-mode:text-slate-900">
-            Certifications
-        </h2>
-        
-        <div class="space-y-6">
-            <article class="bg-slate-800 light-mode:bg-slate-100 p-6 rounded-xl border-l-4 border-blue-500 shadow-lg hover:transform hover:scale-[1.01] transition-all duration-300">
-                <h3 class="text-xl font-bold text-white light-mode:text-slate-900 mb-2">Introduction to Computers and Operating Systems and Security</h3>
-                <div class="text-slate-400 light-mode:text-slate-600 text-sm space-y-1">
-                    <p><span class="font-semibold text-blue-400 light-mode:text-blue-600">Provider:</span> Microsoft via Coursera</p>
-                    <p><span class="font-semibold text-blue-400 light-mode:text-blue-600">Date:</span> May 22, 2024</p>
-                    <p><span class="font-semibold text-blue-400 light-mode:text-blue-600">Grade:</span> 89.16%</p>
-                </div>
-                <div class="mt-4">
-                    <a href="https://learn.microsoft.com/api/credentials/share/en-us/lukeponga/AFD08D0C24C28A2F?sharingId=664B3ACEB7027A76" target="_blank" rel="noopener" class="inline-flex items-center text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">
-                        Verify Credential
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-                    </a>
-                </div>
-            </article>
-
-            <article class="bg-slate-800 light-mode:bg-slate-100 p-6 rounded-xl border-l-4 border-purple-500 shadow-lg hover:transform hover:scale-[1.01] transition-all duration-300">
-                <h3 class="text-xl font-bold text-white light-mode:text-slate-900 mb-2">Microsoft Learn Cloud Skills Challenge – Build Edition</h3>
-                <div class="text-slate-400 light-mode:text-slate-600 text-sm space-y-1">
-                    <p><span class="font-semibold text-purple-400 light-mode:text-purple-600">Provider:</span> Microsoft Learn</p>
-                    <p><span class="font-semibold text-purple-400 light-mode:text-purple-600">Date:</span> June 22, 2024</p>
-                    <p class="mt-2 italic">Successfully completed Cloud Skills Challenge at Build 2024, endorsed by Satya Nadella</p>
-                </div>
-            </article>
-
-            <article class="bg-slate-800 light-mode:bg-slate-100 p-6 rounded-xl border-l-4 border-cyan-500 shadow-lg hover:transform hover:scale-[1.01] transition-all duration-300">
-                <h3 class="text-xl font-bold text-white light-mode:text-slate-900 mb-2">Deploy and Manage a Container App (Azure Container Apps)</h3>
-                <div class="text-slate-400 light-mode:text-slate-600 text-sm space-y-1">
-                    <p><span class="font-semibold text-cyan-400 light-mode:text-cyan-600">Provider:</span> Microsoft Learn</p>
-                    <p><span class="font-semibold text-cyan-400 light-mode:text-cyan-600">Date:</span> December 10, 2025</p>
-                    <p class="mt-2 italic">Guided project on deploying and managing containerized applications</p>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
-
-    <!-- Projects Section: A multi-column grid to showcase featured work -->
-    <section id="projects" class="mb-16">
-      <h2 class="text-4xl font-bold text-white mb-8 text-center border-b-2 border-indigo-500 pb-2">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-        <!-- Project card for the Java Data Structures repository -->
-        <div class="project bg-white/5 backdrop-blur-xl p-8 rounded-3xl shadow-lg border border-white/10 hover:border-indigo-500 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Data Structures & Algorithms</h3>
-          <p class="text-gray-400 mb-4">
-            University assignments on implementing core data structures in Java. Demonstrates knowledge of BSTs, Heaps, and Linked Lists.
-          </p>
-          <a href="https://github.com/lukeponga-dev/compx201-university-java-data-structures" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-400 hover:underline">
-            View on GitHub
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-10h6m0 0l-6 6"></path></svg>
-          </a>
-        </div>
-
-        <!-- Project card for the Job Application Tracker -->
-        <div class="project bg-white/5 backdrop-blur-xl p-8 rounded-3xl shadow-lg border border-white/10 hover:border-indigo-500 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Job Application Tracker</h3>
-          <p class="text-gray-400 mb-4">
-            A practical web-based tool for tracking job applications and volunteer work.
-          </p>
-          <a href="https://github.com/lukeponga-dev/JobApplication-tracker" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-400 hover:underline">
-            View on GitHub
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-10h6m0 0l-6 6"></path></svg>
-          </a>
-        </div>
-
-        <!-- Project card for the Kiwi Car Checker -->
-        <div class="project bg-white/5 backdrop-blur-xl p-8 rounded-3xl shadow-lg border border-white/10 hover:border-indigo-500 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Kiwi Car Checker</h3>
-          <p class="text-gray-400 mb-4">
-            A TypeScript-based application for checking vehicle information in New Zealand.
-          </p>
-          <a href="https://github.com/lukeponga-dev/kiwi-car-checker" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-400 hover:underline">
-            View on GitHub
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-10h6m0 0l-6 6"></path></svg>
-          </a>
-        </div>
-
-        <!-- More projects placeholder card -->
-        <div class="project bg-white/5 backdrop-blur-xl p-8 rounded-3xl shadow-lg border border-white/10 hover:border-indigo-500 transition-colors duration-300 flex flex-col justify-between transform hover:-translate-y-2">
-          <div>
-            <h3 class="text-2xl font-semibold text-white mb-2">More Projects</h3>
-            <p class="text-gray-400 mb-4">
-              I'm actively working on new projects. Stay tuned for updates, or check out my GitHub profile for my latest activity.
-            </p>
-          </div>
-          <a href="https://github.com/lukeponga-dev" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-400 hover:underline">
-            Visit My GitHub
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-10h6m0 0l-6 6"></path></svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section: A clean, centered card for contact information -->
-    <section id="contact" class="bg-white/5 backdrop-blur-xl border border-white/10 p-10 rounded-3xl shadow-lg mb-16 text-center">
-      <h2 class="text-4xl font-bold text-white mb-4 border-b-2 border-indigo-500 pb-2">Connect</h2>
-      <p class="text-lg">
-        <span class="text-indigo-500">Email:</span> <a href="mailto:lukeponga9@gmail.com" class="hover:underline text-gray-300">lukeponga9@gmail.com</a>
-      </p>
-      <div class="mt-6 flex items-center justify-center gap-4">
-        <a href="https://github.com/lukeponga-dev" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-full border border-white/20 px-4 py-2 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-300">GitHub</a>
-        <a href="https://www.linkedin.com/in/luke-ponga/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-full border border-white/20 px-4 py-2 text-sm text-gray-200 hover:bg-white/10 transition-colors duration-300">LinkedIn</a>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Back to Top Button -->
-  <button id="backToTop" class="fixed bottom-8 right-8 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0 invisible">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-    </svg>
-  </button>
-
-  <!-- Footer: Simple and subtle -->
-  <footer class="text-center py-6 px-4 text-gray-500">
-    <p>&copy; 2025 Luke Ponga</p>
-  </footer>
-
-  <script>
-    // Back to Top functionality
-    const backToTopButton = document.getElementById('backToTop');
-    
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopButton.classList.remove('opacity-0', 'invisible');
-        backToTopButton.classList.add('opacity-100', 'visible');
-      } else {
-        backToTopButton.classList.remove('opacity-100', 'visible');
-        backToTopButton.classList.add('opacity-0', 'invisible');
-      }
-    });
-    
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    
-    // Mobile menu functionality
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      mobileMenuButton.setAttribute('aria-expanded', mobileMenu.classList.contains('hidden') ? 'false' : 'true');
-    });
-    
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        mobileMenuButton.setAttribute('aria-expanded', 'false');
-      });
-    });
-    
-    // Navbar background change on scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('bg-gray-900', 'shadow-lg');
-        navbar.classList.remove('bg-gray-900/90');
-      } else {
-        navbar.classList.remove('bg-gray-900', 'shadow-lg');
-        navbar.classList.add('bg-gray-900/90');
-      }
-    });
-  </script>
-
+<section class="contact" id="contact"><div class="wrap"><div class="contactbox"><div class="eyebrow">Let’s build something</div><h2>Looking for a developer who likes solving hard problems?</h2><p>I’m interested in software engineering, AI and product-development opportunities where I can build, learn and contribute to real-world systems.</p><div class="actions" style="justify-content:center"><a class="btn primary" href="mailto:lukeponga9@gmail.com">Email me</a><a class="btn" href="https://github.com/lukeponga-dev" target="_blank" rel="noreferrer">View GitHub ↗</a></div></div></div></section>
+</main>
+<footer class="footer"><div class="wrap footerin"><span>© 2026 Luke Ponga</span><span>Designed & built in New Zealand.</span></div></footer>
 </body>
 </html>
