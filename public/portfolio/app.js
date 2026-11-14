@@ -126,6 +126,7 @@ function setupTable(repos) {
 }
 
 const GITHUB_USER = "lukeponga-dev";
+const SNAPSHOT_URL = new URL("repos.json", document.currentScript.src).href;
 
 async function loadRepos() {
   try {
@@ -140,7 +141,7 @@ async function loadRepos() {
     }
     return { repos: all, fetched_at: new Date().toISOString(), live: true };
   } catch {
-    const res = await fetch("portfolio/repos.json");
+    const res = await fetch(SNAPSHOT_URL);
     if (!res.ok) throw new Error(res.status);
     return { ...(await res.json()), live: false };
   }

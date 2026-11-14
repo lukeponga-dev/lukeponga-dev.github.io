@@ -1,293 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luke Ponga | Portfolio</title>
-  <!-- Load the Tailwind CSS CDN for styling -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Set a custom font for the body -->
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #1f2937;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #4f46e5;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #4338ca;
-    }
-  </style>
-  
-  <!-- Vercel Web Analytics -->
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4171876147164529" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="theme-color" content="#050505">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luke Ponga — Portfolio</title>
+<meta name="description" content="Luke Ponga builds reliable, deterministic systems — from fleet backends in .NET to AI-assisted applications powered by Gemini. Based in Hamilton, New Zealand.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portfolio/styles.css">
 </head>
-<body class="bg-gray-900 text-gray-300 antialiased leading-relaxed">
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="logo" href="#top" aria-label="Luke Ponga, home">LP<span>.</span></a>
+    <nav aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#activity">Activity</a>
+      <a href="#repos">Repositories</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- Navigation Bar -->
-  <nav id="navbar" class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-sm z-50 transition-all duration-300 py-4 shadow-lg">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <a href="#" class="text-xl font-bold text-white">Luke Ponga</a>
-      <div class="hidden md:flex space-x-8">
-        <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a>
-        <a href="#skills" class="text-gray-300 hover:text-white transition-colors duration-300">Skills</a>
-        <a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300">Projects</a>
-        <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">My portfolio / Software developer / New Zealand</p>
+      <h1>Luke Ponga</h1>
+      <p class="lede">I build reliable, deterministic systems — from fleet backends in .NET to AI-assisted applications powered by Gemini.</p>
+      <p class="location"><span class="dot" aria-hidden="true"></span>Based in Hamilton, New Zealand</p>
+      <div class="actions">
+        <a class="btn primary" href="#work">See selected work</a>
+        <a class="btn" href="https://github.com/lukeponga-dev" target="_blank" rel="noopener">GitHub profile</a>
       </div>
-      <!-- Mobile menu button -->
-      <div class="md:hidden">
-        <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
+      <dl class="stats" id="stats" aria-live="polite">
+        <div><dt>Public repositories</dt><dd id="stat-repos">—</dd></div>
+        <div><dt>Languages</dt><dd id="stat-langs">—</dd></div>
+        <div><dt>Live deployments</dt><dd id="stat-live">—</dd></div>
+        <div><dt>Last push</dt><dd id="stat-last">—</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="work" class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Selected work</h2>
+        <p>Projects pulled from my GitHub, across native Xbox apps, backends and Gemini-powered tools.</p>
       </div>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-4 pt-2 pb-4">
-      <div class="flex flex-col space-y-3">
-        <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a>
-        <a href="#skills" class="text-gray-300 hover:text-white transition-colors duration-300">Skills</a>
-        <a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300">Projects</a>
-        <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Header Section: Prominent, professional, and centrally aligned -->
-  <header class="bg-gray-800 text-center py-20 px-4 md:px-8 shadow-2xl rounded-b-3xl transform -skew-y-1 mt-16">
-    <div class="transform skew-y-1">
-      <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-2 tracking-tight">Luke Ponga</h1>
-      <p class="text-xl md:text-2xl font-light text-gray-400">Junior Software Developer | Hamilton, NZ</p>
-    </div>
-  </header>
-
-  <main class="container mx-auto px-4 py-16">
-
-    <!-- About Me Section: Clean card with a hover scale effect for visual interest -->
-    <section id="about" class="bg-gray-800 p-10 rounded-3xl shadow-lg mb-16 transform hover:scale-105 transition-transform duration-300">
-      <h2 class="text-4xl font-bold text-white mb-4 border-b-2 border-indigo-500 pb-2">About Me</h2>
-      <p class="text-lg text-gray-400">
-        I'm a passionate developer with a strong foundation in backend systems, IT support, and web technologies. I thrive in collaborative environments and love solving real-world problems through tech.
-      </p>
-    </section>
-
-    <!-- Skills Section: Dynamic grid layout with distinct categories -->
-    <section id="skills" class="bg-gray-800 p-10 rounded-3xl shadow-lg mb-16">
-      <h2 class="text-4xl font-bold text-white mb-8 text-center border-b-2 border-indigo-500 pb-2">Skills</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Languages & Frameworks Card -->
-        <div class="p-6 rounded-2xl bg-gray-700 hover:bg-indigo-600 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Languages & Frameworks</h3>
-          <ul class="list-disc list-inside text-gray-300">
-            <li>C#, Java, HTML/CSS/JS</li>
-            <li>SQL, .NET, Azure</li>
-            <li>React Native</li>
-          </ul>
-        </div>
-        <!-- Tools & Software Card -->
-        <div class="p-6 rounded-2xl bg-gray-700 hover:bg-indigo-600 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Tools & Software</h3>
-          <ul class="list-disc list-inside text-gray-300">
-            <li>Microsoft Office</li>
-            <li>Git, GitHub</li>
-            <li>Visual Studio, VS Code</li>
-          </ul>
-        </div>
-        <!-- Methodologies & Concepts Card -->
-        <div class="p-6 rounded-2xl bg-gray-700 hover:bg-indigo-600 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Methodologies & Concepts</h3>
-          <ul class="list-disc list-inside text-gray-300">
-            <li>ISTQB CTFL</li>
-            <li>Natural Language AI</li>
-            <li>Agile Development</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-<section id="certifications" class="py-16 sm:py-24 container-padding bg-slate-900/50 light-mode:bg-white">
-    <div class="max-w-4xl mx-auto">
-        <h2 class="section-title text-4xl font-bold mb-12 text-center text-white light-mode:text-slate-900">
-            Certifications
-        </h2>
-        
-        <div class="space-y-6">
-            <article class="bg-slate-800 light-mode:bg-slate-100 p-6 rounded-xl border-l-4 border-blue-500 shadow-lg hover:transform hover:scale-[1.01] transition-all duration-300">
-                <h3 class="text-xl font-bold text-white light-mode:text-slate-900 mb-2">Introduction to Computers and Operating Systems and Security</h3>
-                <div class="text-slate-400 light-mode:text-slate-600 text-sm space-y-1">
-                    <p><span class="font-semibold text-blue-400 light-mode:text-blue-600">Provider:</span> Microsoft via Coursera</p>
-                    <p><span class="font-semibold text-blue-400 light-mode:text-blue-600">Date:</span> May 22, 2024</p>
-                    <p><span class="font-semibold text-blue-400 light-mode:text-blue-600">Grade:</span> 89.16%</p>
-                </div>
-                <div class="mt-4">
-                    <a href="https://learn.microsoft.com/api/credentials/share/en-us/lukeponga/AFD08D0C24C28A2F?sharingId=664B3ACEB7027A76" target="_blank" rel="noopener" class="inline-flex items-center text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">
-                        Verify Credential
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
-                    </a>
-                </div>
-            </article>
-
-            <article class="bg-slate-800 light-mode:bg-slate-100 p-6 rounded-xl border-l-4 border-purple-500 shadow-lg hover:transform hover:scale-[1.01] transition-all duration-300">
-                <h3 class="text-xl font-bold text-white light-mode:text-slate-900 mb-2">Microsoft Learn Cloud Skills Challenge – Build Edition</h3>
-                <div class="text-slate-400 light-mode:text-slate-600 text-sm space-y-1">
-                    <p><span class="font-semibold text-purple-400 light-mode:text-purple-600">Provider:</span> Microsoft Learn</p>
-                    <p><span class="font-semibold text-purple-400 light-mode:text-purple-600">Date:</span> June 22, 2024</p>
-                    <p class="mt-2 italic">Successfully completed Cloud Skills Challenge at Build 2024, endorsed by Satya Nadella</p>
-                </div>
-            </article>
-
-            <article class="bg-slate-800 light-mode:bg-slate-100 p-6 rounded-xl border-l-4 border-cyan-500 shadow-lg hover:transform hover:scale-[1.01] transition-all duration-300">
-                <h3 class="text-xl font-bold text-white light-mode:text-slate-900 mb-2">Deploy and Manage a Container App (Azure Container Apps)</h3>
-                <div class="text-slate-400 light-mode:text-slate-600 text-sm space-y-1">
-                    <p><span class="font-semibold text-cyan-400 light-mode:text-cyan-600">Provider:</span> Microsoft Learn</p>
-                    <p><span class="font-semibold text-cyan-400 light-mode:text-cyan-600">Date:</span> December 10, 2025</p>
-                    <p class="mt-2 italic">Guided project on deploying and managing containerized applications</p>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
-
-    <!-- Projects Section: A multi-column grid to showcase featured work -->
-    <section id="projects" class="mb-16">
-      <h2 class="text-4xl font-bold text-white mb-8 text-center border-b-2 border-indigo-500 pb-2">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-        <!-- Project card for the Java Data Structures repository -->
-        <div class="project bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Data Structures & Algorithms</h3>
-          <p class="text-gray-400 mb-4">
-            University assignments on implementing core data structures in Java. Demonstrates knowledge of BSTs, Heaps, and Linked Lists.
-          </p>
-          <a href="https://github.com/lukeponga-dev/compx201-university-java-data-structures" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-400 hover:underline">
-            View on GitHub
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-10h6m0 0l-6 6"></path></svg>
-          </a>
-        </div>
-
-        <!-- Project card for the Job Application Tracker -->
-        <div class="project bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Job Application Tracker</h3>
-          <p class="text-gray-400 mb-4">
-            A practical web-based tool for tracking job applications and volunteer work.
-          </p>
-          <a href="https://github.com/lukeponga-dev/JobApplication-tracker" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-400 hover:underline">
-            View on GitHub
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-10h6m0 0l-6 6"></path></svg>
-          </a>
-        </div>
-
-        <!-- Project card for the Kiwi Car Checker -->
-        <div class="project bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-colors duration-300 transform hover:-translate-y-2">
-          <h3 class="text-2xl font-semibold text-white mb-2">Kiwi Car Checker</h3>
-          <p class="text-gray-400 mb-4">
-            A TypeScript-based application for checking vehicle information in New Zealand.
-          </p>
-          <a href="https://github.com/lukeponga-dev/kiwi-car-checker" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-400 hover:underline">
-            View on GitHub
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-10h6m0 0l-6 6"></path></svg>
-          </a>
-        </div>
-
-        <!-- More projects placeholder card -->
-        <div class="project bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-colors duration-300 flex flex-col justify-between transform hover:-translate-y-2">
-          <div>
-            <h3 class="text-2xl font-semibold text-white mb-2">More Projects</h3>
-            <p class="text-gray-400 mb-4">
-              I'm actively working on new projects. Stay tuned for updates, or check out my GitHub profile for my latest activity.
-            </p>
+      <article class="flagship">
+        <div class="flagship-copy">
+          <span class="eyebrow">Flagship product / 2026</span>
+          <h3>PriceSnap</h3>
+          <p>AI-powered resale valuation for New Zealand. Photograph an item, identify it with multimodal AI, inspect condition, gather market evidence and return a useful NZD price estimate.</p>
+          <ul class="tags"><li>Android</li><li>Kotlin</li><li>Next.js</li><li>TypeScript</li><li>REST</li><li>Vercel</li></ul>
+          <div class="card-links">
+            <a href="https://github.com/lukeponga-dev/pricesnap-backend" target="_blank" rel="noopener">Backend</a>
+            <a href="https://github.com/lukeponga-dev/snapprice_android" target="_blank" rel="noopener">Android app</a>
+            <a href="https://github.com/lukeponga-dev/pricesnap-website" target="_blank" rel="noopener">Website</a>
+            <a href="https://pricesnap-website.vercel.app" target="_blank" rel="noopener">Live site</a>
           </div>
-          <a href="https://github.com/lukeponga-dev" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-400 hover:underline">
-            Visit My GitHub
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-10h6m0 0l-6 6"></path></svg>
-          </a>
+        </div>
+        <div class="flagship-side">
+          <span class="label">How it works</span>
+          <ul>
+            <li><span>Identify</span><span class="muted">multimodal AI</span></li>
+            <li><span>Inspect</span><span class="muted">condition insights</span></li>
+            <li><span>Compare</span><span class="muted">Trade Me, Marketplace, eBay</span></li>
+            <li><span>Estimate</span><span class="muted">price in NZD</span></li>
+          </ul>
+        </div>
+      </article>
+      <div class="grid" id="featured"><p class="muted">Loading projects…</p></div>
+    </div>
+  </section>
+
+  <section id="activity" class="band alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Recent activity</h2>
+        <p>What I've pushed to most recently, and the languages across my public repositories.</p>
+      </div>
+      <div class="activity">
+        <div class="panel">
+          <h3>Latest pushes</h3>
+          <ol class="timeline" id="timeline"></ol>
+        </div>
+        <div class="panel">
+          <h3>Languages</h3>
+          <div class="langbar" id="langbar" role="img" aria-label="Language breakdown"></div>
+          <ul class="langlist" id="langlist"></ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section: A clean, centered card for contact information -->
-    <section id="contact" class="bg-gray-800 p-10 rounded-3xl shadow-lg mb-16 text-center">
-      <h2 class="text-4xl font-bold text-white mb-4 border-b-2 border-indigo-500 pb-2">Contact</h2>
-      <p class="text-lg">
-        <span class="text-indigo-500">Email:</span> <a href="mailto:lukeponga9@gmail.com" class="hover:underline text-gray-300">lukeponga9@gmail.com</a>
-      </p>
-    </section>
+  <section id="repos" class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>All public repositories</h2>
+        <p>Every public, non-fork repository on <a href="https://github.com/lukeponga-dev" target="_blank" rel="noopener">github.com/lukeponga-dev</a>.</p>
+      </div>
+      <div class="filters">
+        <label class="sr-only" for="q">Search repositories</label>
+        <input id="q" type="search" placeholder="Search by name or description">
+        <label class="sr-only" for="lang">Language</label>
+        <select id="lang"><option value="">All languages</option></select>
+        <label class="check"><input type="checkbox" id="liveOnly"> Live demo only</label>
+      </div>
+      <p class="muted small" id="count"></p>
+      <table class="repos">
+        <thead><tr><th>Repository</th><th>Language</th><th class="hide-sm">Updated</th><th>Links</th></tr></thead>
+        <tbody id="repo-rows"></tbody>
+      </table>
+    </div>
+  </section>
 
-  </main>
+  <section id="about" class="band alt">
+    <div class="wrap about">
+      <div>
+        <h2>About</h2>
+        <p>I'm a software developer based in Hamilton, New Zealand. I like solving real-world problems through structured code and automation — whether that's tuning performance, working in tricky native environments, or designing clear dashboards.</p>
+        <p>My background combines computer science, software development and hands-on IT support, so I build for predictable behaviour, clear failure states and systems that are easy to operate. I'm especially interested in applied AI, native and mobile apps, APIs and IoT.</p>
+        <h3>Education &amp; certifications</h3>
+        <div class="edu">
+          <div><b>Computer Science</b><span>University of Waikato</span></div>
+          <div><b>Software Development · Level 6</b><span>ATC Vision College</span></div>
+          <div><b>Web Development &amp; Design · Level 5</b><span>ATC Vision College</span></div>
+          <div><b>ISTQB Foundation (CTFL)</b><span>Software testing certification</span></div>
+          <div><b>Natural Language AI</b><span>Microsoft Build certificate</span></div>
+          <div><b>Generative AI</b><span>CodeSignal certificate</span></div>
+        </div>
+      </div>
+      <div id="stack">
+        <h3>Stack</h3>
+        <dl class="skills">
+          <div><dt>Languages</dt><dd>C# · TypeScript · JavaScript · Kotlin · Java · Rust · SQL</dd></div>
+          <div><dt>Backend &amp; APIs</dt><dd>.NET · Node.js · Next.js · Flask · FastAPI · REST</dd></div>
+          <div><dt>AI engineering</dt><dd>Google Gemini · multimodal AI · agents · structured outputs · grounding · evaluation</dd></div>
+          <div><dt>Native, mobile &amp; IoT</dt><dd>UWP / XAML for Xbox · Android · Retrofit · Arduino · sensors</dd></div>
+          <div><dt>Infrastructure</dt><dd>Git · GitHub Actions · Docker · Nginx · Vercel · Google Cloud · Azure</dd></div>
+          <div><dt>Engineering</dt><dd>OOP · data structures · testing · security · Agile · system design</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
 
-  <!-- Back to Top Button -->
-  <button id="backToTop" class="fixed bottom-8 right-8 bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0 invisible">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-    </svg>
-  </button>
+  <section id="contact" class="band contact">
+    <div class="wrap">
+      <h2>Let's build something dependable</h2>
+      <p>Open to software engineering, AI and product-development opportunities.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:lukeponga9@gmail.com">Email me</a>
+        <a class="btn" href="CV.pdf" target="_blank" rel="noopener">Download CV</a>
+        <a class="btn" href="https://www.linkedin.com/in/lukeponga/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/lukeponga-dev" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://dev.to/lukepongadev" target="_blank" rel="noopener">dev.to</a>
+      </div>
+    </div>
+  </section>
+</main>
 
-  <!-- Footer: Simple and subtle -->
-  <footer class="text-center py-6 px-4 text-gray-500">
-    <p>&copy; 2025 Luke Ponga</p>
-  </footer>
-
-  <script>
-    // Back to Top functionality
-    const backToTopButton = document.getElementById('backToTop');
-    
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopButton.classList.remove('opacity-0', 'invisible');
-        backToTopButton.classList.add('opacity-100', 'visible');
-      } else {
-        backToTopButton.classList.remove('opacity-100', 'visible');
-        backToTopButton.classList.add('opacity-0', 'invisible');
-      }
-    });
-    
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-    
-    // Mobile menu functionality
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-    
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-    
-    // Navbar background change on scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('bg-gray-900', 'shadow-lg');
-        navbar.classList.remove('bg-gray-900/90');
-      } else {
-        navbar.classList.remove('bg-gray-900', 'shadow-lg');
-        navbar.classList.add('bg-gray-900/90');
-      }
-    });
-  </script>
-
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© Luke Ponga · Hamilton, NZ</span>
+    <span id="freshness" class="muted"></span>
+    <a href="https://github.com/lukeponga-dev" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</footer>
+<script src="portfolio/app.js"></script>
 </body>
 </html>
