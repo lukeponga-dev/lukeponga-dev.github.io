@@ -96,7 +96,10 @@ function renderActivity(repos) {
   return Object.keys(counts).length;
 }
 
+const PAGE_SIZE = 12;
+
 function setupTable(repos) {
+  let expanded = false;
   const sorted = [...repos].sort((a, b) => b.pushed_at.localeCompare(a.pushed_at));
   const langs = [...new Set(repos.map((r) => r.language).filter(Boolean))].sort();
   $("lang").append(...langs.map((l) => el("option", { value: l, textContent: l })));
@@ -108,7 +111,11 @@ function setupTable(repos) {
       (!q || r.name.toLowerCase().includes(q) || (r.description || "").toLowerCase().includes(q)) &&
       (!lang || r.language === lang) && (!liveOnly || safeUrl(r.homepage)));
     $("count").textContent = `${rows.length} of ${repos.length} repositories`;
-    $("repo-rows").replaceChildren(...rows.map((r) => {
+    const filtering = q || lang || liveOnly;
+    const shown = expanded || filtering ? rows : rows.slice(0, PAGE_SIZE);
+    $("more").hidden = shown.length === rows.length;
+    $("more").textContent = `Show all ${rows.length} repositories`;
+    $("repo-rows").replaceChildren(...shown.map((r) => {
       const live = safeUrl(r.homepage);
       return el("tr", {},
         el("td", {}, el("div", { className: "name", textContent: r.name }),
@@ -122,6 +129,7 @@ function setupTable(repos) {
     if (!rows.length) $("repo-rows").append(el("tr", {}, el("td", { colSpan: 4, className: "muted", textContent: "No repositories match." })));
   };
   for (const id of ["q", "lang", "liveOnly"]) $(id).addEventListener("input", draw);
+  $("more").addEventListener("click", () => { expanded = true; draw(); });
   draw();
 }
 
@@ -158,8 +166,12 @@ async function main() {
     $("stat-repos").textContent = repos.length;
     $("stat-langs").textContent = langCount;
     $("stat-live").textContent = repos.filter((r) => safeUrl(r.homepage)).length;
-    const last = repos.reduce((m, r) => (r.pushed_at > m ? r.pushed_at : m), "");
-    $("stat-last").textContent = last ? relTime(last) : "—";
+    const latest = repos.reduce((m, r) => (!m || r.pushed_at > m.pushed_at ? r : m), null);
+    $("stat-last").textContent = latest ? relTime(latest.pushed_at) : "—";
+    if (latest) {
+      Object.assign($("now-repo"), { href: latest.html_url, textContent: latest.name });
+      Object.assign($("now-when"), { dateTime: latest.pushed_at, textContent: relTime(latest.pushed_at) });
+    }
     if (data.live) $("freshness").textContent = "Live from GitHub";
     else if (data.fetched_at) $("freshness").textContent = `GitHub snapshot from ${fmtDate(data.fetched_at)}`;
   } catch {
@@ -167,4 +179,30 @@ async function main() {
       el("a", { href: "https://github.com/lukeponga-dev", target: "_blank", rel: "noopener", textContent: "GitHub" }), "."));
   }
 }
+function setupNav() {
+  const links = new Map([...document.querySelectorAll(".topbar nav a")].map((a) => [a.hash.slice(1), a]));
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) {
+      for (const a of links.values()) a.removeAttribute("aria-current");
+      links.get(e.target.id)?.setAttribute("aria-current", "true");
+    }
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  for (const id of links.keys()) { const s = $(id); if (s) io.observe(s); }
+  const bar = document.querySelector(".topbar");
+  const onScroll = () => bar.classList.toggle("scrolled", window.scrollY > 8);
+  addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+}
+
+function setupReveal() {
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
+  document.documentElement.classList.add("motion");
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+  }, { rootMargin: "0px 0px -8% 0px" });
+  document.querySelectorAll(".section-head, .flagship, .panel, .about > div, .contact .wrap").forEach((n) => io.observe(n));
+}
+
+setupNav();
+setupReveal();
 main();

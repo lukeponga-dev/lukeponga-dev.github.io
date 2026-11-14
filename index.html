@@ -31,13 +31,32 @@
 <main id="top">
   <section class="hero">
     <div class="wrap">
+      <div class="hero-grid">
+      <div class="hero-copy">
       <p class="eyebrow">My portfolio / Software developer / New Zealand</p>
-      <h1>Luke Ponga</h1>
+      <h1>Luke Ponga<span class="accent">.</span></h1>
       <p class="lede">I build reliable, deterministic systems — from fleet backends in .NET to AI-assisted applications powered by Gemini.</p>
       <p class="location"><span class="dot" aria-hidden="true"></span>Based in Hamilton, New Zealand</p>
       <div class="actions">
         <a class="btn primary" href="#work">See selected work</a>
         <a class="btn" href="https://github.com/lukeponga-dev" target="_blank" rel="noopener">GitHub profile</a>
+      </div>
+      </div>
+      <aside class="terminal" aria-label="Profile summary">
+        <div class="terminal-bar"><i></i><i></i><i></i><span>luke.json</span></div>
+<pre class="code"><code>{
+  <b>"name"</b>: <s>"Luke Ponga"</s>,
+  <b>"based"</b>: <s>"Hamilton, NZ"</s>,
+  <b>"builds"</b>: [
+    <s>".NET fleet backends"</s>,
+    <s>"Gemini-powered apps"</s>,
+    <s>"Native Xbox UWP"</s>
+  ],
+  <b>"principles"</b>: [<s>"reliable"</s>, <s>"deterministic"</s>],
+  <b>"open_to_work"</b>: <u>true</u>
+}</code></pre>
+        <div class="terminal-foot"><span class="pulse" aria-hidden="true"></span><span>Latest push</span><a id="now-repo" href="https://github.com/lukeponga-dev" target="_blank" rel="noopener">—</a><time id="now-when"></time></div>
+      </aside>
       </div>
       <dl class="stats" id="stats" aria-live="polite">
         <div><dt>Public repositories</dt><dd id="stat-repos">—</dd></div>
@@ -51,6 +70,7 @@
   <section id="work" class="band">
     <div class="wrap">
       <div class="section-head">
+        <p class="eyebrow">01 / Work</p>
         <h2>Selected work</h2>
         <p>Projects pulled from my GitHub, across native Xbox apps, backends and Gemini-powered tools.</p>
       </div>
@@ -84,6 +104,7 @@
   <section id="activity" class="band alt">
     <div class="wrap">
       <div class="section-head">
+        <p class="eyebrow">02 / Activity</p>
         <h2>Recent activity</h2>
         <p>What I've pushed to most recently, and the languages across my public repositories.</p>
       </div>
@@ -104,6 +125,7 @@
   <section id="repos" class="band">
     <div class="wrap">
       <div class="section-head">
+        <p class="eyebrow">03 / Repositories</p>
         <h2>All public repositories</h2>
         <p>Every public, non-fork repository on <a href="https://github.com/lukeponga-dev" target="_blank" rel="noopener">github.com/lukeponga-dev</a>.</p>
       </div>
@@ -115,16 +137,20 @@
         <label class="check"><input type="checkbox" id="liveOnly"> Live demo only</label>
       </div>
       <p class="muted small" id="count"></p>
+      <div class="table-wrap">
       <table class="repos">
         <thead><tr><th>Repository</th><th>Language</th><th class="hide-sm">Updated</th><th>Links</th></tr></thead>
         <tbody id="repo-rows"></tbody>
       </table>
+      </div>
+      <div class="more"><button type="button" class="btn" id="more" hidden>Show all repositories</button></div>
     </div>
   </section>
 
   <section id="about" class="band alt">
     <div class="wrap about">
       <div>
+        <p class="eyebrow">04 / About</p>
         <h2>About</h2>
         <p>I'm a software developer based in Hamilton, New Zealand. I like solving real-world problems through structured code and automation — whether that's tuning performance, working in tricky native environments, or designing clear dashboards.</p>
         <p>My background combines computer science, software development and hands-on IT support, so I build for predictable behaviour, clear failure states and systems that are easy to operate. I'm especially interested in applied AI, native and mobile apps, APIs and IoT.</p>
@@ -154,7 +180,8 @@
 
   <section id="contact" class="band contact">
     <div class="wrap">
-      <h2>Let's build something dependable</h2>
+      <p class="eyebrow">05 / Contact</p>
+      <h2>Let's build something <span class="accent">dependable</span>.</h2>
       <p>Open to software engineering, AI and product-development opportunities.</p>
       <div class="actions">
         <a class="btn primary" href="mailto:lukeponga9@gmail.com">Email me</a>
