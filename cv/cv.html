@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Luke Ponga — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  :root {
+    --ink: #0b0b0a; --muted: #5c5c57; --rule: #e2e2dc; --bg: #050505; --accent: #c8ff38;
+    --mono: "DM Mono", ui-monospace, Menlo, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font: 400 9.4pt/1.45 "Manrope", system-ui, sans-serif; color: var(--ink); background: #fff; }
+  a { color: inherit; text-decoration: none; }
+  .page { width: 210mm; height: 297mm; overflow: hidden; display: flex; flex-direction: column; }
+  .page + .page { break-before: page; }
+
+  header { background: var(--bg); color: #f3f2ee; padding: 11mm 15mm 9mm; }
+  .eyebrow { font: 500 7.6pt/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-size: 30pt; font-weight: 800; letter-spacing: -.03em; line-height: 1; margin: 4mm 0 3mm; }
+  .lede { font-size: 11pt; color: #d6d5cf; max-width: 150mm; }
+  .contact { display: flex; flex-wrap: wrap; gap: 1.5mm 6mm; margin-top: 6mm; font: 400 8pt/1.3 var(--mono); color: #b9b8b2; }
+  .contact span::before { content: ""; display: inline-block; width: 4px; height: 4px; background: var(--accent); margin: 0 2mm 1px 0; }
+
+  main { flex: 1; display: grid; grid-template-columns: 1fr 58mm; gap: 9mm; padding: 7.5mm 15mm 0; }
+  .page-2 main { padding-top: 13mm; }
+  h2 { font: 500 7.6pt/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink);
+       display: flex; align-items: center; gap: 2.5mm; margin: 0 0 3.5mm; }
+  h2::before { content: ""; width: 7px; height: 7px; background: var(--accent); outline: 1px solid var(--ink); }
+  section + section { margin-top: 7mm; }
+  p + p { margin-top: 2mm; }
+
+  .item { padding: 0 0 3mm; margin-bottom: 3mm; border-bottom: 1px solid var(--rule); break-inside: avoid; }
+  .item:last-child { border-bottom: 0; margin-bottom: 0; }
+  .item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  h3 { font-size: 10.6pt; font-weight: 700; letter-spacing: -.01em; }
+  .meta { font: 400 7.6pt/1.3 var(--mono); color: var(--muted); white-space: nowrap; }
+  .sub { font-size: 8.6pt; color: var(--muted); margin: .6mm 0 1.4mm; }
+  ul { list-style: none; }
+  .item li { position: relative; padding-left: 4mm; }
+  .item li + li { margin-top: .8mm; }
+  .item li::before { content: "–"; position: absolute; left: 0; color: var(--muted); }
+  .tags { display: flex; flex-wrap: wrap; gap: 1.2mm; margin-top: 2mm; }
+  .tags span { font: 400 7pt/1 var(--mono); padding: 1.1mm 1.6mm; border: 1px solid var(--rule); border-radius: 4px; color: #33332f; }
+  .flag { background: #f4f4ef; border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: 4px; padding: 3.6mm 4mm; }
+  .flag .item-head h3 { font-size: 12pt; }
+  .links { font: 400 7.6pt/1.4 var(--mono); color: var(--muted); margin-top: 1.6mm; }
+
+  aside .block + .block { margin-top: 3.2mm; }
+  aside .label { font-weight: 700; font-size: 8.6pt; }
+  aside .val { color: #33332f; font-size: 8.4pt; }
+  .edu li { break-inside: avoid; }
+  .edu li + li { margin-top: 3mm; }
+  .edu .label { display: block; }
+  .edu .meta { display: block; white-space: normal; margin-top: .4mm; }
+
+  footer { display: flex; justify-content: space-between; padding: 5mm 15mm 7mm; font: 400 7.2pt/1 var(--mono); color: var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <div class="eyebrow">Software developer / Hamilton, New Zealand</div>
+    <h1>Luke Ponga</h1>
+    <p class="lede">I build reliable, deterministic systems — from fleet backends in .NET to AI-assisted applications powered by Gemini.</p>
+    <div class="contact">
+      <span><a href="mailto:lukeponga9@gmail.com">lukeponga9@gmail.com</a></span>
+      <span><a href="tel:+64211038077">+64 21 103 8077</a></span>
+      <span><a href="https://lukeponga-dev.github.io">lukeponga-dev.github.io</a></span>
+      <span><a href="https://github.com/lukeponga-dev">github.com/lukeponga-dev</a></span>
+      <span><a href="https://www.linkedin.com/in/lukeponga/">linkedin.com/in/lukeponga</a></span>
+      <span>Eligible to work in New Zealand</span>
+    </div>
+  </header>
+
+  <main>
+    <div>
+      <section>
+        <h2>Profile</h2>
+        <p>Software developer with a background in computer science, software development and hands-on IT support. My recent work spans native Xbox apps in C# and Rust, Android and full-stack TypeScript products, and applied AI with Google Gemini. I build for predictable behaviour, clear failure states and systems that are easy to operate, and I'm looking for software engineering, AI and product-development roles.</p>
+      </section>
+
+      <section>
+        <h2>Selected projects</h2>
+
+        <div class="item flag">
+          <div class="item-head"><h3>PriceSnap</h3><span class="meta">2026 · Flagship product</span></div>
+          <p class="sub">AI-powered resale valuation for New Zealand</p>
+          <ul>
+            <li>Photograph a secondhand item, identify it with multimodal AI, inspect its condition and return an NZD price estimate.</li>
+            <li>Gathers market evidence from comparable listings (Trade Me, Facebook Marketplace, eBay) to back each estimate.</li>
+            <li>Built as a TypeScript REST backend, a native Android client and a marketing website, all deployed on Vercel.</li>
+          </ul>
+          <div class="tags"><span>Kotlin</span><span>Android</span><span>TypeScript</span><span>Next.js</span><span>REST</span><span>Vercel</span></div>
+          <div class="links">pricesnap-website.vercel.app</div>
+        </div>
+
+        <div class="item">
+          <div class="item-head"><h3>StreamioX</h3><span class="meta">2026 · Native Xbox app</span></div>
+          <p class="sub">Controller-first media client for Xbox One and Xbox Series X|S</p>
+          <ul>
+            <li>UWP / XAML app with MVVM, XY-focus controller navigation and a full on-screen playback overlay.</li>
+            <li>Discovers and streams content through Stremio-compatible add-ons, with QR device-link sign-in, add-on sync and resume tracking.</li>
+            <li>Native Rust bridge for peer-to-peer streaming; FFmpegInteropX playback.</li>
+          </ul>
+          <div class="tags"><span>C#</span><span>UWP / XAML</span><span>Rust</span><span>FFmpegInteropX</span><span>MSIX</span></div>
+        </div>
+
+        <div class="item">
+          <div class="item-head"><h3>CodeAgent X</h3><span class="meta">2026 · Gemini agent</span></div>
+          <ul>
+            <li>Autonomous multimodal software-engineering agent built on Gemini 3.</li>
+            <li>Analyses repositories, architecture diagrams and failure signals to diagnose errors and propose targeted fixes.</li>
+          </ul>
+          <div class="tags"><span>TypeScript</span><span>Gemini</span><span>Agents</span></div>
+          <div class="links">codeagentx.vercel.app</div>
+        </div>
+      </section>
+    </div>
+
+    <aside>
+      <section>
+        <h2>Skills</h2>
+        <div class="block"><div class="label">Languages</div><div class="val">C#, TypeScript, JavaScript, Kotlin, Java, Rust, Python, SQL</div></div>
+        <div class="block"><div class="label">Backend &amp; APIs</div><div class="val">.NET, Node.js, Next.js, Flask, FastAPI, REST</div></div>
+        <div class="block"><div class="label">AI engineering</div><div class="val">Google Gemini, multimodal AI, agents, structured outputs, grounding, evaluation</div></div>
+        <div class="block"><div class="label">Native, mobile &amp; IoT</div><div class="val">UWP / XAML for Xbox, Android, Retrofit, Arduino, sensors</div></div>
+        <div class="block"><div class="label">Frontend</div><div class="val">React, React Native, HTML, CSS, Tailwind</div></div>
+        <div class="block"><div class="label">Infrastructure</div><div class="val">Git, GitHub Actions, Docker, Nginx, Vercel, Google Cloud, Azure, Firebase, Supabase</div></div>
+        <div class="block"><div class="label">Engineering</div><div class="val">OOP, data structures, software testing (ISTQB), security, Agile, system design</div></div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <ul class="edu">
+          <li><span class="label">Computer Science</span><span class="val">University of Waikato</span></li>
+          <li><span class="label">NZ Diploma in Software Development (Level 6)</span><span class="val">ATC New Zealand</span><span class="meta">2019 – 2020</span></li>
+          <li><span class="label">NZ Diploma in Web Development &amp; Design (Level 5)</span><span class="val">ATC New Zealand</span><span class="meta">2018 – 2019</span></li>
+          <li><span class="label">Certificate in Business Administration &amp; Technology</span><span class="val">ATC New Zealand</span><span class="meta">2017</span></li>
+          <li><span class="label">NCEA Level 3</span><span class="val">Fairfield College</span><span class="meta">2015 – 2017</span></li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+  <footer><span>Luke Ponga — CV</span><span>1 / 2</span></footer>
+</div>
+
+<div class="page page-2">
+  <main>
+    <div>
+      <section>
+        <h2>More projects</h2>
+        <div class="item">
+          <div class="item-head"><h3>Nexus Research Workspace</h3><span class="meta">2026 · AI research tool</span></div>
+          <ul>
+            <li>Turns open-ended questions into decision-ready insights; companion Multimodal Research Engine uses Gemini 3 Flash for fast analysis of research data.</li>
+          </ul>
+          <div class="tags"><span>TypeScript</span><span>Gemini</span><span>Multimodal AI</span></div>
+          <div class="links">nexus-research-workspace.vercel.app · multimodal-engine.vercel.app</div>
+        </div>
+        <div class="item">
+          <div class="item-head"><h3>TrafficNZ Explorer</h3><span class="meta">2025 – 2026 · Live data map</span></div>
+          <ul><li>Live New Zealand traffic data, cameras and map-based discovery in a focused exploration interface, with a companion Android app.</li></ul>
+          <div class="tags"><span>TypeScript</span><span>React</span><span>Leaflet</span><span>Flask</span></div>
+          <div class="links">traffic-cameras-nz-yryi.vercel.app</div>
+        </div>
+        <div class="item">
+          <div class="item-head"><h3>AI Health Companion</h3><span class="meta">2026 · Gemini assistant</span></div>
+          <ul><li>Virtual health companion giving personalised guidance on symptoms, mental health and lifestyle, grounded in verified information.</li></ul>
+          <div class="tags"><span>TypeScript</span><span>Gemini</span><span>Google Cloud Run</span></div>
+        </div>
+        <div class="item">
+          <div class="item-head"><h3>Data Structures &amp; Algorithms</h3><span class="meta">2022 · University of Waikato</span></div>
+          <ul><li>Java implementations of trees, heaps, linked structures and core computer-science algorithms (COMPX201).</li></ul>
+          <div class="tags"><span>Java</span><span>Algorithms</span><span>OOP</span></div>
+        </div>
+        <p class="sub" style="margin-top:3mm">120+ public repositories at github.com/lukeponga-dev</p>
+      </section>
+
+      <section>
+        <h2>Work experience</h2>
+        <div class="item">
+          <div class="item-head"><h3>Volunteer — SPCA New Zealand</h3><span class="meta">2025 – present · Hamilton</span></div>
+          <ul>
+            <li>Assist customers with enquiries and support in a retail environment.</li>
+            <li>Handle transactions, manage inventory and keep the store clean and organised.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item-head"><h3>Cleaner — New Clean Land Limited</h3><span class="meta">2025 – present · Hamilton</span></div>
+          <ul>
+            <li>Carry out cleaning across multiple sites to a high standard of cleanliness and hygiene.</li>
+            <li>Manage time to complete assigned tasks within deadlines, following safety guidelines and procedures.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <aside>
+      <section>
+        <h2>Certifications</h2>
+        <ul class="edu">
+          <li><span class="label">ISTQB Certified Tester Foundation Level (CTFL)</span><span class="val">ATC New Zealand</span><span class="meta">2019</span></li>
+          <li><span class="label">Natural Language AI</span><span class="val">Microsoft Build</span></li>
+          <li><span class="label">Generative AI</span><span class="val">CodeSignal</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Strengths</h2>
+        <div class="block"><div class="val">Attention to detail · customer service · teamwork · clear communication · self-directed learning</div></div>
+      </section>
+
+      <section>
+        <h2>Interests</h2>
+        <div class="block"><div class="val">Applied AI, backend infrastructure, real-time systems, IoT automation and open-source collaboration.</div></div>
+      </section>
+    </aside>
+  </main>
+  <footer><span>Luke Ponga — CV</span><span>2 / 2</span></footer>
+</div>
+
+</body>
+</html>
