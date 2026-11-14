@@ -2,7 +2,7 @@
 
 I build reliable, deterministic systems — from fleet backends in .NET to AI-assisted applications powered by Gemini. Based in Hamilton, New Zealand.
 
-- **GitHub Pages:** https://lukeponga-dev.github.io (serves the root `index.html`)
+- **GitHub Pages:** https://lukeponga-dev.github.io (serves the root `index.html`; deployed by `.github/workflows/pages.yml` on every push to `main`)
 - **Vercel:** https://lukeponga-dev-github-io.vercel.app (serves `public/`)
 
 ## Structure
