@@ -15,6 +15,7 @@
   --font-mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
 a { color: var(--accent); text-decoration: none; }
