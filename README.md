@@ -1,179 +1,48 @@
-# 🌐 Luke Ponga – Developer & IT Support Portfolio
+# Luke Ponga — Portfolio
 
-Welcome to my professional portfolio website! This site showcases my work as a full-stack web developer and IT support specialist based in Hamilton, New Zealand. It highlights my technical skills, featured projects, and contact information for potential collaborators and recruiters.
+I build reliable, deterministic systems — from fleet backends in .NET to AI-assisted applications powered by Gemini. Based in Hamilton, New Zealand.
 
-🔗 **Live Site:** lukeponga-dev.github.io
+- **GitHub Pages:** https://lukeponga-dev.github.io (serves the root `index.html`)
+- **Vercel:** https://lukeponga-dev-github-io.vercel.app (serves `public/`)
 
-## 📋 Table of Contents
-* [About Me](#-about-me)
-* [Features](#-features)
-* [Core Skills](#-core-skills)
-* [Featured Projects](#-featured-projects)
-* [Project Structure](#-project-structure)
-* [Technologies Used](#️-technologies-used)
-* [Getting Started](#-getting-started)
-* [Customization](#-customization)
-* [Deployment](#-deployment)
-* [License](#-license)
-* [Contact](#-contact)
+## Structure
 
----
-
-## 👋 About Me
-I'm a passionate developer with a strong foundation in backend systems, IT support, and modern web technologies. I thrive in collaborative environments and love solving real-world problems through innovative technology. My background in IT support gives me a unique advantage in delivering reliable, secure, and intuitive digital solutions.
-
-* **Location:** Hamilton, New Zealand
-* **Specialization:** Full-stack web development, AI/LLM integration, IoT solutions
-
-## ✨ Features
-This portfolio is designed for maximum clarity, performance, and user experience.
-
-### 🎨 Modern Design
-* Dark/Light mode toggle with `localStorage` persistence
-* Responsive design for all screen sizes (mobile, tablet, desktop)
-* Smooth scrolling and animations
-* Glassmorphism effects with backdrop blur
-
-### 🎯 Project Showcase
-* **Dual Layout Views:** Switch between grid (3-column) and list layouts
-* **Staggered Animations:** Cards fade in sequentially for visual appeal
-* **Interactive Hover Effects:** Cards lift and scale on interaction
-* **Tech Badges:** Color-coded technology stack indicators
-* **Direct Links:** GitHub repositories and live demos for each project
-
-### 🔧 Technical Features
-* Canvas-based particle animation in hero section
-* Dynamic header styling on scroll
-* Mobile menu toggle
-* SEO-optimized structure
-
----
-
-## 🔧 Core Skills
-| Category | Key Technologies |
-| :--- | :--- |
-| **Frontend Development** | React, Next.js, JavaScript (ES6+), Tailwind CSS, Responsive Design |
-| **Backend Development** | Node.js & Express, C# & .NET, SQL & NoSQL Databases, RESTful APIs |
-| **AI & Machine Learning** | Google Gemini Integration, LLM Prompt Engineering, Genkit Framework |
-| **DevOps & Cloud** | Git & GitHub, CI/CD Pipelines, AWS & Azure, Docker, GitHub Actions |
-| **IT Support** | Hardware Troubleshooting, Network Administration, System Reliability, Security Best Practices |
-
----
-
-## 🚀 Featured Projects
-
-1.  **⭐ RotorWise AI RX-8 Mechanic**
-    * *Description:* AI-powered diagnostic assistant for Mazda RX-8 rotary engines using Google Gemini.
-    * *Tech Stack:* TypeScript, Google Gemini, React
-    * *Links:* [GitHub](link) | [Live Demo](link)
-
-2.  **Job Tracker Dashboard**
-    * *Description:* AI-powered job application tracker with summaries, filtering, and analytics.
-    * *Tech Stack:* Next.js, Supabase, Google AI, PostgreSQL
-    * *Links:* [GitHub](link) | [Live Demo](link)
-
-3.  **CryptoStats**
-    * *Description:* Real-time cryptocurrency price tracker with historical charts and market data.
-    * *Tech Stack:* React, JavaScript, CoinGecko API, Recharts
-    * *Links:* [GitHub](link) | [Live Demo](link)
-
-4.  **NZ Tourism Website**
-    * *Description:* Interactive tourism showcase for New Zealand with beautiful design and intuitive navigation.
-    * *Tech Stack:* HTML, CSS, Bootstrap
-    * *Links:* [GitHub](link) | [Live Demo](link)
-
-5.  **AI Chat Interface SDK**
-    * *Description:* Reusable chat UI SDK for seamless LLM integration into applications.
-    * *Tech Stack:* Next.js, TypeScript, Genkit AI, React
-    * *Links:* [GitHub](link) | [Live Demo](link)
-
-6.  **AI Image Enhancer**
-    * *Description:* Enhance and transform images using AI techniques for superior quality.
-    * *Tech Stack:* React, Google Gemini, Tailwind CSS
-    * *Links:* [GitHub](link) | [Live Demo](link)
-
----
-## 🏗️ Project Structure
 ```
-/lukeponga-dev.github.io/
-│ ├── index.html               # Main HTML file
-│ ├── css/                     # CSS
-│ │   └── styles.css           # Main stylesheet
-│ ├── js/                      # JavaScript
-│ │   └── script.js            # Main JavaScript file
-│ ├── assets/                  # Assets
-│ │   ├── images/              # Image assets
-│ │   └── favicon/             # Icon assets (site.webmanifest, favicons)
-│ ├── CV.pdf                   # Downloadable resume
-│ ├── LICENSE                  # License file
-│ ├── SECURITY.md              # Security policy
-│ └── README.md                # This file
+index.html              # Portfolio page (GitHub Pages)
+public/
+  index.html            # Same page with public-relative paths (Vercel)
+  portfolio/
+    styles.css          # Shared styles
+    app.js              # Featured projects, activity and repo browser
+    repos.json          # Committed GitHub snapshot, used when the live API is unavailable
+  CV.pdf, favicon/      # Copies served by Vercel
+cv/cv.html              # Source for CV.pdf
+CV.pdf                  # Downloadable CV
+assests/                # Favicons, certificates and images
 ```
 
----
+The two `index.html` files differ only in asset prefixes (`public/portfolio/` and `assests/favicon/` at the root, `portfolio/` and `favicon/` in `public/`). Keep them in sync.
 
-## 🛠️ Technologies Used
-| Category | Key Tools & Services |
-| :--- | :--- |
-| **Frontend** | Tailwind CSS, JavaScript (Vanilla), HTML5, Canvas API |
-| **Frameworks** | React, Next.js, Bootstrap |
-| **APIs & Services** | Google Gemini LLM, NASA APOD API, CoinGecko API, Supabase |
-| **Hosting & Tools** | GitHub Pages, Netlify, Vercel, Git & GitHub, VS Code, GitHub Actions |
+`app.js` loads public, non-fork repositories from the GitHub API in the visitor's browser and falls back to `repos.json`.
 
----
+## Local development
 
-## 🚀 Getting Started
+```bash
+python3 -m http.server 8000
+# http://localhost:8000/ and http://localhost:8000/public/
+```
 
-### Prerequisites
-* Node.js 16+ (for local development)
-* Git
-* A modern web browser
+## Regenerating the CV
 
-### Local Development
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/lukeponga-dev/lukeponga-dev.github.io.git](https://github.com/lukeponga-dev/lukeponga-dev.github.io.git)
-    cd lukeponga-dev.github.io
-    ```
-2.  **Open locally:**
-    ```bash
-    # Simple way - open index.html directly
-    open index.html
-    # Or use a local server (Python is easiest)
-    python3 -m http.server 8000
-    ```
-    Then visit `http://localhost:8000` in your browser.
+```bash
+google-chrome --headless=new --no-pdf-header-footer --virtual-time-budget=10000 --print-to-pdf=CV.pdf cv/cv.html
+cp CV.pdf public/CV.pdf
+```
 
-## ⚙️ Customization
-* **Change Theme Colors:** Modify CSS variables in `css/styles.css` (e.g., `--primary-color`).
-* **Update Projects:** Edit the project cards directly in `index.html`.
+## Contact
 
-## 🌐 Deployment
-This site is designed for seamless deployment using GitHub Pages.
+- Email: lukeponga9@gmail.com
+- GitHub: [@lukeponga-dev](https://github.com/lukeponga-dev)
+- LinkedIn: [lukeponga](https://www.linkedin.com/in/lukeponga/)
 
-1.  Ensure changes are committed:
-    ```bash
-    git add .
-    git commit -m "Update portfolio content"
-    git push origin main
-    ```
-2.  The site automatically deploys to `https://lukeponga-dev.github.io`.
-
----
-
-## 🔒 Security & Performance
-* **Security:** Content Security Policy (CSP) headers and HTTPS Enforcement.
-* **Performance:** Optimized images, lazy loading, and minimal dependencies to achieve high Lighthouse scores.
-
-## 📝 License
-This project is licensed under the **MIT License**.
-
-## 📧 Contact
-* **Email:** lukeponga9@gmail.com
-* **GitHub:** [@lukeponga-dev](https://github.com/lukeponga-dev)
-* **Location:** Hamilton, New Zealand
-
-***
-*Last Updated: November 2025*
-*Version: 2.0*
-*Built with ❤️ by Luke Ponga*
+Licensed under the MIT License.
